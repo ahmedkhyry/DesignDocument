@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>DesignDocument.UI</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net452</TargetFramework>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="DesignDocument.UI.exe.licenses" />
+    <EmbeddedResource Include="DesignDocument.UI.exe.licenses" LogicalName="DesignDocument.UI.exe.licenses" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.0.0" />
+    <PackageReference Include="GemBox.Spreadsheet" Version="49.0.1895" />
+    <PackageReference Include="Microsoft.CrmSdk.Workflow" Version="8.2.0.2" />
+    <PackageReference Include="Microsoft.CrmSdk.XrmTooling.CoreAssembly" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="8.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DesignDocument.BLL\DesignDocument.BLL.csproj" />
+    <ProjectReference Include="..\DesignDocument.DAL\DesignDocument.DAL.csproj" />
+    <ProjectReference Include="..\DesignDocument.Model\DesignDocument.Model.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.IdentityModel">
+      <HintPath>C:\Users\ahmed.khairy\Downloads\TGD\test\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk" />
+    <Reference Include="Microsoft.Crm.Sdk.Proxy" />
+    <Reference Include="GemBox.Spreadsheet" />
+    <Reference Include="Spire.Doc">
+      <HintPath>C:\Users\ahmed.khairy\Downloads\New DLL\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Telerik.WinControls">
+      <HintPath>C:\Users\ahmed.khairy\Downloads\Telerik\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI">
+      <HintPath>C:\Users\ahmed.khairy\Downloads\Telerik\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon">
+      <HintPath>C:\Users\ahmed.khairy\Downloads\Telerik\TelerikCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

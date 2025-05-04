@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>DesignDocument.BLL</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net452</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.0.0" />
+    <PackageReference Include="GemBox.Spreadsheet" Version="49.0.1895" />
+    <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies" Version="8.2.0" />
+    <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1004" />
+    <PackageReference Include="Newtonsoft.Json" Version="8.0.1" />
+    <PackageReference Include="Spire.Doc" Version="6.8.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DesignDocument.Model">
+      <HintPath>C:\Users\ahmed.khairy\Downloads\DesignDocument.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="DesignDocument.DAL">
+      <HintPath>C:\Users\ahmed.khairy\Downloads\DesignDocument.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Tooling.Connector">
+      <HintPath>..\..\..\..\Testing\TryMe\bin\Debug\Microsoft.Xrm.Tooling.Connector.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.Xrm.Sdk" />
+    <Reference Include="System.Data" />
+    <Reference Include="Spire.Doc" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.Crm.Sdk.Proxy" />
+    <Reference Include="GemBox.Spreadsheet" />
+    <Reference Include="EntityFramework" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="MetadataDiagramConsole" />
+    <Reference Include="Newtonsoft.Json" />
+  </ItemGroup>
+</Project>
