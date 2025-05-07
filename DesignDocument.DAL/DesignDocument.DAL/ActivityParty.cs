@@ -591,7 +591,7 @@ public class ActivityParty : Entity, INotifyPropertyChanging, INotifyPropertyCha
 	{
 		get
 		{
-			return ((Entity)this).Id;
+			return Id;
 		}
 		set
 		{
@@ -604,12 +604,12 @@ public class ActivityParty : Entity, INotifyPropertyChanging, INotifyPropertyCha
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("activityid");
+			return GetAttributeValue<EntityReference>("activityid");
 		}
 		set
 		{
 			OnPropertyChanging("ActivityId");
-			((Entity)this).SetAttributeValue("activityid", (object)value);
+			SetAttributeValue("activityid", (object)value);
 			OnPropertyChanged("ActivityId");
 		}
 	}
@@ -619,19 +619,19 @@ public class ActivityParty : Entity, INotifyPropertyChanging, INotifyPropertyCha
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("activitypartyid");
+			return GetAttributeValue<Guid?>("activitypartyid");
 		}
 		set
 		{
 			OnPropertyChanging("ActivityPartyId");
-			((Entity)this).SetAttributeValue("activitypartyid", (object)value);
+			SetAttributeValue("activitypartyid", (object)value);
 			if (value.HasValue)
 			{
-				((Entity)this).Id = value.Value;
+				Id = value.Value;
 			}
 			else
 			{
-				((Entity)this).Id = Guid.Empty;
+				Id = Guid.Empty;
 			}
 			OnPropertyChanged("ActivityPartyId");
 		}
@@ -642,42 +642,42 @@ public class ActivityParty : Entity, INotifyPropertyChanging, INotifyPropertyCha
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("addressused");
+			return GetAttributeValue<string>("addressused");
 		}
 		set
 		{
 			OnPropertyChanging("AddressUsed");
-			((Entity)this).SetAttributeValue("addressused", (object)value);
+			SetAttributeValue("addressused", (object)value);
 			OnPropertyChanged("AddressUsed");
 		}
 	}
 
 	[AttributeLogicalName("addressusedemailcolumnnumber")]
-	public int? AddressUsedEmailColumnNumber => ((Entity)this).GetAttributeValue<int?>("addressusedemailcolumnnumber");
+	public int? AddressUsedEmailColumnNumber => GetAttributeValue<int?>("addressusedemailcolumnnumber");
 
 	[AttributeLogicalName("donotemail")]
-	public bool? DoNotEmail => ((Entity)this).GetAttributeValue<bool?>("donotemail");
+	public bool? DoNotEmail => GetAttributeValue<bool?>("donotemail");
 
 	[AttributeLogicalName("donotfax")]
-	public bool? DoNotFax => ((Entity)this).GetAttributeValue<bool?>("donotfax");
+	public bool? DoNotFax => GetAttributeValue<bool?>("donotfax");
 
 	[AttributeLogicalName("donotphone")]
-	public bool? DoNotPhone => ((Entity)this).GetAttributeValue<bool?>("donotphone");
+	public bool? DoNotPhone => GetAttributeValue<bool?>("donotphone");
 
 	[AttributeLogicalName("donotpostalmail")]
-	public bool? DoNotPostalMail => ((Entity)this).GetAttributeValue<bool?>("donotpostalmail");
+	public bool? DoNotPostalMail => GetAttributeValue<bool?>("donotpostalmail");
 
 	[AttributeLogicalName("effort")]
 	public double? Effort
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<double?>("effort");
+			return GetAttributeValue<double?>("effort");
 		}
 		set
 		{
 			OnPropertyChanging("Effort");
-			((Entity)this).SetAttributeValue("effort", (object)value);
+			SetAttributeValue("effort", (object)value);
 			OnPropertyChanged("Effort");
 		}
 	}
@@ -687,42 +687,42 @@ public class ActivityParty : Entity, INotifyPropertyChanging, INotifyPropertyCha
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("exchangeentryid");
+			return GetAttributeValue<string>("exchangeentryid");
 		}
 		set
 		{
 			OnPropertyChanging("ExchangeEntryId");
-			((Entity)this).SetAttributeValue("exchangeentryid", (object)value);
+			SetAttributeValue("exchangeentryid", (object)value);
 			OnPropertyChanged("ExchangeEntryId");
 		}
 	}
 
 	[AttributeLogicalName("instancetypecode")]
-	public OptionSetValue InstanceTypeCode => ((Entity)this).GetAttributeValue<OptionSetValue>("instancetypecode");
+	public OptionSetValue InstanceTypeCode => GetAttributeValue<OptionSetValue>("instancetypecode");
 
 	[AttributeLogicalName("ispartydeleted")]
-	public bool? IsPartyDeleted => ((Entity)this).GetAttributeValue<bool?>("ispartydeleted");
+	public bool? IsPartyDeleted => GetAttributeValue<bool?>("ispartydeleted");
 
 	[AttributeLogicalName("ownerid")]
-	public EntityReference OwnerId => ((Entity)this).GetAttributeValue<EntityReference>("ownerid");
+	public EntityReference OwnerId => GetAttributeValue<EntityReference>("ownerid");
 
 	[AttributeLogicalName("owningbusinessunit")]
-	public Guid? OwningBusinessUnit => ((Entity)this).GetAttributeValue<Guid?>("owningbusinessunit");
+	public Guid? OwningBusinessUnit => GetAttributeValue<Guid?>("owningbusinessunit");
 
 	[AttributeLogicalName("owninguser")]
-	public Guid? OwningUser => ((Entity)this).GetAttributeValue<Guid?>("owninguser");
+	public Guid? OwningUser => GetAttributeValue<Guid?>("owninguser");
 
 	[AttributeLogicalName("participationtypemask")]
 	public OptionSetValue ParticipationTypeMask
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("participationtypemask");
+			return GetAttributeValue<OptionSetValue>("participationtypemask");
 		}
 		set
 		{
 			OnPropertyChanging("ParticipationTypeMask");
-			((Entity)this).SetAttributeValue("participationtypemask", (object)value);
+			SetAttributeValue("participationtypemask", (object)value);
 			OnPropertyChanged("ParticipationTypeMask");
 		}
 	}
@@ -732,12 +732,12 @@ public class ActivityParty : Entity, INotifyPropertyChanging, INotifyPropertyCha
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("partyid");
+			return GetAttributeValue<EntityReference>("partyid");
 		}
 		set
 		{
 			OnPropertyChanging("PartyId");
-			((Entity)this).SetAttributeValue("partyid", (object)value);
+			SetAttributeValue("partyid", (object)value);
 			OnPropertyChanged("PartyId");
 		}
 	}
@@ -747,24 +747,24 @@ public class ActivityParty : Entity, INotifyPropertyChanging, INotifyPropertyCha
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("resourcespecid");
+			return GetAttributeValue<EntityReference>("resourcespecid");
 		}
 		set
 		{
 			OnPropertyChanging("ResourceSpecId");
-			((Entity)this).SetAttributeValue("resourcespecid", (object)value);
+			SetAttributeValue("resourcespecid", (object)value);
 			OnPropertyChanged("ResourceSpecId");
 		}
 	}
 
 	[AttributeLogicalName("scheduledend")]
-	public DateTime? ScheduledEnd => ((Entity)this).GetAttributeValue<DateTime?>("scheduledend");
+	public DateTime? ScheduledEnd => GetAttributeValue<DateTime?>("scheduledend");
 
 	[AttributeLogicalName("scheduledstart")]
-	public DateTime? ScheduledStart => ((Entity)this).GetAttributeValue<DateTime?>("scheduledstart");
+	public DateTime? ScheduledStart => GetAttributeValue<DateTime?>("scheduledstart");
 
 	[AttributeLogicalName("versionnumber")]
-	public long? VersionNumber => ((Entity)this).GetAttributeValue<long?>("versionnumber");
+	public long? VersionNumber => GetAttributeValue<long?>("versionnumber");
 
 	[AttributeLogicalName("partyid")]
 	[RelationshipSchemaName("system_user_activity_parties")]
@@ -778,19 +778,19 @@ public class ActivityParty : Entity, INotifyPropertyChanging, INotifyPropertyCha
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "system_user_activity_parties");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("system_user_activity_parties", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("system_user_activity_parties", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("system_user_activity_parties", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("system_user_activity_parties", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("system_user_activity_parties");
-			((Entity)this).SetRelatedEntity<SystemUser>("system_user_activity_parties", (EntityRole?)null, value);
+			SetRelatedEntity<SystemUser>("system_user_activity_parties", (EntityRole?)null, value);
 			OnPropertyChanged("system_user_activity_parties");
 		}
 	}
@@ -822,7 +822,7 @@ public class ActivityParty : Entity, INotifyPropertyChanging, INotifyPropertyCha
 
 	public SystemUser Load_system_user_activity_parties(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		Entity val = CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", ((Entity)this).LogicalName, "systemuserid", "partyid", "activitypartyid", "activitypartyid", recordCountLimit, attributes).FirstOrDefault();
+		Entity val = CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", LogicalName, "systemuserid", "partyid", "activitypartyid", "activitypartyid", recordCountLimit, attributes).FirstOrDefault();
 		if (val != null)
 		{
 			return system_user_activity_parties = val.ToEntity<SystemUser>();
@@ -841,16 +841,16 @@ public class ActivityParty : Entity, INotifyPropertyChanging, INotifyPropertyCha
 			object value = propertyInfo.GetValue(anonymousType, null);
 			if (propertyInfo.PropertyType == typeof(Guid))
 			{
-				((Entity)this).Id = (Guid)value;
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)["activitypartyid"] = ((Entity)this).Id;
+				Id = (Guid)value;
+				((DataCollection<string, object>)(object)Attributes)["activitypartyid"] = Id;
 			}
 			else if (propertyInfo.Name == "FormattedValues")
 			{
-				((DataCollection<string, string>)(object)((Entity)this).FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
+				((DataCollection<string, string>)(object)FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
 			}
 			else
 			{
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)[propertyInfo.Name.ToLower()] = value;
+				((DataCollection<string, object>)(object)Attributes)[propertyInfo.Name.ToLower()] = value;
 			}
 		}
 	}

@@ -9,13 +9,13 @@ internal class CustomSqlServerMigrationSqlGenerator : SqlServerMigrationSqlGener
 	protected override void Generate(AddColumnOperation addColumnOperation)
 	{
 		SetCreatedUtcColumn((PropertyModel)(object)addColumnOperation.Column);
-		((SqlServerMigrationSqlGenerator)this).Generate(addColumnOperation);
+		Generate(addColumnOperation);
 	}
 
 	protected override void Generate(CreateTableOperation createTableOperation)
 	{
 		SetCreatedUtcColumn((IEnumerable<ColumnModel>)createTableOperation.Columns);
-		((SqlServerMigrationSqlGenerator)this).Generate(createTableOperation);
+		Generate(createTableOperation);
 	}
 
 	private static void SetCreatedUtcColumn(IEnumerable<ColumnModel> columns)

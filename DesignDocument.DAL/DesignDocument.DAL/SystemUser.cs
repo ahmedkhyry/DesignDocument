@@ -2447,7 +2447,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).Id;
+			return Id;
 		}
 		set
 		{
@@ -2460,30 +2460,30 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("accessmode");
+			return GetAttributeValue<OptionSetValue>("accessmode");
 		}
 		set
 		{
 			OnPropertyChanging("AccessMode");
-			((Entity)this).SetAttributeValue("accessmode", (object)value);
+			SetAttributeValue("accessmode", (object)value);
 			OnPropertyChanged("AccessMode");
 		}
 	}
 
 	[AttributeLogicalName("activedirectoryguid")]
-	public Guid? ActiveDirectoryGuid => ((Entity)this).GetAttributeValue<Guid?>("activedirectoryguid");
+	public Guid? ActiveDirectoryGuid => GetAttributeValue<Guid?>("activedirectoryguid");
 
 	[AttributeLogicalName("address1_addressid")]
 	public Guid? Address1_AddressId
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("address1_addressid");
+			return GetAttributeValue<Guid?>("address1_addressid");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_AddressId");
-			((Entity)this).SetAttributeValue("address1_addressid", (object)value);
+			SetAttributeValue("address1_addressid", (object)value);
 			OnPropertyChanged("Address1_AddressId");
 		}
 	}
@@ -2493,12 +2493,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("address1_addresstypecode");
+			return GetAttributeValue<OptionSetValue>("address1_addresstypecode");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_AddressTypeCode");
-			((Entity)this).SetAttributeValue("address1_addresstypecode", (object)value);
+			SetAttributeValue("address1_addresstypecode", (object)value);
 			OnPropertyChanged("Address1_AddressTypeCode");
 		}
 	}
@@ -2508,30 +2508,30 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_city");
+			return GetAttributeValue<string>("address1_city");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_City");
-			((Entity)this).SetAttributeValue("address1_city", (object)value);
+			SetAttributeValue("address1_city", (object)value);
 			OnPropertyChanged("Address1_City");
 		}
 	}
 
 	[AttributeLogicalName("address1_composite")]
-	public string Address1_Composite => ((Entity)this).GetAttributeValue<string>("address1_composite");
+	public string Address1_Composite => GetAttributeValue<string>("address1_composite");
 
 	[AttributeLogicalName("address1_country")]
 	public string Address1_Country
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_country");
+			return GetAttributeValue<string>("address1_country");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_Country");
-			((Entity)this).SetAttributeValue("address1_country", (object)value);
+			SetAttributeValue("address1_country", (object)value);
 			OnPropertyChanged("Address1_Country");
 		}
 	}
@@ -2541,12 +2541,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_county");
+			return GetAttributeValue<string>("address1_county");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_County");
-			((Entity)this).SetAttributeValue("address1_county", (object)value);
+			SetAttributeValue("address1_county", (object)value);
 			OnPropertyChanged("Address1_County");
 		}
 	}
@@ -2556,12 +2556,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_fax");
+			return GetAttributeValue<string>("address1_fax");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_Fax");
-			((Entity)this).SetAttributeValue("address1_fax", (object)value);
+			SetAttributeValue("address1_fax", (object)value);
 			OnPropertyChanged("Address1_Fax");
 		}
 	}
@@ -2571,12 +2571,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<double?>("address1_latitude");
+			return GetAttributeValue<double?>("address1_latitude");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_Latitude");
-			((Entity)this).SetAttributeValue("address1_latitude", (object)value);
+			SetAttributeValue("address1_latitude", (object)value);
 			OnPropertyChanged("Address1_Latitude");
 		}
 	}
@@ -2586,12 +2586,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_line1");
+			return GetAttributeValue<string>("address1_line1");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_Line1");
-			((Entity)this).SetAttributeValue("address1_line1", (object)value);
+			SetAttributeValue("address1_line1", (object)value);
 			OnPropertyChanged("Address1_Line1");
 		}
 	}
@@ -2601,12 +2601,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_line2");
+			return GetAttributeValue<string>("address1_line2");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_Line2");
-			((Entity)this).SetAttributeValue("address1_line2", (object)value);
+			SetAttributeValue("address1_line2", (object)value);
 			OnPropertyChanged("Address1_Line2");
 		}
 	}
@@ -2616,12 +2616,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_line3");
+			return GetAttributeValue<string>("address1_line3");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_Line3");
-			((Entity)this).SetAttributeValue("address1_line3", (object)value);
+			SetAttributeValue("address1_line3", (object)value);
 			OnPropertyChanged("Address1_Line3");
 		}
 	}
@@ -2631,12 +2631,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<double?>("address1_longitude");
+			return GetAttributeValue<double?>("address1_longitude");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_Longitude");
-			((Entity)this).SetAttributeValue("address1_longitude", (object)value);
+			SetAttributeValue("address1_longitude", (object)value);
 			OnPropertyChanged("Address1_Longitude");
 		}
 	}
@@ -2646,12 +2646,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_name");
+			return GetAttributeValue<string>("address1_name");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_Name");
-			((Entity)this).SetAttributeValue("address1_name", (object)value);
+			SetAttributeValue("address1_name", (object)value);
 			OnPropertyChanged("Address1_Name");
 		}
 	}
@@ -2661,12 +2661,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_postalcode");
+			return GetAttributeValue<string>("address1_postalcode");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_PostalCode");
-			((Entity)this).SetAttributeValue("address1_postalcode", (object)value);
+			SetAttributeValue("address1_postalcode", (object)value);
 			OnPropertyChanged("Address1_PostalCode");
 		}
 	}
@@ -2676,12 +2676,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_postofficebox");
+			return GetAttributeValue<string>("address1_postofficebox");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_PostOfficeBox");
-			((Entity)this).SetAttributeValue("address1_postofficebox", (object)value);
+			SetAttributeValue("address1_postofficebox", (object)value);
 			OnPropertyChanged("Address1_PostOfficeBox");
 		}
 	}
@@ -2691,12 +2691,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("address1_shippingmethodcode");
+			return GetAttributeValue<OptionSetValue>("address1_shippingmethodcode");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_ShippingMethodCode");
-			((Entity)this).SetAttributeValue("address1_shippingmethodcode", (object)value);
+			SetAttributeValue("address1_shippingmethodcode", (object)value);
 			OnPropertyChanged("Address1_ShippingMethodCode");
 		}
 	}
@@ -2706,12 +2706,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_stateorprovince");
+			return GetAttributeValue<string>("address1_stateorprovince");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_StateOrProvince");
-			((Entity)this).SetAttributeValue("address1_stateorprovince", (object)value);
+			SetAttributeValue("address1_stateorprovince", (object)value);
 			OnPropertyChanged("Address1_StateOrProvince");
 		}
 	}
@@ -2721,12 +2721,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_telephone1");
+			return GetAttributeValue<string>("address1_telephone1");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_Telephone1");
-			((Entity)this).SetAttributeValue("address1_telephone1", (object)value);
+			SetAttributeValue("address1_telephone1", (object)value);
 			OnPropertyChanged("Address1_Telephone1");
 		}
 	}
@@ -2736,12 +2736,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_telephone2");
+			return GetAttributeValue<string>("address1_telephone2");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_Telephone2");
-			((Entity)this).SetAttributeValue("address1_telephone2", (object)value);
+			SetAttributeValue("address1_telephone2", (object)value);
 			OnPropertyChanged("Address1_Telephone2");
 		}
 	}
@@ -2751,12 +2751,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_telephone3");
+			return GetAttributeValue<string>("address1_telephone3");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_Telephone3");
-			((Entity)this).SetAttributeValue("address1_telephone3", (object)value);
+			SetAttributeValue("address1_telephone3", (object)value);
 			OnPropertyChanged("Address1_Telephone3");
 		}
 	}
@@ -2766,12 +2766,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address1_upszone");
+			return GetAttributeValue<string>("address1_upszone");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_UPSZone");
-			((Entity)this).SetAttributeValue("address1_upszone", (object)value);
+			SetAttributeValue("address1_upszone", (object)value);
 			OnPropertyChanged("Address1_UPSZone");
 		}
 	}
@@ -2781,12 +2781,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("address1_utcoffset");
+			return GetAttributeValue<int?>("address1_utcoffset");
 		}
 		set
 		{
 			OnPropertyChanging("Address1_UTCOffset");
-			((Entity)this).SetAttributeValue("address1_utcoffset", (object)value);
+			SetAttributeValue("address1_utcoffset", (object)value);
 			OnPropertyChanged("Address1_UTCOffset");
 		}
 	}
@@ -2796,12 +2796,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("address2_addressid");
+			return GetAttributeValue<Guid?>("address2_addressid");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_AddressId");
-			((Entity)this).SetAttributeValue("address2_addressid", (object)value);
+			SetAttributeValue("address2_addressid", (object)value);
 			OnPropertyChanged("Address2_AddressId");
 		}
 	}
@@ -2811,12 +2811,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("address2_addresstypecode");
+			return GetAttributeValue<OptionSetValue>("address2_addresstypecode");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_AddressTypeCode");
-			((Entity)this).SetAttributeValue("address2_addresstypecode", (object)value);
+			SetAttributeValue("address2_addresstypecode", (object)value);
 			OnPropertyChanged("Address2_AddressTypeCode");
 		}
 	}
@@ -2826,30 +2826,30 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_city");
+			return GetAttributeValue<string>("address2_city");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_City");
-			((Entity)this).SetAttributeValue("address2_city", (object)value);
+			SetAttributeValue("address2_city", (object)value);
 			OnPropertyChanged("Address2_City");
 		}
 	}
 
 	[AttributeLogicalName("address2_composite")]
-	public string Address2_Composite => ((Entity)this).GetAttributeValue<string>("address2_composite");
+	public string Address2_Composite => GetAttributeValue<string>("address2_composite");
 
 	[AttributeLogicalName("address2_country")]
 	public string Address2_Country
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_country");
+			return GetAttributeValue<string>("address2_country");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_Country");
-			((Entity)this).SetAttributeValue("address2_country", (object)value);
+			SetAttributeValue("address2_country", (object)value);
 			OnPropertyChanged("Address2_Country");
 		}
 	}
@@ -2859,12 +2859,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_county");
+			return GetAttributeValue<string>("address2_county");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_County");
-			((Entity)this).SetAttributeValue("address2_county", (object)value);
+			SetAttributeValue("address2_county", (object)value);
 			OnPropertyChanged("Address2_County");
 		}
 	}
@@ -2874,12 +2874,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_fax");
+			return GetAttributeValue<string>("address2_fax");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_Fax");
-			((Entity)this).SetAttributeValue("address2_fax", (object)value);
+			SetAttributeValue("address2_fax", (object)value);
 			OnPropertyChanged("Address2_Fax");
 		}
 	}
@@ -2889,12 +2889,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<double?>("address2_latitude");
+			return GetAttributeValue<double?>("address2_latitude");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_Latitude");
-			((Entity)this).SetAttributeValue("address2_latitude", (object)value);
+			SetAttributeValue("address2_latitude", (object)value);
 			OnPropertyChanged("Address2_Latitude");
 		}
 	}
@@ -2904,12 +2904,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_line1");
+			return GetAttributeValue<string>("address2_line1");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_Line1");
-			((Entity)this).SetAttributeValue("address2_line1", (object)value);
+			SetAttributeValue("address2_line1", (object)value);
 			OnPropertyChanged("Address2_Line1");
 		}
 	}
@@ -2919,12 +2919,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_line2");
+			return GetAttributeValue<string>("address2_line2");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_Line2");
-			((Entity)this).SetAttributeValue("address2_line2", (object)value);
+			SetAttributeValue("address2_line2", (object)value);
 			OnPropertyChanged("Address2_Line2");
 		}
 	}
@@ -2934,12 +2934,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_line3");
+			return GetAttributeValue<string>("address2_line3");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_Line3");
-			((Entity)this).SetAttributeValue("address2_line3", (object)value);
+			SetAttributeValue("address2_line3", (object)value);
 			OnPropertyChanged("Address2_Line3");
 		}
 	}
@@ -2949,12 +2949,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<double?>("address2_longitude");
+			return GetAttributeValue<double?>("address2_longitude");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_Longitude");
-			((Entity)this).SetAttributeValue("address2_longitude", (object)value);
+			SetAttributeValue("address2_longitude", (object)value);
 			OnPropertyChanged("Address2_Longitude");
 		}
 	}
@@ -2964,12 +2964,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_name");
+			return GetAttributeValue<string>("address2_name");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_Name");
-			((Entity)this).SetAttributeValue("address2_name", (object)value);
+			SetAttributeValue("address2_name", (object)value);
 			OnPropertyChanged("Address2_Name");
 		}
 	}
@@ -2979,12 +2979,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_postalcode");
+			return GetAttributeValue<string>("address2_postalcode");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_PostalCode");
-			((Entity)this).SetAttributeValue("address2_postalcode", (object)value);
+			SetAttributeValue("address2_postalcode", (object)value);
 			OnPropertyChanged("Address2_PostalCode");
 		}
 	}
@@ -2994,12 +2994,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_postofficebox");
+			return GetAttributeValue<string>("address2_postofficebox");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_PostOfficeBox");
-			((Entity)this).SetAttributeValue("address2_postofficebox", (object)value);
+			SetAttributeValue("address2_postofficebox", (object)value);
 			OnPropertyChanged("Address2_PostOfficeBox");
 		}
 	}
@@ -3009,12 +3009,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("address2_shippingmethodcode");
+			return GetAttributeValue<OptionSetValue>("address2_shippingmethodcode");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_ShippingMethodCode");
-			((Entity)this).SetAttributeValue("address2_shippingmethodcode", (object)value);
+			SetAttributeValue("address2_shippingmethodcode", (object)value);
 			OnPropertyChanged("Address2_ShippingMethodCode");
 		}
 	}
@@ -3024,12 +3024,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_stateorprovince");
+			return GetAttributeValue<string>("address2_stateorprovince");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_StateOrProvince");
-			((Entity)this).SetAttributeValue("address2_stateorprovince", (object)value);
+			SetAttributeValue("address2_stateorprovince", (object)value);
 			OnPropertyChanged("Address2_StateOrProvince");
 		}
 	}
@@ -3039,12 +3039,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_telephone1");
+			return GetAttributeValue<string>("address2_telephone1");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_Telephone1");
-			((Entity)this).SetAttributeValue("address2_telephone1", (object)value);
+			SetAttributeValue("address2_telephone1", (object)value);
 			OnPropertyChanged("Address2_Telephone1");
 		}
 	}
@@ -3054,12 +3054,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_telephone2");
+			return GetAttributeValue<string>("address2_telephone2");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_Telephone2");
-			((Entity)this).SetAttributeValue("address2_telephone2", (object)value);
+			SetAttributeValue("address2_telephone2", (object)value);
 			OnPropertyChanged("Address2_Telephone2");
 		}
 	}
@@ -3069,12 +3069,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_telephone3");
+			return GetAttributeValue<string>("address2_telephone3");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_Telephone3");
-			((Entity)this).SetAttributeValue("address2_telephone3", (object)value);
+			SetAttributeValue("address2_telephone3", (object)value);
 			OnPropertyChanged("Address2_Telephone3");
 		}
 	}
@@ -3084,12 +3084,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("address2_upszone");
+			return GetAttributeValue<string>("address2_upszone");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_UPSZone");
-			((Entity)this).SetAttributeValue("address2_upszone", (object)value);
+			SetAttributeValue("address2_upszone", (object)value);
 			OnPropertyChanged("Address2_UPSZone");
 		}
 	}
@@ -3099,12 +3099,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("address2_utcoffset");
+			return GetAttributeValue<int?>("address2_utcoffset");
 		}
 		set
 		{
 			OnPropertyChanging("Address2_UTCOffset");
-			((Entity)this).SetAttributeValue("address2_utcoffset", (object)value);
+			SetAttributeValue("address2_utcoffset", (object)value);
 			OnPropertyChanged("Address2_UTCOffset");
 		}
 	}
@@ -3114,12 +3114,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("businessunitid");
+			return GetAttributeValue<EntityReference>("businessunitid");
 		}
 		set
 		{
 			OnPropertyChanging("BusinessUnitId");
-			((Entity)this).SetAttributeValue("businessunitid", (object)value);
+			SetAttributeValue("businessunitid", (object)value);
 			OnPropertyChanged("BusinessUnitId");
 		}
 	}
@@ -3129,12 +3129,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("calendarid");
+			return GetAttributeValue<EntityReference>("calendarid");
 		}
 		set
 		{
 			OnPropertyChanging("CalendarId");
-			((Entity)this).SetAttributeValue("calendarid", (object)value);
+			SetAttributeValue("calendarid", (object)value);
 			OnPropertyChanged("CalendarId");
 		}
 	}
@@ -3144,48 +3144,48 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("caltype");
+			return GetAttributeValue<OptionSetValue>("caltype");
 		}
 		set
 		{
 			OnPropertyChanging("CALType");
-			((Entity)this).SetAttributeValue("caltype", (object)value);
+			SetAttributeValue("caltype", (object)value);
 			OnPropertyChanged("CALType");
 		}
 	}
 
 	[AttributeLogicalName("createdby")]
-	public EntityReference CreatedBy => ((Entity)this).GetAttributeValue<EntityReference>("createdby");
+	public EntityReference CreatedBy => GetAttributeValue<EntityReference>("createdby");
 
 	[AttributeLogicalName("createdon")]
-	public DateTime? CreatedOn => ((Entity)this).GetAttributeValue<DateTime?>("createdon");
+	public DateTime? CreatedOn => GetAttributeValue<DateTime?>("createdon");
 
 	[AttributeLogicalName("createdonbehalfby")]
-	public EntityReference CreatedOnBehalfBy => ((Entity)this).GetAttributeValue<EntityReference>("createdonbehalfby");
+	public EntityReference CreatedOnBehalfBy => GetAttributeValue<EntityReference>("createdonbehalfby");
 
 	[AttributeLogicalName("defaultfilterspopulated")]
-	public bool? DefaultFiltersPopulated => ((Entity)this).GetAttributeValue<bool?>("defaultfilterspopulated");
+	public bool? DefaultFiltersPopulated => GetAttributeValue<bool?>("defaultfilterspopulated");
 
 	[AttributeLogicalName("defaultmailbox")]
-	public EntityReference DefaultMailbox => ((Entity)this).GetAttributeValue<EntityReference>("defaultmailbox");
+	public EntityReference DefaultMailbox => GetAttributeValue<EntityReference>("defaultmailbox");
 
 	[AttributeLogicalName("defaultodbfoldername")]
-	public string DefaultOdbFolderName => ((Entity)this).GetAttributeValue<string>("defaultodbfoldername");
+	public string DefaultOdbFolderName => GetAttributeValue<string>("defaultodbfoldername");
 
 	[AttributeLogicalName("disabledreason")]
-	public string DisabledReason => ((Entity)this).GetAttributeValue<string>("disabledreason");
+	public string DisabledReason => GetAttributeValue<string>("disabledreason");
 
 	[AttributeLogicalName("displayinserviceviews")]
 	public bool? DisplayInServiceViews
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("displayinserviceviews");
+			return GetAttributeValue<bool?>("displayinserviceviews");
 		}
 		set
 		{
 			OnPropertyChanging("DisplayInServiceViews");
-			((Entity)this).SetAttributeValue("displayinserviceviews", (object)value);
+			SetAttributeValue("displayinserviceviews", (object)value);
 			OnPropertyChanged("DisplayInServiceViews");
 		}
 	}
@@ -3195,12 +3195,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("domainname");
+			return GetAttributeValue<string>("domainname");
 		}
 		set
 		{
 			OnPropertyChanging("DomainName");
-			((Entity)this).SetAttributeValue("domainname", (object)value);
+			SetAttributeValue("domainname", (object)value);
 			OnPropertyChanged("DomainName");
 		}
 	}
@@ -3210,12 +3210,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("emailrouteraccessapproval");
+			return GetAttributeValue<OptionSetValue>("emailrouteraccessapproval");
 		}
 		set
 		{
 			OnPropertyChanging("EmailRouterAccessApproval");
-			((Entity)this).SetAttributeValue("emailrouteraccessapproval", (object)value);
+			SetAttributeValue("emailrouteraccessapproval", (object)value);
 			OnPropertyChanged("EmailRouterAccessApproval");
 		}
 	}
@@ -3225,12 +3225,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("employeeid");
+			return GetAttributeValue<string>("employeeid");
 		}
 		set
 		{
 			OnPropertyChanging("EmployeeId");
-			((Entity)this).SetAttributeValue("employeeid", (object)value);
+			SetAttributeValue("employeeid", (object)value);
 			OnPropertyChanged("EmployeeId");
 		}
 	}
@@ -3240,57 +3240,57 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<byte[]>("entityimage");
+			return GetAttributeValue<byte[]>("entityimage");
 		}
 		set
 		{
 			OnPropertyChanging("EntityImage");
-			((Entity)this).SetAttributeValue("entityimage", (object)value);
+			SetAttributeValue("entityimage", (object)value);
 			OnPropertyChanged("EntityImage");
 		}
 	}
 
 	[AttributeLogicalName("entityimage_timestamp")]
-	public long? EntityImage_Timestamp => ((Entity)this).GetAttributeValue<long?>("entityimage_timestamp");
+	public long? EntityImage_Timestamp => GetAttributeValue<long?>("entityimage_timestamp");
 
 	[AttributeLogicalName("entityimage_url")]
-	public string EntityImage_URL => ((Entity)this).GetAttributeValue<string>("entityimage_url");
+	public string EntityImage_URL => GetAttributeValue<string>("entityimage_url");
 
 	[AttributeLogicalName("entityimageid")]
-	public Guid? EntityImageId => ((Entity)this).GetAttributeValue<Guid?>("entityimageid");
+	public Guid? EntityImageId => GetAttributeValue<Guid?>("entityimageid");
 
 	[AttributeLogicalName("exchangerate")]
-	public decimal? ExchangeRate => ((Entity)this).GetAttributeValue<decimal?>("exchangerate");
+	public decimal? ExchangeRate => GetAttributeValue<decimal?>("exchangerate");
 
 	[AttributeLogicalName("firstname")]
 	public string FirstName
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("firstname");
+			return GetAttributeValue<string>("firstname");
 		}
 		set
 		{
 			OnPropertyChanging("FirstName");
-			((Entity)this).SetAttributeValue("firstname", (object)value);
+			SetAttributeValue("firstname", (object)value);
 			OnPropertyChanged("FirstName");
 		}
 	}
 
 	[AttributeLogicalName("fullname")]
-	public string FullName => ((Entity)this).GetAttributeValue<string>("fullname");
+	public string FullName => GetAttributeValue<string>("fullname");
 
 	[AttributeLogicalName("governmentid")]
 	public string GovernmentId
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("governmentid");
+			return GetAttributeValue<string>("governmentid");
 		}
 		set
 		{
 			OnPropertyChanging("GovernmentId");
-			((Entity)this).SetAttributeValue("governmentid", (object)value);
+			SetAttributeValue("governmentid", (object)value);
 			OnPropertyChanged("GovernmentId");
 		}
 	}
@@ -3300,12 +3300,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("homephone");
+			return GetAttributeValue<string>("homephone");
 		}
 		set
 		{
 			OnPropertyChanging("HomePhone");
-			((Entity)this).SetAttributeValue("homephone", (object)value);
+			SetAttributeValue("homephone", (object)value);
 			OnPropertyChanged("HomePhone");
 		}
 	}
@@ -3315,12 +3315,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("importsequencenumber");
+			return GetAttributeValue<int?>("importsequencenumber");
 		}
 		set
 		{
 			OnPropertyChanging("ImportSequenceNumber");
-			((Entity)this).SetAttributeValue("importsequencenumber", (object)value);
+			SetAttributeValue("importsequencenumber", (object)value);
 			OnPropertyChanged("ImportSequenceNumber");
 		}
 	}
@@ -3330,12 +3330,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("incomingemaildeliverymethod");
+			return GetAttributeValue<OptionSetValue>("incomingemaildeliverymethod");
 		}
 		set
 		{
 			OnPropertyChanging("IncomingEmailDeliveryMethod");
-			((Entity)this).SetAttributeValue("incomingemaildeliverymethod", (object)value);
+			SetAttributeValue("incomingemaildeliverymethod", (object)value);
 			OnPropertyChanged("IncomingEmailDeliveryMethod");
 		}
 	}
@@ -3345,12 +3345,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("internalemailaddress");
+			return GetAttributeValue<string>("internalemailaddress");
 		}
 		set
 		{
 			OnPropertyChanging("InternalEMailAddress");
-			((Entity)this).SetAttributeValue("internalemailaddress", (object)value);
+			SetAttributeValue("internalemailaddress", (object)value);
 			OnPropertyChanged("InternalEMailAddress");
 		}
 	}
@@ -3360,36 +3360,36 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("invitestatuscode");
+			return GetAttributeValue<OptionSetValue>("invitestatuscode");
 		}
 		set
 		{
 			OnPropertyChanging("InviteStatusCode");
-			((Entity)this).SetAttributeValue("invitestatuscode", (object)value);
+			SetAttributeValue("invitestatuscode", (object)value);
 			OnPropertyChanged("InviteStatusCode");
 		}
 	}
 
 	[AttributeLogicalName("isactivedirectoryuser")]
-	public bool? IsActiveDirectoryUser => ((Entity)this).GetAttributeValue<bool?>("isactivedirectoryuser");
+	public bool? IsActiveDirectoryUser => GetAttributeValue<bool?>("isactivedirectoryuser");
 
 	[AttributeLogicalName("isdisabled")]
-	public bool? IsDisabled => ((Entity)this).GetAttributeValue<bool?>("isdisabled");
+	public bool? IsDisabled => GetAttributeValue<bool?>("isdisabled");
 
 	[AttributeLogicalName("isemailaddressapprovedbyo365admin")]
-	public bool? IsEmailAddressApprovedByO365Admin => ((Entity)this).GetAttributeValue<bool?>("isemailaddressapprovedbyo365admin");
+	public bool? IsEmailAddressApprovedByO365Admin => GetAttributeValue<bool?>("isemailaddressapprovedbyo365admin");
 
 	[AttributeLogicalName("isintegrationuser")]
 	public bool? IsIntegrationUser
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("isintegrationuser");
+			return GetAttributeValue<bool?>("isintegrationuser");
 		}
 		set
 		{
 			OnPropertyChanging("IsIntegrationUser");
-			((Entity)this).SetAttributeValue("isintegrationuser", (object)value);
+			SetAttributeValue("isintegrationuser", (object)value);
 			OnPropertyChanged("IsIntegrationUser");
 		}
 	}
@@ -3399,12 +3399,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("islicensed");
+			return GetAttributeValue<bool?>("islicensed");
 		}
 		set
 		{
 			OnPropertyChanging("IsLicensed");
-			((Entity)this).SetAttributeValue("islicensed", (object)value);
+			SetAttributeValue("islicensed", (object)value);
 			OnPropertyChanged("IsLicensed");
 		}
 	}
@@ -3414,12 +3414,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("issyncwithdirectory");
+			return GetAttributeValue<bool?>("issyncwithdirectory");
 		}
 		set
 		{
 			OnPropertyChanging("IsSyncWithDirectory");
-			((Entity)this).SetAttributeValue("issyncwithdirectory", (object)value);
+			SetAttributeValue("issyncwithdirectory", (object)value);
 			OnPropertyChanged("IsSyncWithDirectory");
 		}
 	}
@@ -3429,12 +3429,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("jobtitle");
+			return GetAttributeValue<string>("jobtitle");
 		}
 		set
 		{
 			OnPropertyChanging("JobTitle");
-			((Entity)this).SetAttributeValue("jobtitle", (object)value);
+			SetAttributeValue("jobtitle", (object)value);
 			OnPropertyChanged("JobTitle");
 		}
 	}
@@ -3444,12 +3444,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("lastname");
+			return GetAttributeValue<string>("lastname");
 		}
 		set
 		{
 			OnPropertyChanging("LastName");
-			((Entity)this).SetAttributeValue("lastname", (object)value);
+			SetAttributeValue("lastname", (object)value);
 			OnPropertyChanged("LastName");
 		}
 	}
@@ -3459,12 +3459,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("ldv_isonleave");
+			return GetAttributeValue<bool?>("ldv_isonleave");
 		}
 		set
 		{
 			OnPropertyChanging("ldv_isonleave");
-			((Entity)this).SetAttributeValue("ldv_isonleave", (object)value);
+			SetAttributeValue("ldv_isonleave", (object)value);
 			OnPropertyChanged("ldv_isonleave");
 		}
 	}
@@ -3474,12 +3474,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("ldv_preferredcommunicationlanguage");
+			return GetAttributeValue<OptionSetValue>("ldv_preferredcommunicationlanguage");
 		}
 		set
 		{
 			OnPropertyChanging("ldv_PreferredCommunicationLanguage");
-			((Entity)this).SetAttributeValue("ldv_preferredcommunicationlanguage", (object)value);
+			SetAttributeValue("ldv_preferredcommunicationlanguage", (object)value);
 			OnPropertyChanged("ldv_PreferredCommunicationLanguage");
 		}
 	}
@@ -3489,12 +3489,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("ldv_userrole");
+			return GetAttributeValue<OptionSetValue>("ldv_userrole");
 		}
 		set
 		{
 			OnPropertyChanging("ldv_userrole");
-			((Entity)this).SetAttributeValue("ldv_userrole", (object)value);
+			SetAttributeValue("ldv_userrole", (object)value);
 			OnPropertyChanged("ldv_userrole");
 		}
 	}
@@ -3504,12 +3504,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("middlename");
+			return GetAttributeValue<string>("middlename");
 		}
 		set
 		{
 			OnPropertyChanging("MiddleName");
-			((Entity)this).SetAttributeValue("middlename", (object)value);
+			SetAttributeValue("middlename", (object)value);
 			OnPropertyChanged("MiddleName");
 		}
 	}
@@ -3519,12 +3519,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("mlsd_branch");
+			return GetAttributeValue<EntityReference>("mlsd_branch");
 		}
 		set
 		{
 			OnPropertyChanging("mlsd_branch");
-			((Entity)this).SetAttributeValue("mlsd_branch", (object)value);
+			SetAttributeValue("mlsd_branch", (object)value);
 			OnPropertyChanged("mlsd_branch");
 		}
 	}
@@ -3534,12 +3534,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("mlsd_order");
+			return GetAttributeValue<int?>("mlsd_order");
 		}
 		set
 		{
 			OnPropertyChanging("mlsd_Order");
-			((Entity)this).SetAttributeValue("mlsd_order", (object)value);
+			SetAttributeValue("mlsd_order", (object)value);
 			OnPropertyChanged("mlsd_Order");
 		}
 	}
@@ -3549,12 +3549,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("mlsd_region");
+			return GetAttributeValue<EntityReference>("mlsd_region");
 		}
 		set
 		{
 			OnPropertyChanging("mlsd_region");
-			((Entity)this).SetAttributeValue("mlsd_region", (object)value);
+			SetAttributeValue("mlsd_region", (object)value);
 			OnPropertyChanged("mlsd_region");
 		}
 	}
@@ -3564,12 +3564,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("mobilealertemail");
+			return GetAttributeValue<string>("mobilealertemail");
 		}
 		set
 		{
 			OnPropertyChanging("MobileAlertEMail");
-			((Entity)this).SetAttributeValue("mobilealertemail", (object)value);
+			SetAttributeValue("mobilealertemail", (object)value);
 			OnPropertyChanged("MobileAlertEMail");
 		}
 	}
@@ -3579,12 +3579,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("mobileofflineprofileid");
+			return GetAttributeValue<EntityReference>("mobileofflineprofileid");
 		}
 		set
 		{
 			OnPropertyChanging("MobileOfflineProfileId");
-			((Entity)this).SetAttributeValue("mobileofflineprofileid", (object)value);
+			SetAttributeValue("mobileofflineprofileid", (object)value);
 			OnPropertyChanged("MobileOfflineProfileId");
 		}
 	}
@@ -3594,54 +3594,54 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("mobilephone");
+			return GetAttributeValue<string>("mobilephone");
 		}
 		set
 		{
 			OnPropertyChanging("MobilePhone");
-			((Entity)this).SetAttributeValue("mobilephone", (object)value);
+			SetAttributeValue("mobilephone", (object)value);
 			OnPropertyChanged("MobilePhone");
 		}
 	}
 
 	[AttributeLogicalName("modifiedby")]
-	public EntityReference ModifiedBy => ((Entity)this).GetAttributeValue<EntityReference>("modifiedby");
+	public EntityReference ModifiedBy => GetAttributeValue<EntityReference>("modifiedby");
 
 	[AttributeLogicalName("modifiedon")]
-	public DateTime? ModifiedOn => ((Entity)this).GetAttributeValue<DateTime?>("modifiedon");
+	public DateTime? ModifiedOn => GetAttributeValue<DateTime?>("modifiedon");
 
 	[AttributeLogicalName("modifiedonbehalfby")]
-	public EntityReference ModifiedOnBehalfBy => ((Entity)this).GetAttributeValue<EntityReference>("modifiedonbehalfby");
+	public EntityReference ModifiedOnBehalfBy => GetAttributeValue<EntityReference>("modifiedonbehalfby");
 
 	[AttributeLogicalName("nickname")]
 	public string NickName
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("nickname");
+			return GetAttributeValue<string>("nickname");
 		}
 		set
 		{
 			OnPropertyChanging("NickName");
-			((Entity)this).SetAttributeValue("nickname", (object)value);
+			SetAttributeValue("nickname", (object)value);
 			OnPropertyChanged("NickName");
 		}
 	}
 
 	[AttributeLogicalName("organizationid")]
-	public Guid? OrganizationId => ((Entity)this).GetAttributeValue<Guid?>("organizationid");
+	public Guid? OrganizationId => GetAttributeValue<Guid?>("organizationid");
 
 	[AttributeLogicalName("outgoingemaildeliverymethod")]
 	public OptionSetValue OutgoingEmailDeliveryMethod
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("outgoingemaildeliverymethod");
+			return GetAttributeValue<OptionSetValue>("outgoingemaildeliverymethod");
 		}
 		set
 		{
 			OnPropertyChanging("OutgoingEmailDeliveryMethod");
-			((Entity)this).SetAttributeValue("outgoingemaildeliverymethod", (object)value);
+			SetAttributeValue("outgoingemaildeliverymethod", (object)value);
 			OnPropertyChanged("OutgoingEmailDeliveryMethod");
 		}
 	}
@@ -3651,12 +3651,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<DateTime?>("overriddencreatedon");
+			return GetAttributeValue<DateTime?>("overriddencreatedon");
 		}
 		set
 		{
 			OnPropertyChanging("OverriddenCreatedOn");
-			((Entity)this).SetAttributeValue("overriddencreatedon", (object)value);
+			SetAttributeValue("overriddencreatedon", (object)value);
 			OnPropertyChanged("OverriddenCreatedOn");
 		}
 	}
@@ -3666,12 +3666,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("parentsystemuserid");
+			return GetAttributeValue<EntityReference>("parentsystemuserid");
 		}
 		set
 		{
 			OnPropertyChanging("ParentSystemUserId");
-			((Entity)this).SetAttributeValue("parentsystemuserid", (object)value);
+			SetAttributeValue("parentsystemuserid", (object)value);
 			OnPropertyChanged("ParentSystemUserId");
 		}
 	}
@@ -3681,12 +3681,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("passporthi");
+			return GetAttributeValue<int?>("passporthi");
 		}
 		set
 		{
 			OnPropertyChanging("PassportHi");
-			((Entity)this).SetAttributeValue("passporthi", (object)value);
+			SetAttributeValue("passporthi", (object)value);
 			OnPropertyChanged("PassportHi");
 		}
 	}
@@ -3696,12 +3696,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("passportlo");
+			return GetAttributeValue<int?>("passportlo");
 		}
 		set
 		{
 			OnPropertyChanging("PassportLo");
-			((Entity)this).SetAttributeValue("passportlo", (object)value);
+			SetAttributeValue("passportlo", (object)value);
 			OnPropertyChanged("PassportLo");
 		}
 	}
@@ -3711,12 +3711,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("personalemailaddress");
+			return GetAttributeValue<string>("personalemailaddress");
 		}
 		set
 		{
 			OnPropertyChanging("PersonalEMailAddress");
-			((Entity)this).SetAttributeValue("personalemailaddress", (object)value);
+			SetAttributeValue("personalemailaddress", (object)value);
 			OnPropertyChanged("PersonalEMailAddress");
 		}
 	}
@@ -3726,12 +3726,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("photourl");
+			return GetAttributeValue<string>("photourl");
 		}
 		set
 		{
 			OnPropertyChanging("PhotoUrl");
-			((Entity)this).SetAttributeValue("photourl", (object)value);
+			SetAttributeValue("photourl", (object)value);
 			OnPropertyChanged("PhotoUrl");
 		}
 	}
@@ -3741,12 +3741,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("positionid");
+			return GetAttributeValue<EntityReference>("positionid");
 		}
 		set
 		{
 			OnPropertyChanging("PositionId");
-			((Entity)this).SetAttributeValue("positionid", (object)value);
+			SetAttributeValue("positionid", (object)value);
 			OnPropertyChanged("PositionId");
 		}
 	}
@@ -3756,12 +3756,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("preferredaddresscode");
+			return GetAttributeValue<OptionSetValue>("preferredaddresscode");
 		}
 		set
 		{
 			OnPropertyChanging("PreferredAddressCode");
-			((Entity)this).SetAttributeValue("preferredaddresscode", (object)value);
+			SetAttributeValue("preferredaddresscode", (object)value);
 			OnPropertyChanged("PreferredAddressCode");
 		}
 	}
@@ -3771,12 +3771,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("preferredemailcode");
+			return GetAttributeValue<OptionSetValue>("preferredemailcode");
 		}
 		set
 		{
 			OnPropertyChanging("PreferredEmailCode");
-			((Entity)this).SetAttributeValue("preferredemailcode", (object)value);
+			SetAttributeValue("preferredemailcode", (object)value);
 			OnPropertyChanged("PreferredEmailCode");
 		}
 	}
@@ -3786,12 +3786,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("preferredphonecode");
+			return GetAttributeValue<OptionSetValue>("preferredphonecode");
 		}
 		set
 		{
 			OnPropertyChanging("PreferredPhoneCode");
-			((Entity)this).SetAttributeValue("preferredphonecode", (object)value);
+			SetAttributeValue("preferredphonecode", (object)value);
 			OnPropertyChanged("PreferredPhoneCode");
 		}
 	}
@@ -3801,12 +3801,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("processid");
+			return GetAttributeValue<Guid?>("processid");
 		}
 		set
 		{
 			OnPropertyChanging("ProcessId");
-			((Entity)this).SetAttributeValue("processid", (object)value);
+			SetAttributeValue("processid", (object)value);
 			OnPropertyChanged("ProcessId");
 		}
 	}
@@ -3816,12 +3816,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("queueid");
+			return GetAttributeValue<EntityReference>("queueid");
 		}
 		set
 		{
 			OnPropertyChanging("QueueId");
-			((Entity)this).SetAttributeValue("queueid", (object)value);
+			SetAttributeValue("queueid", (object)value);
 			OnPropertyChanged("QueueId");
 		}
 	}
@@ -3831,12 +3831,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("salutation");
+			return GetAttributeValue<string>("salutation");
 		}
 		set
 		{
 			OnPropertyChanging("Salutation");
-			((Entity)this).SetAttributeValue("salutation", (object)value);
+			SetAttributeValue("salutation", (object)value);
 			OnPropertyChanged("Salutation");
 		}
 	}
@@ -3846,12 +3846,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("setupuser");
+			return GetAttributeValue<bool?>("setupuser");
 		}
 		set
 		{
 			OnPropertyChanging("SetupUser");
-			((Entity)this).SetAttributeValue("setupuser", (object)value);
+			SetAttributeValue("setupuser", (object)value);
 			OnPropertyChanged("SetupUser");
 		}
 	}
@@ -3861,12 +3861,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("sharepointemailaddress");
+			return GetAttributeValue<string>("sharepointemailaddress");
 		}
 		set
 		{
 			OnPropertyChanging("SharePointEmailAddress");
-			((Entity)this).SetAttributeValue("sharepointemailaddress", (object)value);
+			SetAttributeValue("sharepointemailaddress", (object)value);
 			OnPropertyChanged("SharePointEmailAddress");
 		}
 	}
@@ -3876,12 +3876,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("siteid");
+			return GetAttributeValue<EntityReference>("siteid");
 		}
 		set
 		{
 			OnPropertyChanging("SiteId");
-			((Entity)this).SetAttributeValue("siteid", (object)value);
+			SetAttributeValue("siteid", (object)value);
 			OnPropertyChanged("SiteId");
 		}
 	}
@@ -3891,12 +3891,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("skills");
+			return GetAttributeValue<string>("skills");
 		}
 		set
 		{
 			OnPropertyChanging("Skills");
-			((Entity)this).SetAttributeValue("skills", (object)value);
+			SetAttributeValue("skills", (object)value);
 			OnPropertyChanged("Skills");
 		}
 	}
@@ -3906,12 +3906,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("stageid");
+			return GetAttributeValue<Guid?>("stageid");
 		}
 		set
 		{
 			OnPropertyChanging("StageId");
-			((Entity)this).SetAttributeValue("stageid", (object)value);
+			SetAttributeValue("stageid", (object)value);
 			OnPropertyChanged("StageId");
 		}
 	}
@@ -3921,19 +3921,19 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("systemuserid");
+			return GetAttributeValue<Guid?>("systemuserid");
 		}
 		set
 		{
 			OnPropertyChanging("SystemUserId");
-			((Entity)this).SetAttributeValue("systemuserid", (object)value);
+			SetAttributeValue("systemuserid", (object)value);
 			if (value.HasValue)
 			{
-				((Entity)this).Id = value.Value;
+				Id = value.Value;
 			}
 			else
 			{
-				((Entity)this).Id = Guid.Empty;
+				Id = Guid.Empty;
 			}
 			OnPropertyChanged("SystemUserId");
 		}
@@ -3944,12 +3944,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("territoryid");
+			return GetAttributeValue<EntityReference>("territoryid");
 		}
 		set
 		{
 			OnPropertyChanging("TerritoryId");
-			((Entity)this).SetAttributeValue("territoryid", (object)value);
+			SetAttributeValue("territoryid", (object)value);
 			OnPropertyChanged("TerritoryId");
 		}
 	}
@@ -3959,12 +3959,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("timezoneruleversionnumber");
+			return GetAttributeValue<int?>("timezoneruleversionnumber");
 		}
 		set
 		{
 			OnPropertyChanging("TimeZoneRuleVersionNumber");
-			((Entity)this).SetAttributeValue("timezoneruleversionnumber", (object)value);
+			SetAttributeValue("timezoneruleversionnumber", (object)value);
 			OnPropertyChanged("TimeZoneRuleVersionNumber");
 		}
 	}
@@ -3974,12 +3974,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("title");
+			return GetAttributeValue<string>("title");
 		}
 		set
 		{
 			OnPropertyChanging("Title");
-			((Entity)this).SetAttributeValue("title", (object)value);
+			SetAttributeValue("title", (object)value);
 			OnPropertyChanged("Title");
 		}
 	}
@@ -3989,12 +3989,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("transactioncurrencyid");
+			return GetAttributeValue<EntityReference>("transactioncurrencyid");
 		}
 		set
 		{
 			OnPropertyChanging("TransactionCurrencyId");
-			((Entity)this).SetAttributeValue("transactioncurrencyid", (object)value);
+			SetAttributeValue("transactioncurrencyid", (object)value);
 			OnPropertyChanged("TransactionCurrencyId");
 		}
 	}
@@ -4004,12 +4004,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("traversedpath");
+			return GetAttributeValue<string>("traversedpath");
 		}
 		set
 		{
 			OnPropertyChanging("TraversedPath");
-			((Entity)this).SetAttributeValue("traversedpath", (object)value);
+			SetAttributeValue("traversedpath", (object)value);
 			OnPropertyChanged("TraversedPath");
 		}
 	}
@@ -4019,12 +4019,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("userlicensetype");
+			return GetAttributeValue<int?>("userlicensetype");
 		}
 		set
 		{
 			OnPropertyChanging("UserLicenseType");
-			((Entity)this).SetAttributeValue("userlicensetype", (object)value);
+			SetAttributeValue("userlicensetype", (object)value);
 			OnPropertyChanged("UserLicenseType");
 		}
 	}
@@ -4034,30 +4034,30 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("utcconversiontimezonecode");
+			return GetAttributeValue<int?>("utcconversiontimezonecode");
 		}
 		set
 		{
 			OnPropertyChanging("UTCConversionTimeZoneCode");
-			((Entity)this).SetAttributeValue("utcconversiontimezonecode", (object)value);
+			SetAttributeValue("utcconversiontimezonecode", (object)value);
 			OnPropertyChanged("UTCConversionTimeZoneCode");
 		}
 	}
 
 	[AttributeLogicalName("versionnumber")]
-	public long? VersionNumber => ((Entity)this).GetAttributeValue<long?>("versionnumber");
+	public long? VersionNumber => GetAttributeValue<long?>("versionnumber");
 
 	[AttributeLogicalName("windowsliveid")]
 	public string WindowsLiveID
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("windowsliveid");
+			return GetAttributeValue<string>("windowsliveid");
 		}
 		set
 		{
 			OnPropertyChanging("WindowsLiveID");
-			((Entity)this).SetAttributeValue("windowsliveid", (object)value);
+			SetAttributeValue("windowsliveid", (object)value);
 			OnPropertyChanged("WindowsLiveID");
 		}
 	}
@@ -4067,12 +4067,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("yammeremailaddress");
+			return GetAttributeValue<string>("yammeremailaddress");
 		}
 		set
 		{
 			OnPropertyChanging("YammerEmailAddress");
-			((Entity)this).SetAttributeValue("yammeremailaddress", (object)value);
+			SetAttributeValue("yammeremailaddress", (object)value);
 			OnPropertyChanged("YammerEmailAddress");
 		}
 	}
@@ -4082,12 +4082,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("yammeruserid");
+			return GetAttributeValue<string>("yammeruserid");
 		}
 		set
 		{
 			OnPropertyChanging("YammerUserId");
-			((Entity)this).SetAttributeValue("yammeruserid", (object)value);
+			SetAttributeValue("yammeruserid", (object)value);
 			OnPropertyChanged("YammerUserId");
 		}
 	}
@@ -4097,30 +4097,30 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("yomifirstname");
+			return GetAttributeValue<string>("yomifirstname");
 		}
 		set
 		{
 			OnPropertyChanging("YomiFirstName");
-			((Entity)this).SetAttributeValue("yomifirstname", (object)value);
+			SetAttributeValue("yomifirstname", (object)value);
 			OnPropertyChanged("YomiFirstName");
 		}
 	}
 
 	[AttributeLogicalName("yomifullname")]
-	public string YomiFullName => ((Entity)this).GetAttributeValue<string>("yomifullname");
+	public string YomiFullName => GetAttributeValue<string>("yomifullname");
 
 	[AttributeLogicalName("yomilastname")]
 	public string YomiLastName
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("yomilastname");
+			return GetAttributeValue<string>("yomilastname");
 		}
 		set
 		{
 			OnPropertyChanging("YomiLastName");
-			((Entity)this).SetAttributeValue("yomilastname", (object)value);
+			SetAttributeValue("yomilastname", (object)value);
 			OnPropertyChanged("YomiLastName");
 		}
 	}
@@ -4130,12 +4130,12 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("yomimiddlename");
+			return GetAttributeValue<string>("yomimiddlename");
 		}
 		set
 		{
 			OnPropertyChanging("YomiMiddleName");
-			((Entity)this).SetAttributeValue("yomimiddlename", (object)value);
+			SetAttributeValue("yomimiddlename", (object)value);
 			OnPropertyChanged("YomiMiddleName");
 		}
 	}
@@ -4151,7 +4151,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "createdby_pluginassembly");
 				}
-				IEnumerable<PluginAssembly> relatedEntities = ((Entity)this).GetRelatedEntities<PluginAssembly>("createdby_pluginassembly", (EntityRole?)null);
+				IEnumerable<PluginAssembly> relatedEntities = GetRelatedEntities<PluginAssembly>("createdby_pluginassembly", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(PluginAssembly element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4160,13 +4160,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<PluginAssembly>("createdby_pluginassembly", (EntityRole?)null);
+				return GetRelatedEntities<PluginAssembly>("createdby_pluginassembly", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("createdby_pluginassembly");
-			((Entity)this).SetRelatedEntities<PluginAssembly>("createdby_pluginassembly", (EntityRole?)null, value);
+			SetRelatedEntities<PluginAssembly>("createdby_pluginassembly", (EntityRole?)null, value);
 			OnPropertyChanged("createdby_pluginassembly");
 		}
 	}
@@ -4182,7 +4182,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "createdby_sdkmessage");
 				}
-				IEnumerable<SdkMessage> relatedEntities = ((Entity)this).GetRelatedEntities<SdkMessage>("createdby_sdkmessage", (EntityRole?)null);
+				IEnumerable<SdkMessage> relatedEntities = GetRelatedEntities<SdkMessage>("createdby_sdkmessage", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SdkMessage element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4191,13 +4191,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SdkMessage>("createdby_sdkmessage", (EntityRole?)null);
+				return GetRelatedEntities<SdkMessage>("createdby_sdkmessage", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("createdby_sdkmessage");
-			((Entity)this).SetRelatedEntities<SdkMessage>("createdby_sdkmessage", (EntityRole?)null, value);
+			SetRelatedEntities<SdkMessage>("createdby_sdkmessage", (EntityRole?)null, value);
 			OnPropertyChanged("createdby_sdkmessage");
 		}
 	}
@@ -4213,7 +4213,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "createdby_sdkmessagefilter");
 				}
-				IEnumerable<SdkMessageFilter> relatedEntities = ((Entity)this).GetRelatedEntities<SdkMessageFilter>("createdby_sdkmessagefilter", (EntityRole?)null);
+				IEnumerable<SdkMessageFilter> relatedEntities = GetRelatedEntities<SdkMessageFilter>("createdby_sdkmessagefilter", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SdkMessageFilter element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4222,13 +4222,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SdkMessageFilter>("createdby_sdkmessagefilter", (EntityRole?)null);
+				return GetRelatedEntities<SdkMessageFilter>("createdby_sdkmessagefilter", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("createdby_sdkmessagefilter");
-			((Entity)this).SetRelatedEntities<SdkMessageFilter>("createdby_sdkmessagefilter", (EntityRole?)null, value);
+			SetRelatedEntities<SdkMessageFilter>("createdby_sdkmessagefilter", (EntityRole?)null, value);
 			OnPropertyChanged("createdby_sdkmessagefilter");
 		}
 	}
@@ -4244,7 +4244,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "createdby_sdkmessageprocessingstep");
 				}
-				IEnumerable<SdkMessageProcessingStep> relatedEntities = ((Entity)this).GetRelatedEntities<SdkMessageProcessingStep>("createdby_sdkmessageprocessingstep", (EntityRole?)null);
+				IEnumerable<SdkMessageProcessingStep> relatedEntities = GetRelatedEntities<SdkMessageProcessingStep>("createdby_sdkmessageprocessingstep", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SdkMessageProcessingStep element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4253,13 +4253,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SdkMessageProcessingStep>("createdby_sdkmessageprocessingstep", (EntityRole?)null);
+				return GetRelatedEntities<SdkMessageProcessingStep>("createdby_sdkmessageprocessingstep", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("createdby_sdkmessageprocessingstep");
-			((Entity)this).SetRelatedEntities<SdkMessageProcessingStep>("createdby_sdkmessageprocessingstep", (EntityRole?)null, value);
+			SetRelatedEntities<SdkMessageProcessingStep>("createdby_sdkmessageprocessingstep", (EntityRole?)null, value);
 			OnPropertyChanged("createdby_sdkmessageprocessingstep");
 		}
 	}
@@ -4275,7 +4275,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "impersonatinguserid_sdkmessageprocessingstep");
 				}
-				IEnumerable<SdkMessageProcessingStep> relatedEntities = ((Entity)this).GetRelatedEntities<SdkMessageProcessingStep>("impersonatinguserid_sdkmessageprocessingstep", (EntityRole?)null);
+				IEnumerable<SdkMessageProcessingStep> relatedEntities = GetRelatedEntities<SdkMessageProcessingStep>("impersonatinguserid_sdkmessageprocessingstep", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SdkMessageProcessingStep element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4284,13 +4284,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SdkMessageProcessingStep>("impersonatinguserid_sdkmessageprocessingstep", (EntityRole?)null);
+				return GetRelatedEntities<SdkMessageProcessingStep>("impersonatinguserid_sdkmessageprocessingstep", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("impersonatinguserid_sdkmessageprocessingstep");
-			((Entity)this).SetRelatedEntities<SdkMessageProcessingStep>("impersonatinguserid_sdkmessageprocessingstep", (EntityRole?)null, value);
+			SetRelatedEntities<SdkMessageProcessingStep>("impersonatinguserid_sdkmessageprocessingstep", (EntityRole?)null, value);
 			OnPropertyChanged("impersonatinguserid_sdkmessageprocessingstep");
 		}
 	}
@@ -4306,7 +4306,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_fieldsecurityprofile_createdby");
 				}
-				IEnumerable<FieldSecurityProfile> relatedEntities = ((Entity)this).GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_createdby", (EntityRole?)null);
+				IEnumerable<FieldSecurityProfile> relatedEntities = GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_createdby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(FieldSecurityProfile element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4315,13 +4315,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_createdby", (EntityRole?)null);
+				return GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_createdby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_fieldsecurityprofile_createdby");
-			((Entity)this).SetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_createdby", (EntityRole?)null, value);
+			SetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_createdby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_fieldsecurityprofile_createdby");
 		}
 	}
@@ -4337,7 +4337,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_fieldsecurityprofile_createdonbehalfby");
 				}
-				IEnumerable<FieldSecurityProfile> relatedEntities = ((Entity)this).GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_createdonbehalfby", (EntityRole?)null);
+				IEnumerable<FieldSecurityProfile> relatedEntities = GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_createdonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(FieldSecurityProfile element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4346,13 +4346,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_createdonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_createdonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_fieldsecurityprofile_createdonbehalfby");
-			((Entity)this).SetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_createdonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_createdonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_fieldsecurityprofile_createdonbehalfby");
 		}
 	}
@@ -4368,7 +4368,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_fieldsecurityprofile_modifiedby");
 				}
-				IEnumerable<FieldSecurityProfile> relatedEntities = ((Entity)this).GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_modifiedby", (EntityRole?)null);
+				IEnumerable<FieldSecurityProfile> relatedEntities = GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_modifiedby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(FieldSecurityProfile element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4377,13 +4377,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_modifiedby", (EntityRole?)null);
+				return GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_modifiedby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_fieldsecurityprofile_modifiedby");
-			((Entity)this).SetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_modifiedby", (EntityRole?)null, value);
+			SetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_modifiedby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_fieldsecurityprofile_modifiedby");
 		}
 	}
@@ -4399,7 +4399,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_fieldsecurityprofile_modifiedonbehalfby");
 				}
-				IEnumerable<FieldSecurityProfile> relatedEntities = ((Entity)this).GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_modifiedonbehalfby", (EntityRole?)null);
+				IEnumerable<FieldSecurityProfile> relatedEntities = GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_modifiedonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(FieldSecurityProfile element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4408,13 +4408,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_modifiedonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_modifiedonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_fieldsecurityprofile_modifiedonbehalfby");
-			((Entity)this).SetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_modifiedonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<FieldSecurityProfile>("lk_fieldsecurityprofile_modifiedonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_fieldsecurityprofile_modifiedonbehalfby");
 		}
 	}
@@ -4430,7 +4430,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_pluginassembly_createdonbehalfby");
 				}
-				IEnumerable<PluginAssembly> relatedEntities = ((Entity)this).GetRelatedEntities<PluginAssembly>("lk_pluginassembly_createdonbehalfby", (EntityRole?)null);
+				IEnumerable<PluginAssembly> relatedEntities = GetRelatedEntities<PluginAssembly>("lk_pluginassembly_createdonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(PluginAssembly element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4439,13 +4439,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<PluginAssembly>("lk_pluginassembly_createdonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<PluginAssembly>("lk_pluginassembly_createdonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_pluginassembly_createdonbehalfby");
-			((Entity)this).SetRelatedEntities<PluginAssembly>("lk_pluginassembly_createdonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<PluginAssembly>("lk_pluginassembly_createdonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_pluginassembly_createdonbehalfby");
 		}
 	}
@@ -4461,7 +4461,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_pluginassembly_modifiedonbehalfby");
 				}
-				IEnumerable<PluginAssembly> relatedEntities = ((Entity)this).GetRelatedEntities<PluginAssembly>("lk_pluginassembly_modifiedonbehalfby", (EntityRole?)null);
+				IEnumerable<PluginAssembly> relatedEntities = GetRelatedEntities<PluginAssembly>("lk_pluginassembly_modifiedonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(PluginAssembly element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4470,13 +4470,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<PluginAssembly>("lk_pluginassembly_modifiedonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<PluginAssembly>("lk_pluginassembly_modifiedonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_pluginassembly_modifiedonbehalfby");
-			((Entity)this).SetRelatedEntities<PluginAssembly>("lk_pluginassembly_modifiedonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<PluginAssembly>("lk_pluginassembly_modifiedonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_pluginassembly_modifiedonbehalfby");
 		}
 	}
@@ -4492,7 +4492,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_role_createdonbehalfby");
 				}
-				IEnumerable<Role> relatedEntities = ((Entity)this).GetRelatedEntities<Role>("lk_role_createdonbehalfby", (EntityRole?)null);
+				IEnumerable<Role> relatedEntities = GetRelatedEntities<Role>("lk_role_createdonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(Role element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4501,13 +4501,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Role>("lk_role_createdonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<Role>("lk_role_createdonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_role_createdonbehalfby");
-			((Entity)this).SetRelatedEntities<Role>("lk_role_createdonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<Role>("lk_role_createdonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_role_createdonbehalfby");
 		}
 	}
@@ -4523,7 +4523,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_role_modifiedonbehalfby");
 				}
-				IEnumerable<Role> relatedEntities = ((Entity)this).GetRelatedEntities<Role>("lk_role_modifiedonbehalfby", (EntityRole?)null);
+				IEnumerable<Role> relatedEntities = GetRelatedEntities<Role>("lk_role_modifiedonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(Role element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4532,13 +4532,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Role>("lk_role_modifiedonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<Role>("lk_role_modifiedonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_role_modifiedonbehalfby");
-			((Entity)this).SetRelatedEntities<Role>("lk_role_modifiedonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<Role>("lk_role_modifiedonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_role_modifiedonbehalfby");
 		}
 	}
@@ -4554,7 +4554,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_rolebase_createdby");
 				}
-				IEnumerable<Role> relatedEntities = ((Entity)this).GetRelatedEntities<Role>("lk_rolebase_createdby", (EntityRole?)null);
+				IEnumerable<Role> relatedEntities = GetRelatedEntities<Role>("lk_rolebase_createdby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(Role element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4563,13 +4563,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Role>("lk_rolebase_createdby", (EntityRole?)null);
+				return GetRelatedEntities<Role>("lk_rolebase_createdby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_rolebase_createdby");
-			((Entity)this).SetRelatedEntities<Role>("lk_rolebase_createdby", (EntityRole?)null, value);
+			SetRelatedEntities<Role>("lk_rolebase_createdby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_rolebase_createdby");
 		}
 	}
@@ -4585,7 +4585,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_rolebase_modifiedby");
 				}
-				IEnumerable<Role> relatedEntities = ((Entity)this).GetRelatedEntities<Role>("lk_rolebase_modifiedby", (EntityRole?)null);
+				IEnumerable<Role> relatedEntities = GetRelatedEntities<Role>("lk_rolebase_modifiedby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(Role element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4594,13 +4594,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Role>("lk_rolebase_modifiedby", (EntityRole?)null);
+				return GetRelatedEntities<Role>("lk_rolebase_modifiedby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_rolebase_modifiedby");
-			((Entity)this).SetRelatedEntities<Role>("lk_rolebase_modifiedby", (EntityRole?)null, value);
+			SetRelatedEntities<Role>("lk_rolebase_modifiedby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_rolebase_modifiedby");
 		}
 	}
@@ -4616,7 +4616,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_sdkmessage_createdonbehalfby");
 				}
-				IEnumerable<SdkMessage> relatedEntities = ((Entity)this).GetRelatedEntities<SdkMessage>("lk_sdkmessage_createdonbehalfby", (EntityRole?)null);
+				IEnumerable<SdkMessage> relatedEntities = GetRelatedEntities<SdkMessage>("lk_sdkmessage_createdonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SdkMessage element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4625,13 +4625,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SdkMessage>("lk_sdkmessage_createdonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<SdkMessage>("lk_sdkmessage_createdonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_sdkmessage_createdonbehalfby");
-			((Entity)this).SetRelatedEntities<SdkMessage>("lk_sdkmessage_createdonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<SdkMessage>("lk_sdkmessage_createdonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_sdkmessage_createdonbehalfby");
 		}
 	}
@@ -4647,7 +4647,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_sdkmessage_modifiedonbehalfby");
 				}
-				IEnumerable<SdkMessage> relatedEntities = ((Entity)this).GetRelatedEntities<SdkMessage>("lk_sdkmessage_modifiedonbehalfby", (EntityRole?)null);
+				IEnumerable<SdkMessage> relatedEntities = GetRelatedEntities<SdkMessage>("lk_sdkmessage_modifiedonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SdkMessage element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4656,13 +4656,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SdkMessage>("lk_sdkmessage_modifiedonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<SdkMessage>("lk_sdkmessage_modifiedonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_sdkmessage_modifiedonbehalfby");
-			((Entity)this).SetRelatedEntities<SdkMessage>("lk_sdkmessage_modifiedonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<SdkMessage>("lk_sdkmessage_modifiedonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_sdkmessage_modifiedonbehalfby");
 		}
 	}
@@ -4678,7 +4678,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_sdkmessagefilter_createdonbehalfby");
 				}
-				IEnumerable<SdkMessageFilter> relatedEntities = ((Entity)this).GetRelatedEntities<SdkMessageFilter>("lk_sdkmessagefilter_createdonbehalfby", (EntityRole?)null);
+				IEnumerable<SdkMessageFilter> relatedEntities = GetRelatedEntities<SdkMessageFilter>("lk_sdkmessagefilter_createdonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SdkMessageFilter element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4687,13 +4687,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SdkMessageFilter>("lk_sdkmessagefilter_createdonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<SdkMessageFilter>("lk_sdkmessagefilter_createdonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_sdkmessagefilter_createdonbehalfby");
-			((Entity)this).SetRelatedEntities<SdkMessageFilter>("lk_sdkmessagefilter_createdonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<SdkMessageFilter>("lk_sdkmessagefilter_createdonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_sdkmessagefilter_createdonbehalfby");
 		}
 	}
@@ -4709,7 +4709,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_sdkmessagefilter_modifiedonbehalfby");
 				}
-				IEnumerable<SdkMessageFilter> relatedEntities = ((Entity)this).GetRelatedEntities<SdkMessageFilter>("lk_sdkmessagefilter_modifiedonbehalfby", (EntityRole?)null);
+				IEnumerable<SdkMessageFilter> relatedEntities = GetRelatedEntities<SdkMessageFilter>("lk_sdkmessagefilter_modifiedonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SdkMessageFilter element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4718,13 +4718,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SdkMessageFilter>("lk_sdkmessagefilter_modifiedonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<SdkMessageFilter>("lk_sdkmessagefilter_modifiedonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_sdkmessagefilter_modifiedonbehalfby");
-			((Entity)this).SetRelatedEntities<SdkMessageFilter>("lk_sdkmessagefilter_modifiedonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<SdkMessageFilter>("lk_sdkmessagefilter_modifiedonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_sdkmessagefilter_modifiedonbehalfby");
 		}
 	}
@@ -4740,7 +4740,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_sdkmessageprocessingstep_createdonbehalfby");
 				}
-				IEnumerable<SdkMessageProcessingStep> relatedEntities = ((Entity)this).GetRelatedEntities<SdkMessageProcessingStep>("lk_sdkmessageprocessingstep_createdonbehalfby", (EntityRole?)null);
+				IEnumerable<SdkMessageProcessingStep> relatedEntities = GetRelatedEntities<SdkMessageProcessingStep>("lk_sdkmessageprocessingstep_createdonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SdkMessageProcessingStep element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4749,13 +4749,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SdkMessageProcessingStep>("lk_sdkmessageprocessingstep_createdonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<SdkMessageProcessingStep>("lk_sdkmessageprocessingstep_createdonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_sdkmessageprocessingstep_createdonbehalfby");
-			((Entity)this).SetRelatedEntities<SdkMessageProcessingStep>("lk_sdkmessageprocessingstep_createdonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<SdkMessageProcessingStep>("lk_sdkmessageprocessingstep_createdonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_sdkmessageprocessingstep_createdonbehalfby");
 		}
 	}
@@ -4771,7 +4771,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_sdkmessageprocessingstep_modifiedonbehalfby");
 				}
-				IEnumerable<SdkMessageProcessingStep> relatedEntities = ((Entity)this).GetRelatedEntities<SdkMessageProcessingStep>("lk_sdkmessageprocessingstep_modifiedonbehalfby", (EntityRole?)null);
+				IEnumerable<SdkMessageProcessingStep> relatedEntities = GetRelatedEntities<SdkMessageProcessingStep>("lk_sdkmessageprocessingstep_modifiedonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SdkMessageProcessingStep element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4780,18 +4780,18 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SdkMessageProcessingStep>("lk_sdkmessageprocessingstep_modifiedonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<SdkMessageProcessingStep>("lk_sdkmessageprocessingstep_modifiedonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_sdkmessageprocessingstep_modifiedonbehalfby");
-			((Entity)this).SetRelatedEntities<SdkMessageProcessingStep>("lk_sdkmessageprocessingstep_modifiedonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<SdkMessageProcessingStep>("lk_sdkmessageprocessingstep_modifiedonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("lk_sdkmessageprocessingstep_modifiedonbehalfby");
 		}
 	}
 
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public IEnumerable<SystemUser> Referenced_lk_systemuser_createdonbehalfby
 	{
 		get
@@ -4802,7 +4802,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_systemuser_createdonbehalfby");
 				}
-				IEnumerable<SystemUser> relatedEntities = ((Entity)this).GetRelatedEntities<SystemUser>("lk_systemuser_createdonbehalfby", (EntityRole?)(EntityRole)1);
+				IEnumerable<SystemUser> relatedEntities = GetRelatedEntities<SystemUser>("lk_systemuser_createdonbehalfby", (EntityRole?)(EntityRole)1);
 				relatedEntities.ToList().ForEach(delegate(SystemUser element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4811,18 +4811,18 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SystemUser>("lk_systemuser_createdonbehalfby", (EntityRole?)(EntityRole)1);
+				return GetRelatedEntities<SystemUser>("lk_systemuser_createdonbehalfby", (EntityRole?)(EntityRole)1);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("Referenced_lk_systemuser_createdonbehalfby");
-			((Entity)this).SetRelatedEntities<SystemUser>("lk_systemuser_createdonbehalfby", (EntityRole?)(EntityRole)1, value);
+			SetRelatedEntities<SystemUser>("lk_systemuser_createdonbehalfby", (EntityRole?)(EntityRole)1, value);
 			OnPropertyChanged("Referenced_lk_systemuser_createdonbehalfby");
 		}
 	}
 
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public IEnumerable<SystemUser> Referenced_lk_systemuser_modifiedonbehalfby
 	{
 		get
@@ -4833,7 +4833,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_systemuser_modifiedonbehalfby");
 				}
-				IEnumerable<SystemUser> relatedEntities = ((Entity)this).GetRelatedEntities<SystemUser>("lk_systemuser_modifiedonbehalfby", (EntityRole?)(EntityRole)1);
+				IEnumerable<SystemUser> relatedEntities = GetRelatedEntities<SystemUser>("lk_systemuser_modifiedonbehalfby", (EntityRole?)(EntityRole)1);
 				relatedEntities.ToList().ForEach(delegate(SystemUser element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4842,18 +4842,18 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SystemUser>("lk_systemuser_modifiedonbehalfby", (EntityRole?)(EntityRole)1);
+				return GetRelatedEntities<SystemUser>("lk_systemuser_modifiedonbehalfby", (EntityRole?)(EntityRole)1);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("Referenced_lk_systemuser_modifiedonbehalfby");
-			((Entity)this).SetRelatedEntities<SystemUser>("lk_systemuser_modifiedonbehalfby", (EntityRole?)(EntityRole)1, value);
+			SetRelatedEntities<SystemUser>("lk_systemuser_modifiedonbehalfby", (EntityRole?)(EntityRole)1, value);
 			OnPropertyChanged("Referenced_lk_systemuser_modifiedonbehalfby");
 		}
 	}
 
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public IEnumerable<SystemUser> Referenced_lk_systemuserbase_createdby
 	{
 		get
@@ -4864,7 +4864,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_systemuserbase_createdby");
 				}
-				IEnumerable<SystemUser> relatedEntities = ((Entity)this).GetRelatedEntities<SystemUser>("lk_systemuserbase_createdby", (EntityRole?)(EntityRole)1);
+				IEnumerable<SystemUser> relatedEntities = GetRelatedEntities<SystemUser>("lk_systemuserbase_createdby", (EntityRole?)(EntityRole)1);
 				relatedEntities.ToList().ForEach(delegate(SystemUser element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4873,18 +4873,18 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SystemUser>("lk_systemuserbase_createdby", (EntityRole?)(EntityRole)1);
+				return GetRelatedEntities<SystemUser>("lk_systemuserbase_createdby", (EntityRole?)(EntityRole)1);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("Referenced_lk_systemuserbase_createdby");
-			((Entity)this).SetRelatedEntities<SystemUser>("lk_systemuserbase_createdby", (EntityRole?)(EntityRole)1, value);
+			SetRelatedEntities<SystemUser>("lk_systemuserbase_createdby", (EntityRole?)(EntityRole)1, value);
 			OnPropertyChanged("Referenced_lk_systemuserbase_createdby");
 		}
 	}
 
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public IEnumerable<SystemUser> Referenced_lk_systemuserbase_modifiedby
 	{
 		get
@@ -4895,7 +4895,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_systemuserbase_modifiedby");
 				}
-				IEnumerable<SystemUser> relatedEntities = ((Entity)this).GetRelatedEntities<SystemUser>("lk_systemuserbase_modifiedby", (EntityRole?)(EntityRole)1);
+				IEnumerable<SystemUser> relatedEntities = GetRelatedEntities<SystemUser>("lk_systemuserbase_modifiedby", (EntityRole?)(EntityRole)1);
 				relatedEntities.ToList().ForEach(delegate(SystemUser element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4904,13 +4904,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SystemUser>("lk_systemuserbase_modifiedby", (EntityRole?)(EntityRole)1);
+				return GetRelatedEntities<SystemUser>("lk_systemuserbase_modifiedby", (EntityRole?)(EntityRole)1);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("Referenced_lk_systemuserbase_modifiedby");
-			((Entity)this).SetRelatedEntities<SystemUser>("lk_systemuserbase_modifiedby", (EntityRole?)(EntityRole)1, value);
+			SetRelatedEntities<SystemUser>("lk_systemuserbase_modifiedby", (EntityRole?)(EntityRole)1, value);
 			OnPropertyChanged("Referenced_lk_systemuserbase_modifiedby");
 		}
 	}
@@ -4926,7 +4926,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "modifiedby_pluginassembly");
 				}
-				IEnumerable<PluginAssembly> relatedEntities = ((Entity)this).GetRelatedEntities<PluginAssembly>("modifiedby_pluginassembly", (EntityRole?)null);
+				IEnumerable<PluginAssembly> relatedEntities = GetRelatedEntities<PluginAssembly>("modifiedby_pluginassembly", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(PluginAssembly element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4935,13 +4935,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<PluginAssembly>("modifiedby_pluginassembly", (EntityRole?)null);
+				return GetRelatedEntities<PluginAssembly>("modifiedby_pluginassembly", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("modifiedby_pluginassembly");
-			((Entity)this).SetRelatedEntities<PluginAssembly>("modifiedby_pluginassembly", (EntityRole?)null, value);
+			SetRelatedEntities<PluginAssembly>("modifiedby_pluginassembly", (EntityRole?)null, value);
 			OnPropertyChanged("modifiedby_pluginassembly");
 		}
 	}
@@ -4957,7 +4957,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "modifiedby_sdkmessage");
 				}
-				IEnumerable<SdkMessage> relatedEntities = ((Entity)this).GetRelatedEntities<SdkMessage>("modifiedby_sdkmessage", (EntityRole?)null);
+				IEnumerable<SdkMessage> relatedEntities = GetRelatedEntities<SdkMessage>("modifiedby_sdkmessage", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SdkMessage element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4966,13 +4966,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SdkMessage>("modifiedby_sdkmessage", (EntityRole?)null);
+				return GetRelatedEntities<SdkMessage>("modifiedby_sdkmessage", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("modifiedby_sdkmessage");
-			((Entity)this).SetRelatedEntities<SdkMessage>("modifiedby_sdkmessage", (EntityRole?)null, value);
+			SetRelatedEntities<SdkMessage>("modifiedby_sdkmessage", (EntityRole?)null, value);
 			OnPropertyChanged("modifiedby_sdkmessage");
 		}
 	}
@@ -4988,7 +4988,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "modifiedby_sdkmessagefilter");
 				}
-				IEnumerable<SdkMessageFilter> relatedEntities = ((Entity)this).GetRelatedEntities<SdkMessageFilter>("modifiedby_sdkmessagefilter", (EntityRole?)null);
+				IEnumerable<SdkMessageFilter> relatedEntities = GetRelatedEntities<SdkMessageFilter>("modifiedby_sdkmessagefilter", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SdkMessageFilter element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -4997,13 +4997,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SdkMessageFilter>("modifiedby_sdkmessagefilter", (EntityRole?)null);
+				return GetRelatedEntities<SdkMessageFilter>("modifiedby_sdkmessagefilter", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("modifiedby_sdkmessagefilter");
-			((Entity)this).SetRelatedEntities<SdkMessageFilter>("modifiedby_sdkmessagefilter", (EntityRole?)null, value);
+			SetRelatedEntities<SdkMessageFilter>("modifiedby_sdkmessagefilter", (EntityRole?)null, value);
 			OnPropertyChanged("modifiedby_sdkmessagefilter");
 		}
 	}
@@ -5019,7 +5019,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "modifiedby_sdkmessageprocessingstep");
 				}
-				IEnumerable<SdkMessageProcessingStep> relatedEntities = ((Entity)this).GetRelatedEntities<SdkMessageProcessingStep>("modifiedby_sdkmessageprocessingstep", (EntityRole?)null);
+				IEnumerable<SdkMessageProcessingStep> relatedEntities = GetRelatedEntities<SdkMessageProcessingStep>("modifiedby_sdkmessageprocessingstep", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SdkMessageProcessingStep element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -5028,13 +5028,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SdkMessageProcessingStep>("modifiedby_sdkmessageprocessingstep", (EntityRole?)null);
+				return GetRelatedEntities<SdkMessageProcessingStep>("modifiedby_sdkmessageprocessingstep", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("modifiedby_sdkmessageprocessingstep");
-			((Entity)this).SetRelatedEntities<SdkMessageProcessingStep>("modifiedby_sdkmessageprocessingstep", (EntityRole?)null, value);
+			SetRelatedEntities<SdkMessageProcessingStep>("modifiedby_sdkmessageprocessingstep", (EntityRole?)null, value);
 			OnPropertyChanged("modifiedby_sdkmessageprocessingstep");
 		}
 	}
@@ -5050,7 +5050,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "system_user_activity_parties");
 				}
-				IEnumerable<ActivityParty> relatedEntities = ((Entity)this).GetRelatedEntities<ActivityParty>("system_user_activity_parties", (EntityRole?)null);
+				IEnumerable<ActivityParty> relatedEntities = GetRelatedEntities<ActivityParty>("system_user_activity_parties", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(ActivityParty element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -5059,13 +5059,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<ActivityParty>("system_user_activity_parties", (EntityRole?)null);
+				return GetRelatedEntities<ActivityParty>("system_user_activity_parties", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("system_user_activity_parties");
-			((Entity)this).SetRelatedEntities<ActivityParty>("system_user_activity_parties", (EntityRole?)null, value);
+			SetRelatedEntities<ActivityParty>("system_user_activity_parties", (EntityRole?)null, value);
 			OnPropertyChanged("system_user_activity_parties");
 		}
 	}
@@ -5081,7 +5081,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "system_user_workflow");
 				}
-				IEnumerable<Workflow> relatedEntities = ((Entity)this).GetRelatedEntities<Workflow>("system_user_workflow", (EntityRole?)null);
+				IEnumerable<Workflow> relatedEntities = GetRelatedEntities<Workflow>("system_user_workflow", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(Workflow element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -5090,18 +5090,18 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Workflow>("system_user_workflow", (EntityRole?)null);
+				return GetRelatedEntities<Workflow>("system_user_workflow", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("system_user_workflow");
-			((Entity)this).SetRelatedEntities<Workflow>("system_user_workflow", (EntityRole?)null, value);
+			SetRelatedEntities<Workflow>("system_user_workflow", (EntityRole?)null, value);
 			OnPropertyChanged("system_user_workflow");
 		}
 	}
 
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public IEnumerable<SystemUser> Referenced_user_parent_user
 	{
 		get
@@ -5112,7 +5112,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "user_parent_user");
 				}
-				IEnumerable<SystemUser> relatedEntities = ((Entity)this).GetRelatedEntities<SystemUser>("user_parent_user", (EntityRole?)(EntityRole)1);
+				IEnumerable<SystemUser> relatedEntities = GetRelatedEntities<SystemUser>("user_parent_user", (EntityRole?)(EntityRole)1);
 				relatedEntities.ToList().ForEach(delegate(SystemUser element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -5121,13 +5121,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SystemUser>("user_parent_user", (EntityRole?)(EntityRole)1);
+				return GetRelatedEntities<SystemUser>("user_parent_user", (EntityRole?)(EntityRole)1);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("Referenced_user_parent_user");
-			((Entity)this).SetRelatedEntities<SystemUser>("user_parent_user", (EntityRole?)(EntityRole)1, value);
+			SetRelatedEntities<SystemUser>("user_parent_user", (EntityRole?)(EntityRole)1, value);
 			OnPropertyChanged("Referenced_user_parent_user");
 		}
 	}
@@ -5143,7 +5143,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_createdby");
 				}
-				IEnumerable<Workflow> relatedEntities = ((Entity)this).GetRelatedEntities<Workflow>("workflow_createdby", (EntityRole?)null);
+				IEnumerable<Workflow> relatedEntities = GetRelatedEntities<Workflow>("workflow_createdby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(Workflow element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -5152,13 +5152,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Workflow>("workflow_createdby", (EntityRole?)null);
+				return GetRelatedEntities<Workflow>("workflow_createdby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("workflow_createdby");
-			((Entity)this).SetRelatedEntities<Workflow>("workflow_createdby", (EntityRole?)null, value);
+			SetRelatedEntities<Workflow>("workflow_createdby", (EntityRole?)null, value);
 			OnPropertyChanged("workflow_createdby");
 		}
 	}
@@ -5174,7 +5174,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_createdonbehalfby");
 				}
-				IEnumerable<Workflow> relatedEntities = ((Entity)this).GetRelatedEntities<Workflow>("workflow_createdonbehalfby", (EntityRole?)null);
+				IEnumerable<Workflow> relatedEntities = GetRelatedEntities<Workflow>("workflow_createdonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(Workflow element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -5183,13 +5183,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Workflow>("workflow_createdonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<Workflow>("workflow_createdonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("workflow_createdonbehalfby");
-			((Entity)this).SetRelatedEntities<Workflow>("workflow_createdonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<Workflow>("workflow_createdonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("workflow_createdonbehalfby");
 		}
 	}
@@ -5205,7 +5205,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_dependency_createdby");
 				}
-				IEnumerable<WorkflowDependency> relatedEntities = ((Entity)this).GetRelatedEntities<WorkflowDependency>("workflow_dependency_createdby", (EntityRole?)null);
+				IEnumerable<WorkflowDependency> relatedEntities = GetRelatedEntities<WorkflowDependency>("workflow_dependency_createdby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(WorkflowDependency element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -5214,13 +5214,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<WorkflowDependency>("workflow_dependency_createdby", (EntityRole?)null);
+				return GetRelatedEntities<WorkflowDependency>("workflow_dependency_createdby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("workflow_dependency_createdby");
-			((Entity)this).SetRelatedEntities<WorkflowDependency>("workflow_dependency_createdby", (EntityRole?)null, value);
+			SetRelatedEntities<WorkflowDependency>("workflow_dependency_createdby", (EntityRole?)null, value);
 			OnPropertyChanged("workflow_dependency_createdby");
 		}
 	}
@@ -5236,7 +5236,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_dependency_createdonbehalfby");
 				}
-				IEnumerable<WorkflowDependency> relatedEntities = ((Entity)this).GetRelatedEntities<WorkflowDependency>("workflow_dependency_createdonbehalfby", (EntityRole?)null);
+				IEnumerable<WorkflowDependency> relatedEntities = GetRelatedEntities<WorkflowDependency>("workflow_dependency_createdonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(WorkflowDependency element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -5245,13 +5245,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<WorkflowDependency>("workflow_dependency_createdonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<WorkflowDependency>("workflow_dependency_createdonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("workflow_dependency_createdonbehalfby");
-			((Entity)this).SetRelatedEntities<WorkflowDependency>("workflow_dependency_createdonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<WorkflowDependency>("workflow_dependency_createdonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("workflow_dependency_createdonbehalfby");
 		}
 	}
@@ -5267,7 +5267,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_dependency_modifiedby");
 				}
-				IEnumerable<WorkflowDependency> relatedEntities = ((Entity)this).GetRelatedEntities<WorkflowDependency>("workflow_dependency_modifiedby", (EntityRole?)null);
+				IEnumerable<WorkflowDependency> relatedEntities = GetRelatedEntities<WorkflowDependency>("workflow_dependency_modifiedby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(WorkflowDependency element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -5276,13 +5276,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<WorkflowDependency>("workflow_dependency_modifiedby", (EntityRole?)null);
+				return GetRelatedEntities<WorkflowDependency>("workflow_dependency_modifiedby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("workflow_dependency_modifiedby");
-			((Entity)this).SetRelatedEntities<WorkflowDependency>("workflow_dependency_modifiedby", (EntityRole?)null, value);
+			SetRelatedEntities<WorkflowDependency>("workflow_dependency_modifiedby", (EntityRole?)null, value);
 			OnPropertyChanged("workflow_dependency_modifiedby");
 		}
 	}
@@ -5298,7 +5298,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_dependency_modifiedonbehalfby");
 				}
-				IEnumerable<WorkflowDependency> relatedEntities = ((Entity)this).GetRelatedEntities<WorkflowDependency>("workflow_dependency_modifiedonbehalfby", (EntityRole?)null);
+				IEnumerable<WorkflowDependency> relatedEntities = GetRelatedEntities<WorkflowDependency>("workflow_dependency_modifiedonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(WorkflowDependency element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -5307,13 +5307,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<WorkflowDependency>("workflow_dependency_modifiedonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<WorkflowDependency>("workflow_dependency_modifiedonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("workflow_dependency_modifiedonbehalfby");
-			((Entity)this).SetRelatedEntities<WorkflowDependency>("workflow_dependency_modifiedonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<WorkflowDependency>("workflow_dependency_modifiedonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("workflow_dependency_modifiedonbehalfby");
 		}
 	}
@@ -5329,7 +5329,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_modifiedby");
 				}
-				IEnumerable<Workflow> relatedEntities = ((Entity)this).GetRelatedEntities<Workflow>("workflow_modifiedby", (EntityRole?)null);
+				IEnumerable<Workflow> relatedEntities = GetRelatedEntities<Workflow>("workflow_modifiedby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(Workflow element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -5338,13 +5338,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Workflow>("workflow_modifiedby", (EntityRole?)null);
+				return GetRelatedEntities<Workflow>("workflow_modifiedby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("workflow_modifiedby");
-			((Entity)this).SetRelatedEntities<Workflow>("workflow_modifiedby", (EntityRole?)null, value);
+			SetRelatedEntities<Workflow>("workflow_modifiedby", (EntityRole?)null, value);
 			OnPropertyChanged("workflow_modifiedby");
 		}
 	}
@@ -5360,7 +5360,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_modifiedonbehalfby");
 				}
-				IEnumerable<Workflow> relatedEntities = ((Entity)this).GetRelatedEntities<Workflow>("workflow_modifiedonbehalfby", (EntityRole?)null);
+				IEnumerable<Workflow> relatedEntities = GetRelatedEntities<Workflow>("workflow_modifiedonbehalfby", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(Workflow element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -5369,19 +5369,19 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Workflow>("workflow_modifiedonbehalfby", (EntityRole?)null);
+				return GetRelatedEntities<Workflow>("workflow_modifiedonbehalfby", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("workflow_modifiedonbehalfby");
-			((Entity)this).SetRelatedEntities<Workflow>("workflow_modifiedonbehalfby", (EntityRole?)null, value);
+			SetRelatedEntities<Workflow>("workflow_modifiedonbehalfby", (EntityRole?)null, value);
 			OnPropertyChanged("workflow_modifiedonbehalfby");
 		}
 	}
 
 	[AttributeLogicalName("createdonbehalfby")]
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public SystemUser Referencing_lk_systemuser_createdonbehalfby
 	{
 		get
@@ -5392,19 +5392,19 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_systemuser_createdonbehalfby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_systemuser_createdonbehalfby", (EntityRole?)(EntityRole)0);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_systemuser_createdonbehalfby", (EntityRole?)(EntityRole)0);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_systemuser_createdonbehalfby", (EntityRole?)(EntityRole)0);
+				return GetRelatedEntity<SystemUser>("lk_systemuser_createdonbehalfby", (EntityRole?)(EntityRole)0);
 			}
 		}
 	}
 
 	[AttributeLogicalName("modifiedonbehalfby")]
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public SystemUser Referencing_lk_systemuser_modifiedonbehalfby
 	{
 		get
@@ -5415,19 +5415,19 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_systemuser_modifiedonbehalfby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_systemuser_modifiedonbehalfby", (EntityRole?)(EntityRole)0);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_systemuser_modifiedonbehalfby", (EntityRole?)(EntityRole)0);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_systemuser_modifiedonbehalfby", (EntityRole?)(EntityRole)0);
+				return GetRelatedEntity<SystemUser>("lk_systemuser_modifiedonbehalfby", (EntityRole?)(EntityRole)0);
 			}
 		}
 	}
 
 	[AttributeLogicalName("createdby")]
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public SystemUser Referencing_lk_systemuserbase_createdby
 	{
 		get
@@ -5438,19 +5438,19 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_systemuserbase_createdby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_systemuserbase_createdby", (EntityRole?)(EntityRole)0);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_systemuserbase_createdby", (EntityRole?)(EntityRole)0);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_systemuserbase_createdby", (EntityRole?)(EntityRole)0);
+				return GetRelatedEntity<SystemUser>("lk_systemuserbase_createdby", (EntityRole?)(EntityRole)0);
 			}
 		}
 	}
 
 	[AttributeLogicalName("modifiedby")]
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public SystemUser Referencing_lk_systemuserbase_modifiedby
 	{
 		get
@@ -5461,19 +5461,19 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_systemuserbase_modifiedby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_systemuserbase_modifiedby", (EntityRole?)(EntityRole)0);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_systemuserbase_modifiedby", (EntityRole?)(EntityRole)0);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_systemuserbase_modifiedby", (EntityRole?)(EntityRole)0);
+				return GetRelatedEntity<SystemUser>("lk_systemuserbase_modifiedby", (EntityRole?)(EntityRole)0);
 			}
 		}
 	}
 
 	[AttributeLogicalName("parentsystemuserid")]
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public SystemUser Referencing_user_parent_user
 	{
 		get
@@ -5484,19 +5484,19 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "user_parent_user");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("user_parent_user", (EntityRole?)(EntityRole)0);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("user_parent_user", (EntityRole?)(EntityRole)0);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("user_parent_user", (EntityRole?)(EntityRole)0);
+				return GetRelatedEntity<SystemUser>("user_parent_user", (EntityRole?)(EntityRole)0);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("Referencing_user_parent_user");
-			((Entity)this).SetRelatedEntity<SystemUser>("user_parent_user", (EntityRole?)(EntityRole)0, value);
+			SetRelatedEntity<SystemUser>("user_parent_user", (EntityRole?)(EntityRole)0, value);
 			OnPropertyChanged("Referencing_user_parent_user");
 		}
 	}
@@ -5512,7 +5512,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "systemuserprofiles_association");
 				}
-				IEnumerable<FieldSecurityProfile> relatedEntities = ((Entity)this).GetRelatedEntities<FieldSecurityProfile>("systemuserprofiles_association", (EntityRole?)null);
+				IEnumerable<FieldSecurityProfile> relatedEntities = GetRelatedEntities<FieldSecurityProfile>("systemuserprofiles_association", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(FieldSecurityProfile element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -5521,13 +5521,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<FieldSecurityProfile>("systemuserprofiles_association", (EntityRole?)null);
+				return GetRelatedEntities<FieldSecurityProfile>("systemuserprofiles_association", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("systemuserprofiles_association");
-			((Entity)this).SetRelatedEntities<FieldSecurityProfile>("systemuserprofiles_association", (EntityRole?)null, value);
+			SetRelatedEntities<FieldSecurityProfile>("systemuserprofiles_association", (EntityRole?)null, value);
 			OnPropertyChanged("systemuserprofiles_association");
 		}
 	}
@@ -5543,7 +5543,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "systemuserroles_association");
 				}
-				IEnumerable<Role> relatedEntities = ((Entity)this).GetRelatedEntities<Role>("systemuserroles_association", (EntityRole?)null);
+				IEnumerable<Role> relatedEntities = GetRelatedEntities<Role>("systemuserroles_association", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(Role element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -5552,13 +5552,13 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Role>("systemuserroles_association", (EntityRole?)null);
+				return GetRelatedEntities<Role>("systemuserroles_association", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("systemuserroles_association");
-			((Entity)this).SetRelatedEntities<Role>("systemuserroles_association", (EntityRole?)null, value);
+			SetRelatedEntities<Role>("systemuserroles_association", (EntityRole?)null, value);
 			OnPropertyChanged("systemuserroles_association");
 		}
 	}
@@ -5590,7 +5590,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<PluginAssembly> Load_createdby_pluginassembly(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<PluginAssembly> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "pluginassembly", ((Entity)this).LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<PluginAssembly> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "pluginassembly", LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<PluginAssembly>();
 		createdby_pluginassembly = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5598,7 +5598,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SdkMessage> Load_createdby_sdkmessage(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SdkMessage> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessage", ((Entity)this).LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SdkMessage> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessage", LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SdkMessage>();
 		createdby_sdkmessage = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5606,7 +5606,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SdkMessageFilter> Load_createdby_sdkmessagefilter(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SdkMessageFilter> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessagefilter", ((Entity)this).LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SdkMessageFilter> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessagefilter", LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SdkMessageFilter>();
 		createdby_sdkmessagefilter = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5614,7 +5614,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SdkMessageProcessingStep> Load_createdby_sdkmessageprocessingstep(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SdkMessageProcessingStep> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessageprocessingstep", ((Entity)this).LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SdkMessageProcessingStep> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessageprocessingstep", LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SdkMessageProcessingStep>();
 		createdby_sdkmessageprocessingstep = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5622,7 +5622,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SdkMessageProcessingStep> Load_impersonatinguserid_sdkmessageprocessingstep(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SdkMessageProcessingStep> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessageprocessingstep", ((Entity)this).LogicalName, "impersonatinguserid", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SdkMessageProcessingStep> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessageprocessingstep", LogicalName, "impersonatinguserid", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SdkMessageProcessingStep>();
 		impersonatinguserid_sdkmessageprocessingstep = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5630,7 +5630,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<FieldSecurityProfile> Load_lk_fieldsecurityprofile_createdby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<FieldSecurityProfile> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "fieldsecurityprofile", ((Entity)this).LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<FieldSecurityProfile> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "fieldsecurityprofile", LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<FieldSecurityProfile>();
 		lk_fieldsecurityprofile_createdby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5638,7 +5638,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<FieldSecurityProfile> Load_lk_fieldsecurityprofile_createdonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<FieldSecurityProfile> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "fieldsecurityprofile", ((Entity)this).LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<FieldSecurityProfile> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "fieldsecurityprofile", LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<FieldSecurityProfile>();
 		lk_fieldsecurityprofile_createdonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5646,7 +5646,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<FieldSecurityProfile> Load_lk_fieldsecurityprofile_modifiedby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<FieldSecurityProfile> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "fieldsecurityprofile", ((Entity)this).LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<FieldSecurityProfile> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "fieldsecurityprofile", LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<FieldSecurityProfile>();
 		lk_fieldsecurityprofile_modifiedby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5654,7 +5654,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<FieldSecurityProfile> Load_lk_fieldsecurityprofile_modifiedonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<FieldSecurityProfile> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "fieldsecurityprofile", ((Entity)this).LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<FieldSecurityProfile> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "fieldsecurityprofile", LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<FieldSecurityProfile>();
 		lk_fieldsecurityprofile_modifiedonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5662,7 +5662,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<PluginAssembly> Load_lk_pluginassembly_createdonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<PluginAssembly> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "pluginassembly", ((Entity)this).LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<PluginAssembly> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "pluginassembly", LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<PluginAssembly>();
 		lk_pluginassembly_createdonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5670,7 +5670,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<PluginAssembly> Load_lk_pluginassembly_modifiedonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<PluginAssembly> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "pluginassembly", ((Entity)this).LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<PluginAssembly> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "pluginassembly", LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<PluginAssembly>();
 		lk_pluginassembly_modifiedonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5678,7 +5678,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<Role> Load_lk_role_createdonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<Role> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "role", ((Entity)this).LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<Role> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "role", LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<Role>();
 		lk_role_createdonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5686,7 +5686,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<Role> Load_lk_role_modifiedonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<Role> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "role", ((Entity)this).LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<Role> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "role", LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<Role>();
 		lk_role_modifiedonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5694,7 +5694,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<Role> Load_lk_rolebase_createdby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<Role> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "role", ((Entity)this).LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<Role> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "role", LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<Role>();
 		lk_rolebase_createdby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5702,7 +5702,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<Role> Load_lk_rolebase_modifiedby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<Role> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "role", ((Entity)this).LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<Role> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "role", LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<Role>();
 		lk_rolebase_modifiedby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5710,7 +5710,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SdkMessage> Load_lk_sdkmessage_createdonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SdkMessage> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessage", ((Entity)this).LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SdkMessage> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessage", LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SdkMessage>();
 		lk_sdkmessage_createdonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5718,7 +5718,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SdkMessage> Load_lk_sdkmessage_modifiedonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SdkMessage> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessage", ((Entity)this).LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SdkMessage> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessage", LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SdkMessage>();
 		lk_sdkmessage_modifiedonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5726,7 +5726,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SdkMessageFilter> Load_lk_sdkmessagefilter_createdonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SdkMessageFilter> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessagefilter", ((Entity)this).LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SdkMessageFilter> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessagefilter", LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SdkMessageFilter>();
 		lk_sdkmessagefilter_createdonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5734,7 +5734,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SdkMessageFilter> Load_lk_sdkmessagefilter_modifiedonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SdkMessageFilter> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessagefilter", ((Entity)this).LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SdkMessageFilter> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessagefilter", LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SdkMessageFilter>();
 		lk_sdkmessagefilter_modifiedonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5742,7 +5742,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SdkMessageProcessingStep> Load_lk_sdkmessageprocessingstep_createdonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SdkMessageProcessingStep> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessageprocessingstep", ((Entity)this).LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SdkMessageProcessingStep> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessageprocessingstep", LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SdkMessageProcessingStep>();
 		lk_sdkmessageprocessingstep_createdonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5750,7 +5750,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SdkMessageProcessingStep> Load_lk_sdkmessageprocessingstep_modifiedonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SdkMessageProcessingStep> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessageprocessingstep", ((Entity)this).LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SdkMessageProcessingStep> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessageprocessingstep", LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SdkMessageProcessingStep>();
 		lk_sdkmessageprocessingstep_modifiedonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5758,7 +5758,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SystemUser> Load_Referenced_lk_systemuser_createdonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SystemUser> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", ((Entity)this).LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SystemUser> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SystemUser>();
 		Referenced_lk_systemuser_createdonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5766,7 +5766,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SystemUser> Load_Referenced_lk_systemuser_modifiedonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SystemUser> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", ((Entity)this).LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SystemUser> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SystemUser>();
 		Referenced_lk_systemuser_modifiedonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5774,7 +5774,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SystemUser> Load_Referenced_lk_systemuserbase_createdby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SystemUser> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", ((Entity)this).LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SystemUser> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SystemUser>();
 		Referenced_lk_systemuserbase_createdby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5782,7 +5782,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SystemUser> Load_Referenced_lk_systemuserbase_modifiedby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SystemUser> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", ((Entity)this).LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SystemUser> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SystemUser>();
 		Referenced_lk_systemuserbase_modifiedby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5790,7 +5790,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<PluginAssembly> Load_modifiedby_pluginassembly(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<PluginAssembly> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "pluginassembly", ((Entity)this).LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<PluginAssembly> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "pluginassembly", LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<PluginAssembly>();
 		modifiedby_pluginassembly = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5798,7 +5798,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SdkMessage> Load_modifiedby_sdkmessage(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SdkMessage> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessage", ((Entity)this).LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SdkMessage> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessage", LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SdkMessage>();
 		modifiedby_sdkmessage = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5806,7 +5806,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SdkMessageFilter> Load_modifiedby_sdkmessagefilter(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SdkMessageFilter> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessagefilter", ((Entity)this).LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SdkMessageFilter> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessagefilter", LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SdkMessageFilter>();
 		modifiedby_sdkmessagefilter = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5814,7 +5814,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SdkMessageProcessingStep> Load_modifiedby_sdkmessageprocessingstep(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SdkMessageProcessingStep> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessageprocessingstep", ((Entity)this).LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SdkMessageProcessingStep> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessageprocessingstep", LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SdkMessageProcessingStep>();
 		modifiedby_sdkmessageprocessingstep = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5822,7 +5822,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<ActivityParty> Load_system_user_activity_parties(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<ActivityParty> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "activityparty", ((Entity)this).LogicalName, "partyid", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<ActivityParty> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "activityparty", LogicalName, "partyid", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<ActivityParty>();
 		system_user_activity_parties = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5830,7 +5830,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<Workflow> Load_system_user_workflow(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<Workflow> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflow", ((Entity)this).LogicalName, "owninguser", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<Workflow> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflow", LogicalName, "owninguser", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<Workflow>();
 		system_user_workflow = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5838,7 +5838,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SystemUser> Load_Referenced_user_parent_user(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SystemUser> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", ((Entity)this).LogicalName, "parentsystemuserid", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<SystemUser> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", LogicalName, "parentsystemuserid", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<SystemUser>();
 		Referenced_user_parent_user = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5846,7 +5846,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<Workflow> Load_workflow_createdby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<Workflow> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflow", ((Entity)this).LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<Workflow> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflow", LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<Workflow>();
 		workflow_createdby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5854,7 +5854,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<Workflow> Load_workflow_createdonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<Workflow> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflow", ((Entity)this).LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<Workflow> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflow", LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<Workflow>();
 		workflow_createdonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5862,7 +5862,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<WorkflowDependency> Load_workflow_dependency_createdby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<WorkflowDependency> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflowdependency", ((Entity)this).LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<WorkflowDependency> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflowdependency", LogicalName, "createdby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<WorkflowDependency>();
 		workflow_dependency_createdby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5870,7 +5870,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<WorkflowDependency> Load_workflow_dependency_createdonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<WorkflowDependency> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflowdependency", ((Entity)this).LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<WorkflowDependency> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflowdependency", LogicalName, "createdonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<WorkflowDependency>();
 		workflow_dependency_createdonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5878,7 +5878,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<WorkflowDependency> Load_workflow_dependency_modifiedby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<WorkflowDependency> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflowdependency", ((Entity)this).LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<WorkflowDependency> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflowdependency", LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<WorkflowDependency>();
 		workflow_dependency_modifiedby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5886,7 +5886,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<WorkflowDependency> Load_workflow_dependency_modifiedonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<WorkflowDependency> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflowdependency", ((Entity)this).LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<WorkflowDependency> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflowdependency", LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<WorkflowDependency>();
 		workflow_dependency_modifiedonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5894,7 +5894,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<Workflow> Load_workflow_modifiedby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<Workflow> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflow", ((Entity)this).LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<Workflow> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflow", LogicalName, "modifiedby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<Workflow>();
 		workflow_modifiedby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5902,7 +5902,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<Workflow> Load_workflow_modifiedonbehalfby(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<Workflow> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflow", ((Entity)this).LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
+		IEnumerable<Workflow> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflow", LogicalName, "modifiedonbehalfby", "systemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes)
 			select entity.ToEntity<Workflow>();
 		workflow_modifiedonbehalfby = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -5910,7 +5910,7 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public SystemUser Load_Referencing_user_parent_user(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		Entity val = CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", ((Entity)this).LogicalName, "systemuserid", "parentsystemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes).FirstOrDefault();
+		Entity val = CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", LogicalName, "systemuserid", "parentsystemuserid", "systemuserid", "systemuserid", recordCountLimit, attributes).FirstOrDefault();
 		if (val != null)
 		{
 			return Referencing_user_parent_user = val.ToEntity<SystemUser>();
@@ -5929,16 +5929,16 @@ public class SystemUser : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			object value = propertyInfo.GetValue(anonymousType, null);
 			if (propertyInfo.PropertyType == typeof(Guid))
 			{
-				((Entity)this).Id = (Guid)value;
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)["systemuserid"] = ((Entity)this).Id;
+				Id = (Guid)value;
+				((DataCollection<string, object>)(object)Attributes)["systemuserid"] = Id;
 			}
 			else if (propertyInfo.Name == "FormattedValues")
 			{
-				((DataCollection<string, string>)(object)((Entity)this).FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
+				((DataCollection<string, string>)(object)FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
 			}
 			else
 			{
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)[propertyInfo.Name.ToLower()] = value;
+				((DataCollection<string, object>)(object)Attributes)[propertyInfo.Name.ToLower()] = value;
 			}
 		}
 	}

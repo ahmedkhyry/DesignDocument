@@ -21,7 +21,7 @@
     <EmbeddedResource Include="DesignDocument.UI.exe.licenses" LogicalName="DesignDocument.UI.exe.licenses" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="EntityFramework" Version="6.0.0" />
+    <PackageReference Include="EntityFramework" Version="6.1.3" />
     <PackageReference Include="GemBox.Spreadsheet" Version="49.0.1895" />
     <PackageReference Include="Microsoft.CrmSdk.Workflow" Version="8.2.0.2" />
     <PackageReference Include="Microsoft.CrmSdk.XrmTooling.CoreAssembly" Version="8.0.0" />

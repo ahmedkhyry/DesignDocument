@@ -384,7 +384,7 @@ public class FieldSecurityProfile : Entity, INotifyPropertyChanging, INotifyProp
 	{
 		get
 		{
-			return ((Entity)this).Id;
+			return Id;
 		}
 		set
 		{
@@ -393,28 +393,28 @@ public class FieldSecurityProfile : Entity, INotifyPropertyChanging, INotifyProp
 	}
 
 	[AttributeLogicalName("componentstate")]
-	public OptionSetValue ComponentState => ((Entity)this).GetAttributeValue<OptionSetValue>("componentstate");
+	public OptionSetValue ComponentState => GetAttributeValue<OptionSetValue>("componentstate");
 
 	[AttributeLogicalName("createdby")]
-	public EntityReference CreatedBy => ((Entity)this).GetAttributeValue<EntityReference>("createdby");
+	public EntityReference CreatedBy => GetAttributeValue<EntityReference>("createdby");
 
 	[AttributeLogicalName("createdon")]
-	public DateTime? CreatedOn => ((Entity)this).GetAttributeValue<DateTime?>("createdon");
+	public DateTime? CreatedOn => GetAttributeValue<DateTime?>("createdon");
 
 	[AttributeLogicalName("createdonbehalfby")]
-	public EntityReference CreatedOnBehalfBy => ((Entity)this).GetAttributeValue<EntityReference>("createdonbehalfby");
+	public EntityReference CreatedOnBehalfBy => GetAttributeValue<EntityReference>("createdonbehalfby");
 
 	[AttributeLogicalName("description")]
 	public string Description
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("description");
+			return GetAttributeValue<string>("description");
 		}
 		set
 		{
 			OnPropertyChanging("Description");
-			((Entity)this).SetAttributeValue("description", (object)value);
+			SetAttributeValue("description", (object)value);
 			OnPropertyChanged("Description");
 		}
 	}
@@ -424,68 +424,68 @@ public class FieldSecurityProfile : Entity, INotifyPropertyChanging, INotifyProp
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("fieldsecurityprofileid");
+			return GetAttributeValue<Guid?>("fieldsecurityprofileid");
 		}
 		set
 		{
 			OnPropertyChanging("FieldSecurityProfileId");
-			((Entity)this).SetAttributeValue("fieldsecurityprofileid", (object)value);
+			SetAttributeValue("fieldsecurityprofileid", (object)value);
 			if (value.HasValue)
 			{
-				((Entity)this).Id = value.Value;
+				Id = value.Value;
 			}
 			else
 			{
-				((Entity)this).Id = Guid.Empty;
+				Id = Guid.Empty;
 			}
 			OnPropertyChanged("FieldSecurityProfileId");
 		}
 	}
 
 	[AttributeLogicalName("fieldsecurityprofileidunique")]
-	public Guid? FieldSecurityProfileIdUnique => ((Entity)this).GetAttributeValue<Guid?>("fieldsecurityprofileidunique");
+	public Guid? FieldSecurityProfileIdUnique => GetAttributeValue<Guid?>("fieldsecurityprofileidunique");
 
 	[AttributeLogicalName("ismanaged")]
-	public bool? IsManaged => ((Entity)this).GetAttributeValue<bool?>("ismanaged");
+	public bool? IsManaged => GetAttributeValue<bool?>("ismanaged");
 
 	[AttributeLogicalName("modifiedby")]
-	public EntityReference ModifiedBy => ((Entity)this).GetAttributeValue<EntityReference>("modifiedby");
+	public EntityReference ModifiedBy => GetAttributeValue<EntityReference>("modifiedby");
 
 	[AttributeLogicalName("modifiedon")]
-	public DateTime? ModifiedOn => ((Entity)this).GetAttributeValue<DateTime?>("modifiedon");
+	public DateTime? ModifiedOn => GetAttributeValue<DateTime?>("modifiedon");
 
 	[AttributeLogicalName("modifiedonbehalfby")]
-	public EntityReference ModifiedOnBehalfBy => ((Entity)this).GetAttributeValue<EntityReference>("modifiedonbehalfby");
+	public EntityReference ModifiedOnBehalfBy => GetAttributeValue<EntityReference>("modifiedonbehalfby");
 
 	[AttributeLogicalName("name")]
 	public string Name
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("name");
+			return GetAttributeValue<string>("name");
 		}
 		set
 		{
 			OnPropertyChanging("Name");
-			((Entity)this).SetAttributeValue("name", (object)value);
+			SetAttributeValue("name", (object)value);
 			OnPropertyChanged("Name");
 		}
 	}
 
 	[AttributeLogicalName("organizationid")]
-	public EntityReference OrganizationId => ((Entity)this).GetAttributeValue<EntityReference>("organizationid");
+	public EntityReference OrganizationId => GetAttributeValue<EntityReference>("organizationid");
 
 	[AttributeLogicalName("overwritetime")]
-	public DateTime? OverwriteTime => ((Entity)this).GetAttributeValue<DateTime?>("overwritetime");
+	public DateTime? OverwriteTime => GetAttributeValue<DateTime?>("overwritetime");
 
 	[AttributeLogicalName("solutionid")]
-	public Guid? SolutionId => ((Entity)this).GetAttributeValue<Guid?>("solutionid");
+	public Guid? SolutionId => GetAttributeValue<Guid?>("solutionid");
 
 	[AttributeLogicalName("supportingsolutionid")]
-	public Guid? SupportingSolutionId => ((Entity)this).GetAttributeValue<Guid?>("supportingsolutionid");
+	public Guid? SupportingSolutionId => GetAttributeValue<Guid?>("supportingsolutionid");
 
 	[AttributeLogicalName("versionnumber")]
-	public long? VersionNumber => ((Entity)this).GetAttributeValue<long?>("versionnumber");
+	public long? VersionNumber => GetAttributeValue<long?>("versionnumber");
 
 	[RelationshipSchemaName("lk_fieldpermission_fieldsecurityprofileid")]
 	public IEnumerable<FieldPermission> lk_fieldpermission_fieldsecurityprofileid
@@ -498,7 +498,7 @@ public class FieldSecurityProfile : Entity, INotifyPropertyChanging, INotifyProp
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_fieldpermission_fieldsecurityprofileid");
 				}
-				IEnumerable<FieldPermission> relatedEntities = ((Entity)this).GetRelatedEntities<FieldPermission>("lk_fieldpermission_fieldsecurityprofileid", (EntityRole?)null);
+				IEnumerable<FieldPermission> relatedEntities = GetRelatedEntities<FieldPermission>("lk_fieldpermission_fieldsecurityprofileid", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(FieldPermission element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -507,13 +507,13 @@ public class FieldSecurityProfile : Entity, INotifyPropertyChanging, INotifyProp
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<FieldPermission>("lk_fieldpermission_fieldsecurityprofileid", (EntityRole?)null);
+				return GetRelatedEntities<FieldPermission>("lk_fieldpermission_fieldsecurityprofileid", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_fieldpermission_fieldsecurityprofileid");
-			((Entity)this).SetRelatedEntities<FieldPermission>("lk_fieldpermission_fieldsecurityprofileid", (EntityRole?)null, value);
+			SetRelatedEntities<FieldPermission>("lk_fieldpermission_fieldsecurityprofileid", (EntityRole?)null, value);
 			OnPropertyChanged("lk_fieldpermission_fieldsecurityprofileid");
 		}
 	}
@@ -530,13 +530,13 @@ public class FieldSecurityProfile : Entity, INotifyPropertyChanging, INotifyProp
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_fieldsecurityprofile_createdby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_createdby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_createdby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_createdby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_createdby", (EntityRole?)null);
 			}
 		}
 	}
@@ -553,13 +553,13 @@ public class FieldSecurityProfile : Entity, INotifyPropertyChanging, INotifyProp
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_fieldsecurityprofile_createdonbehalfby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_createdonbehalfby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_createdonbehalfby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_createdonbehalfby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_createdonbehalfby", (EntityRole?)null);
 			}
 		}
 	}
@@ -576,13 +576,13 @@ public class FieldSecurityProfile : Entity, INotifyPropertyChanging, INotifyProp
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_fieldsecurityprofile_modifiedby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_modifiedby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_modifiedby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_modifiedby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_modifiedby", (EntityRole?)null);
 			}
 		}
 	}
@@ -599,13 +599,13 @@ public class FieldSecurityProfile : Entity, INotifyPropertyChanging, INotifyProp
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_fieldsecurityprofile_modifiedonbehalfby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_modifiedonbehalfby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_modifiedonbehalfby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_modifiedonbehalfby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("lk_fieldsecurityprofile_modifiedonbehalfby", (EntityRole?)null);
 			}
 		}
 	}
@@ -621,7 +621,7 @@ public class FieldSecurityProfile : Entity, INotifyPropertyChanging, INotifyProp
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "systemuserprofiles_association");
 				}
-				IEnumerable<SystemUser> relatedEntities = ((Entity)this).GetRelatedEntities<SystemUser>("systemuserprofiles_association", (EntityRole?)null);
+				IEnumerable<SystemUser> relatedEntities = GetRelatedEntities<SystemUser>("systemuserprofiles_association", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SystemUser element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -630,13 +630,13 @@ public class FieldSecurityProfile : Entity, INotifyPropertyChanging, INotifyProp
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SystemUser>("systemuserprofiles_association", (EntityRole?)null);
+				return GetRelatedEntities<SystemUser>("systemuserprofiles_association", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("systemuserprofiles_association");
-			((Entity)this).SetRelatedEntities<SystemUser>("systemuserprofiles_association", (EntityRole?)null, value);
+			SetRelatedEntities<SystemUser>("systemuserprofiles_association", (EntityRole?)null, value);
 			OnPropertyChanged("systemuserprofiles_association");
 		}
 	}
@@ -668,7 +668,7 @@ public class FieldSecurityProfile : Entity, INotifyPropertyChanging, INotifyProp
 
 	public List<FieldPermission> Load_lk_fieldpermission_fieldsecurityprofileid(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<FieldPermission> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "fieldpermission", ((Entity)this).LogicalName, "fieldsecurityprofileid", "fieldsecurityprofileid", "fieldsecurityprofileid", "fieldsecurityprofileid", recordCountLimit, attributes)
+		IEnumerable<FieldPermission> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "fieldpermission", LogicalName, "fieldsecurityprofileid", "fieldsecurityprofileid", "fieldsecurityprofileid", "fieldsecurityprofileid", recordCountLimit, attributes)
 			select entity.ToEntity<FieldPermission>();
 		lk_fieldpermission_fieldsecurityprofileid = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -685,16 +685,16 @@ public class FieldSecurityProfile : Entity, INotifyPropertyChanging, INotifyProp
 			object value = propertyInfo.GetValue(anonymousType, null);
 			if (propertyInfo.PropertyType == typeof(Guid))
 			{
-				((Entity)this).Id = (Guid)value;
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)["fieldsecurityprofileid"] = ((Entity)this).Id;
+				Id = (Guid)value;
+				((DataCollection<string, object>)(object)Attributes)["fieldsecurityprofileid"] = Id;
 			}
 			else if (propertyInfo.Name == "FormattedValues")
 			{
-				((DataCollection<string, string>)(object)((Entity)this).FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
+				((DataCollection<string, string>)(object)FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
 			}
 			else
 			{
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)[propertyInfo.Name.ToLower()] = value;
+				((DataCollection<string, object>)(object)Attributes)[propertyInfo.Name.ToLower()] = value;
 			}
 		}
 	}

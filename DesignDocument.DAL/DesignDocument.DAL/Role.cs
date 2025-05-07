@@ -481,7 +481,7 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).Id;
+			return Id;
 		}
 		set
 		{
@@ -494,39 +494,39 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("businessunitid");
+			return GetAttributeValue<EntityReference>("businessunitid");
 		}
 		set
 		{
 			OnPropertyChanging("BusinessUnitId");
-			((Entity)this).SetAttributeValue("businessunitid", (object)value);
+			SetAttributeValue("businessunitid", (object)value);
 			OnPropertyChanged("BusinessUnitId");
 		}
 	}
 
 	[AttributeLogicalName("componentstate")]
-	public OptionSetValue ComponentState => ((Entity)this).GetAttributeValue<OptionSetValue>("componentstate");
+	public OptionSetValue ComponentState => GetAttributeValue<OptionSetValue>("componentstate");
 
 	[AttributeLogicalName("createdby")]
-	public EntityReference CreatedBy => ((Entity)this).GetAttributeValue<EntityReference>("createdby");
+	public EntityReference CreatedBy => GetAttributeValue<EntityReference>("createdby");
 
 	[AttributeLogicalName("createdon")]
-	public DateTime? CreatedOn => ((Entity)this).GetAttributeValue<DateTime?>("createdon");
+	public DateTime? CreatedOn => GetAttributeValue<DateTime?>("createdon");
 
 	[AttributeLogicalName("createdonbehalfby")]
-	public EntityReference CreatedOnBehalfBy => ((Entity)this).GetAttributeValue<EntityReference>("createdonbehalfby");
+	public EntityReference CreatedOnBehalfBy => GetAttributeValue<EntityReference>("createdonbehalfby");
 
 	[AttributeLogicalName("importsequencenumber")]
 	public int? ImportSequenceNumber
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("importsequencenumber");
+			return GetAttributeValue<int?>("importsequencenumber");
 		}
 		set
 		{
 			OnPropertyChanging("ImportSequenceNumber");
-			((Entity)this).SetAttributeValue("importsequencenumber", (object)value);
+			SetAttributeValue("importsequencenumber", (object)value);
 			OnPropertyChanged("ImportSequenceNumber");
 		}
 	}
@@ -536,109 +536,109 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<BooleanManagedProperty>("iscustomizable");
+			return GetAttributeValue<BooleanManagedProperty>("iscustomizable");
 		}
 		set
 		{
 			OnPropertyChanging("IsCustomizable");
-			((Entity)this).SetAttributeValue("iscustomizable", (object)value);
+			SetAttributeValue("iscustomizable", (object)value);
 			OnPropertyChanged("IsCustomizable");
 		}
 	}
 
 	[AttributeLogicalName("ismanaged")]
-	public bool? IsManaged => ((Entity)this).GetAttributeValue<bool?>("ismanaged");
+	public bool? IsManaged => GetAttributeValue<bool?>("ismanaged");
 
 	[AttributeLogicalName("modifiedby")]
-	public EntityReference ModifiedBy => ((Entity)this).GetAttributeValue<EntityReference>("modifiedby");
+	public EntityReference ModifiedBy => GetAttributeValue<EntityReference>("modifiedby");
 
 	[AttributeLogicalName("modifiedon")]
-	public DateTime? ModifiedOn => ((Entity)this).GetAttributeValue<DateTime?>("modifiedon");
+	public DateTime? ModifiedOn => GetAttributeValue<DateTime?>("modifiedon");
 
 	[AttributeLogicalName("modifiedonbehalfby")]
-	public EntityReference ModifiedOnBehalfBy => ((Entity)this).GetAttributeValue<EntityReference>("modifiedonbehalfby");
+	public EntityReference ModifiedOnBehalfBy => GetAttributeValue<EntityReference>("modifiedonbehalfby");
 
 	[AttributeLogicalName("name")]
 	public string Name
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("name");
+			return GetAttributeValue<string>("name");
 		}
 		set
 		{
 			OnPropertyChanging("Name");
-			((Entity)this).SetAttributeValue("name", (object)value);
+			SetAttributeValue("name", (object)value);
 			OnPropertyChanged("Name");
 		}
 	}
 
 	[AttributeLogicalName("organizationid")]
-	public Guid? OrganizationId => ((Entity)this).GetAttributeValue<Guid?>("organizationid");
+	public Guid? OrganizationId => GetAttributeValue<Guid?>("organizationid");
 
 	[AttributeLogicalName("overriddencreatedon")]
 	public DateTime? OverriddenCreatedOn
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<DateTime?>("overriddencreatedon");
+			return GetAttributeValue<DateTime?>("overriddencreatedon");
 		}
 		set
 		{
 			OnPropertyChanging("OverriddenCreatedOn");
-			((Entity)this).SetAttributeValue("overriddencreatedon", (object)value);
+			SetAttributeValue("overriddencreatedon", (object)value);
 			OnPropertyChanged("OverriddenCreatedOn");
 		}
 	}
 
 	[AttributeLogicalName("overwritetime")]
-	public DateTime? OverwriteTime => ((Entity)this).GetAttributeValue<DateTime?>("overwritetime");
+	public DateTime? OverwriteTime => GetAttributeValue<DateTime?>("overwritetime");
 
 	[AttributeLogicalName("parentroleid")]
-	public EntityReference ParentRoleId => ((Entity)this).GetAttributeValue<EntityReference>("parentroleid");
+	public EntityReference ParentRoleId => GetAttributeValue<EntityReference>("parentroleid");
 
 	[AttributeLogicalName("parentrootroleid")]
-	public EntityReference ParentRootRoleId => ((Entity)this).GetAttributeValue<EntityReference>("parentrootroleid");
+	public EntityReference ParentRootRoleId => GetAttributeValue<EntityReference>("parentrootroleid");
 
 	[AttributeLogicalName("roleid")]
 	public Guid? RoleId
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("roleid");
+			return GetAttributeValue<Guid?>("roleid");
 		}
 		set
 		{
 			OnPropertyChanging("RoleId");
-			((Entity)this).SetAttributeValue("roleid", (object)value);
+			SetAttributeValue("roleid", (object)value);
 			if (value.HasValue)
 			{
-				((Entity)this).Id = value.Value;
+				Id = value.Value;
 			}
 			else
 			{
-				((Entity)this).Id = Guid.Empty;
+				Id = Guid.Empty;
 			}
 			OnPropertyChanged("RoleId");
 		}
 	}
 
 	[AttributeLogicalName("roleidunique")]
-	public Guid? RoleIdUnique => ((Entity)this).GetAttributeValue<Guid?>("roleidunique");
+	public Guid? RoleIdUnique => GetAttributeValue<Guid?>("roleidunique");
 
 	[AttributeLogicalName("roletemplateid")]
-	public EntityReference RoleTemplateId => ((Entity)this).GetAttributeValue<EntityReference>("roletemplateid");
+	public EntityReference RoleTemplateId => GetAttributeValue<EntityReference>("roletemplateid");
 
 	[AttributeLogicalName("solutionid")]
-	public Guid? SolutionId => ((Entity)this).GetAttributeValue<Guid?>("solutionid");
+	public Guid? SolutionId => GetAttributeValue<Guid?>("solutionid");
 
 	[AttributeLogicalName("supportingsolutionid")]
-	public Guid? SupportingSolutionId => ((Entity)this).GetAttributeValue<Guid?>("supportingsolutionid");
+	public Guid? SupportingSolutionId => GetAttributeValue<Guid?>("supportingsolutionid");
 
 	[AttributeLogicalName("versionnumber")]
-	public long? VersionNumber => ((Entity)this).GetAttributeValue<long?>("versionnumber");
+	public long? VersionNumber => GetAttributeValue<long?>("versionnumber");
 
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public IEnumerable<Role> Referenced_role_parent_role
 	{
 		get
@@ -649,7 +649,7 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "role_parent_role");
 				}
-				IEnumerable<Role> relatedEntities = ((Entity)this).GetRelatedEntities<Role>("role_parent_role", (EntityRole?)(EntityRole)1);
+				IEnumerable<Role> relatedEntities = GetRelatedEntities<Role>("role_parent_role", (EntityRole?)(EntityRole)1);
 				relatedEntities.ToList().ForEach(delegate(Role element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -658,18 +658,18 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Role>("role_parent_role", (EntityRole?)(EntityRole)1);
+				return GetRelatedEntities<Role>("role_parent_role", (EntityRole?)(EntityRole)1);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("Referenced_role_parent_role");
-			((Entity)this).SetRelatedEntities<Role>("role_parent_role", (EntityRole?)(EntityRole)1, value);
+			SetRelatedEntities<Role>("role_parent_role", (EntityRole?)(EntityRole)1, value);
 			OnPropertyChanged("Referenced_role_parent_role");
 		}
 	}
 
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public IEnumerable<Role> Referenced_role_parent_root_role
 	{
 		get
@@ -680,7 +680,7 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "role_parent_root_role");
 				}
-				IEnumerable<Role> relatedEntities = ((Entity)this).GetRelatedEntities<Role>("role_parent_root_role", (EntityRole?)(EntityRole)1);
+				IEnumerable<Role> relatedEntities = GetRelatedEntities<Role>("role_parent_root_role", (EntityRole?)(EntityRole)1);
 				relatedEntities.ToList().ForEach(delegate(Role element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -689,13 +689,13 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Role>("role_parent_root_role", (EntityRole?)(EntityRole)1);
+				return GetRelatedEntities<Role>("role_parent_root_role", (EntityRole?)(EntityRole)1);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("Referenced_role_parent_root_role");
-			((Entity)this).SetRelatedEntities<Role>("role_parent_root_role", (EntityRole?)(EntityRole)1, value);
+			SetRelatedEntities<Role>("role_parent_root_role", (EntityRole?)(EntityRole)1, value);
 			OnPropertyChanged("Referenced_role_parent_root_role");
 		}
 	}
@@ -712,13 +712,13 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_role_createdonbehalfby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_role_createdonbehalfby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_role_createdonbehalfby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_role_createdonbehalfby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("lk_role_createdonbehalfby", (EntityRole?)null);
 			}
 		}
 	}
@@ -735,13 +735,13 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_role_modifiedonbehalfby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_role_modifiedonbehalfby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_role_modifiedonbehalfby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_role_modifiedonbehalfby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("lk_role_modifiedonbehalfby", (EntityRole?)null);
 			}
 		}
 	}
@@ -758,13 +758,13 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_rolebase_createdby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_rolebase_createdby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_rolebase_createdby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_rolebase_createdby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("lk_rolebase_createdby", (EntityRole?)null);
 			}
 		}
 	}
@@ -781,19 +781,19 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_rolebase_modifiedby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_rolebase_modifiedby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_rolebase_modifiedby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_rolebase_modifiedby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("lk_rolebase_modifiedby", (EntityRole?)null);
 			}
 		}
 	}
 
 	[AttributeLogicalName("parentroleid")]
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public Role Referencing_role_parent_role
 	{
 		get
@@ -804,19 +804,19 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "role_parent_role");
 				}
-				Role relatedEntity = ((Entity)this).GetRelatedEntity<Role>("role_parent_role", (EntityRole?)(EntityRole)0);
+				Role relatedEntity = GetRelatedEntity<Role>("role_parent_role", (EntityRole?)(EntityRole)0);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<Role>("role_parent_role", (EntityRole?)(EntityRole)0);
+				return GetRelatedEntity<Role>("role_parent_role", (EntityRole?)(EntityRole)0);
 			}
 		}
 	}
 
 	[AttributeLogicalName("parentrootroleid")]
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public Role Referencing_role_parent_root_role
 	{
 		get
@@ -827,13 +827,13 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "role_parent_root_role");
 				}
-				Role relatedEntity = ((Entity)this).GetRelatedEntity<Role>("role_parent_root_role", (EntityRole?)(EntityRole)0);
+				Role relatedEntity = GetRelatedEntity<Role>("role_parent_root_role", (EntityRole?)(EntityRole)0);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<Role>("role_parent_root_role", (EntityRole?)(EntityRole)0);
+				return GetRelatedEntity<Role>("role_parent_root_role", (EntityRole?)(EntityRole)0);
 			}
 		}
 	}
@@ -849,7 +849,7 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "roleprivileges_association");
 				}
-				IEnumerable<Privilege> relatedEntities = ((Entity)this).GetRelatedEntities<Privilege>("roleprivileges_association", (EntityRole?)null);
+				IEnumerable<Privilege> relatedEntities = GetRelatedEntities<Privilege>("roleprivileges_association", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(Privilege element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -858,13 +858,13 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Privilege>("roleprivileges_association", (EntityRole?)null);
+				return GetRelatedEntities<Privilege>("roleprivileges_association", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("roleprivileges_association");
-			((Entity)this).SetRelatedEntities<Privilege>("roleprivileges_association", (EntityRole?)null, value);
+			SetRelatedEntities<Privilege>("roleprivileges_association", (EntityRole?)null, value);
 			OnPropertyChanged("roleprivileges_association");
 		}
 	}
@@ -880,7 +880,7 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "systemuserroles_association");
 				}
-				IEnumerable<SystemUser> relatedEntities = ((Entity)this).GetRelatedEntities<SystemUser>("systemuserroles_association", (EntityRole?)null);
+				IEnumerable<SystemUser> relatedEntities = GetRelatedEntities<SystemUser>("systemuserroles_association", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(SystemUser element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -889,13 +889,13 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SystemUser>("systemuserroles_association", (EntityRole?)null);
+				return GetRelatedEntities<SystemUser>("systemuserroles_association", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("systemuserroles_association");
-			((Entity)this).SetRelatedEntities<SystemUser>("systemuserroles_association", (EntityRole?)null, value);
+			SetRelatedEntities<SystemUser>("systemuserroles_association", (EntityRole?)null, value);
 			OnPropertyChanged("systemuserroles_association");
 		}
 	}
@@ -927,7 +927,7 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 
 	public List<Role> Load_Referenced_role_parent_role(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<Role> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "role", ((Entity)this).LogicalName, "parentroleid", "roleid", "roleid", "roleid", recordCountLimit, attributes)
+		IEnumerable<Role> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "role", LogicalName, "parentroleid", "roleid", "roleid", "roleid", recordCountLimit, attributes)
 			select entity.ToEntity<Role>();
 		Referenced_role_parent_role = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -935,7 +935,7 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 
 	public List<Role> Load_Referenced_role_parent_root_role(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<Role> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "role", ((Entity)this).LogicalName, "parentrootroleid", "roleid", "roleid", "roleid", recordCountLimit, attributes)
+		IEnumerable<Role> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "role", LogicalName, "parentrootroleid", "roleid", "roleid", "roleid", recordCountLimit, attributes)
 			select entity.ToEntity<Role>();
 		Referenced_role_parent_root_role = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -960,16 +960,16 @@ public class Role : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 			object value = propertyInfo.GetValue(anonymousType, null);
 			if (propertyInfo.PropertyType == typeof(Guid))
 			{
-				((Entity)this).Id = (Guid)value;
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)["roleid"] = ((Entity)this).Id;
+				Id = (Guid)value;
+				((DataCollection<string, object>)(object)Attributes)["roleid"] = Id;
 			}
 			else if (propertyInfo.Name == "FormattedValues")
 			{
-				((DataCollection<string, string>)(object)((Entity)this).FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
+				((DataCollection<string, string>)(object)FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
 			}
 			else
 			{
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)[propertyInfo.Name.ToLower()] = value;
+				((DataCollection<string, object>)(object)Attributes)[propertyInfo.Name.ToLower()] = value;
 			}
 		}
 	}

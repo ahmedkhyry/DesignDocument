@@ -33,7 +33,7 @@ public class GenericRepository<C, T> : IGenericRepository<T> where C : DbContext
 
 	public virtual void Add(T entity)
 	{
-		((DbSet<_003F>)(object)((DbContext)_entities).Set<T>()).Add(entity);
+		((DbSet<T>)(object)((DbContext)_entities).Set<T>()).Add(entity);
 	}
 
 	public virtual T AddIfNotExists<T>(T entity, Expression<Func<T, bool>> predicate = null) where T : class, new()
@@ -46,7 +46,7 @@ public class GenericRepository<C, T> : IGenericRepository<T> where C : DbContext
 		T val = ((IQueryable<T>)((DbContext)_entities).Set<T>()).FirstOrDefault(predicate);
 		if (val == null)
 		{
-			entity = ((DbSet<_003F>)(object)((DbContext)_entities).Set<T>()).Add(entity);
+			entity = ((DbSet<T>)(object)((DbContext)_entities).Set<T>()).Add(entity);
 		}
 		else
 		{
@@ -58,12 +58,12 @@ public class GenericRepository<C, T> : IGenericRepository<T> where C : DbContext
 
 	public virtual void Delete(T entity)
 	{
-		((DbSet<_003F>)(object)((DbContext)_entities).Set<T>()).Remove(entity);
+		((DbSet<T>)(object)((DbContext)_entities).Set<T>()).Remove(entity);
 	}
 
 	public virtual void Edit(T entity)
 	{
-		((DbEntityEntry<_003F>)(object)((DbContext)_entities).Entry<T>(entity)).State = (EntityState)16;
+		((DbEntityEntry<T>)(object)((DbContext)_entities).Entry<T>(entity)).State = (EntityState)16;
 	}
 
 	public virtual void Save()

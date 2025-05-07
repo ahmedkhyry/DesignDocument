@@ -907,7 +907,7 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).Id;
+			return Id;
 		}
 		set
 		{
@@ -920,12 +920,12 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("asyncautodelete");
+			return GetAttributeValue<bool?>("asyncautodelete");
 		}
 		set
 		{
 			OnPropertyChanging("AsyncAutoDelete");
-			((Entity)this).SetAttributeValue("asyncautodelete", (object)value);
+			SetAttributeValue("asyncautodelete", (object)value);
 			OnPropertyChanged("AsyncAutoDelete");
 		}
 	}
@@ -935,57 +935,57 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("canusereadonlyconnection");
+			return GetAttributeValue<bool?>("canusereadonlyconnection");
 		}
 		set
 		{
 			OnPropertyChanging("CanUseReadOnlyConnection");
-			((Entity)this).SetAttributeValue("canusereadonlyconnection", (object)value);
+			SetAttributeValue("canusereadonlyconnection", (object)value);
 			OnPropertyChanged("CanUseReadOnlyConnection");
 		}
 	}
 
 	[AttributeLogicalName("componentstate")]
-	public OptionSetValue ComponentState => ((Entity)this).GetAttributeValue<OptionSetValue>("componentstate");
+	public OptionSetValue ComponentState => GetAttributeValue<OptionSetValue>("componentstate");
 
 	[AttributeLogicalName("configuration")]
 	public string Configuration
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("configuration");
+			return GetAttributeValue<string>("configuration");
 		}
 		set
 		{
 			OnPropertyChanging("Configuration");
-			((Entity)this).SetAttributeValue("configuration", (object)value);
+			SetAttributeValue("configuration", (object)value);
 			OnPropertyChanged("Configuration");
 		}
 	}
 
 	[AttributeLogicalName("createdby")]
-	public EntityReference CreatedBy => ((Entity)this).GetAttributeValue<EntityReference>("createdby");
+	public EntityReference CreatedBy => GetAttributeValue<EntityReference>("createdby");
 
 	[AttributeLogicalName("createdon")]
-	public DateTime? CreatedOn => ((Entity)this).GetAttributeValue<DateTime?>("createdon");
+	public DateTime? CreatedOn => GetAttributeValue<DateTime?>("createdon");
 
 	[AttributeLogicalName("createdonbehalfby")]
-	public EntityReference CreatedOnBehalfBy => ((Entity)this).GetAttributeValue<EntityReference>("createdonbehalfby");
+	public EntityReference CreatedOnBehalfBy => GetAttributeValue<EntityReference>("createdonbehalfby");
 
 	[AttributeLogicalName("customizationlevel")]
-	public int? CustomizationLevel => ((Entity)this).GetAttributeValue<int?>("customizationlevel");
+	public int? CustomizationLevel => GetAttributeValue<int?>("customizationlevel");
 
 	[AttributeLogicalName("description")]
 	public string Description
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("description");
+			return GetAttributeValue<string>("description");
 		}
 		set
 		{
 			OnPropertyChanging("Description");
-			((Entity)this).SetAttributeValue("description", (object)value);
+			SetAttributeValue("description", (object)value);
 			OnPropertyChanged("Description");
 		}
 	}
@@ -995,12 +995,12 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("eventhandler");
+			return GetAttributeValue<EntityReference>("eventhandler");
 		}
 		set
 		{
 			OnPropertyChanging("EventHandler");
-			((Entity)this).SetAttributeValue("eventhandler", (object)value);
+			SetAttributeValue("eventhandler", (object)value);
 			OnPropertyChanged("EventHandler");
 		}
 	}
@@ -1010,12 +1010,12 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("filteringattributes");
+			return GetAttributeValue<string>("filteringattributes");
 		}
 		set
 		{
 			OnPropertyChanging("FilteringAttributes");
-			((Entity)this).SetAttributeValue("filteringattributes", (object)value);
+			SetAttributeValue("filteringattributes", (object)value);
 			OnPropertyChanged("FilteringAttributes");
 		}
 	}
@@ -1025,12 +1025,12 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("impersonatinguserid");
+			return GetAttributeValue<EntityReference>("impersonatinguserid");
 		}
 		set
 		{
 			OnPropertyChanging("ImpersonatingUserId");
-			((Entity)this).SetAttributeValue("impersonatinguserid", (object)value);
+			SetAttributeValue("impersonatinguserid", (object)value);
 			OnPropertyChanged("ImpersonatingUserId");
 		}
 	}
@@ -1040,12 +1040,12 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("introducedversion");
+			return GetAttributeValue<string>("introducedversion");
 		}
 		set
 		{
 			OnPropertyChanging("IntroducedVersion");
-			((Entity)this).SetAttributeValue("introducedversion", (object)value);
+			SetAttributeValue("introducedversion", (object)value);
 			OnPropertyChanged("IntroducedVersion");
 		}
 	}
@@ -1056,12 +1056,12 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("invocationsource");
+			return GetAttributeValue<OptionSetValue>("invocationsource");
 		}
 		set
 		{
 			OnPropertyChanging("InvocationSource");
-			((Entity)this).SetAttributeValue("invocationsource", (object)value);
+			SetAttributeValue("invocationsource", (object)value);
 			OnPropertyChanged("InvocationSource");
 		}
 	}
@@ -1071,12 +1071,12 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<BooleanManagedProperty>("iscustomizable");
+			return GetAttributeValue<BooleanManagedProperty>("iscustomizable");
 		}
 		set
 		{
 			OnPropertyChanging("IsCustomizable");
-			((Entity)this).SetAttributeValue("iscustomizable", (object)value);
+			SetAttributeValue("iscustomizable", (object)value);
 			OnPropertyChanged("IsCustomizable");
 		}
 	}
@@ -1086,63 +1086,63 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<BooleanManagedProperty>("ishidden");
+			return GetAttributeValue<BooleanManagedProperty>("ishidden");
 		}
 		set
 		{
 			OnPropertyChanging("IsHidden");
-			((Entity)this).SetAttributeValue("ishidden", (object)value);
+			SetAttributeValue("ishidden", (object)value);
 			OnPropertyChanged("IsHidden");
 		}
 	}
 
 	[AttributeLogicalName("ismanaged")]
-	public bool? IsManaged => ((Entity)this).GetAttributeValue<bool?>("ismanaged");
+	public bool? IsManaged => GetAttributeValue<bool?>("ismanaged");
 
 	[AttributeLogicalName("mode")]
 	public OptionSetValue Mode
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("mode");
+			return GetAttributeValue<OptionSetValue>("mode");
 		}
 		set
 		{
 			OnPropertyChanging("Mode");
-			((Entity)this).SetAttributeValue("mode", (object)value);
+			SetAttributeValue("mode", (object)value);
 			OnPropertyChanged("Mode");
 		}
 	}
 
 	[AttributeLogicalName("modifiedby")]
-	public EntityReference ModifiedBy => ((Entity)this).GetAttributeValue<EntityReference>("modifiedby");
+	public EntityReference ModifiedBy => GetAttributeValue<EntityReference>("modifiedby");
 
 	[AttributeLogicalName("modifiedon")]
-	public DateTime? ModifiedOn => ((Entity)this).GetAttributeValue<DateTime?>("modifiedon");
+	public DateTime? ModifiedOn => GetAttributeValue<DateTime?>("modifiedon");
 
 	[AttributeLogicalName("modifiedonbehalfby")]
-	public EntityReference ModifiedOnBehalfBy => ((Entity)this).GetAttributeValue<EntityReference>("modifiedonbehalfby");
+	public EntityReference ModifiedOnBehalfBy => GetAttributeValue<EntityReference>("modifiedonbehalfby");
 
 	[AttributeLogicalName("name")]
 	public string Name
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("name");
+			return GetAttributeValue<string>("name");
 		}
 		set
 		{
 			OnPropertyChanging("Name");
-			((Entity)this).SetAttributeValue("name", (object)value);
+			SetAttributeValue("name", (object)value);
 			OnPropertyChanged("Name");
 		}
 	}
 
 	[AttributeLogicalName("organizationid")]
-	public EntityReference OrganizationId => ((Entity)this).GetAttributeValue<EntityReference>("organizationid");
+	public EntityReference OrganizationId => GetAttributeValue<EntityReference>("organizationid");
 
 	[AttributeLogicalName("overwritetime")]
-	public DateTime? OverwriteTime => ((Entity)this).GetAttributeValue<DateTime?>("overwritetime");
+	public DateTime? OverwriteTime => GetAttributeValue<DateTime?>("overwritetime");
 
 	[AttributeLogicalName("plugintypeid")]
 	[Obsolete]
@@ -1150,12 +1150,12 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("plugintypeid");
+			return GetAttributeValue<EntityReference>("plugintypeid");
 		}
 		set
 		{
 			OnPropertyChanging("PluginTypeId");
-			((Entity)this).SetAttributeValue("plugintypeid", (object)value);
+			SetAttributeValue("plugintypeid", (object)value);
 			OnPropertyChanged("PluginTypeId");
 		}
 	}
@@ -1165,12 +1165,12 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("rank");
+			return GetAttributeValue<int?>("rank");
 		}
 		set
 		{
 			OnPropertyChanging("Rank");
-			((Entity)this).SetAttributeValue("rank", (object)value);
+			SetAttributeValue("rank", (object)value);
 			OnPropertyChanged("Rank");
 		}
 	}
@@ -1180,12 +1180,12 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("sdkmessagefilterid");
+			return GetAttributeValue<EntityReference>("sdkmessagefilterid");
 		}
 		set
 		{
 			OnPropertyChanging("SdkMessageFilterId");
-			((Entity)this).SetAttributeValue("sdkmessagefilterid", (object)value);
+			SetAttributeValue("sdkmessagefilterid", (object)value);
 			OnPropertyChanged("SdkMessageFilterId");
 		}
 	}
@@ -1195,12 +1195,12 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("sdkmessageid");
+			return GetAttributeValue<EntityReference>("sdkmessageid");
 		}
 		set
 		{
 			OnPropertyChanging("SdkMessageId");
-			((Entity)this).SetAttributeValue("sdkmessageid", (object)value);
+			SetAttributeValue("sdkmessageid", (object)value);
 			OnPropertyChanged("SdkMessageId");
 		}
 	}
@@ -1210,56 +1210,56 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("sdkmessageprocessingstepid");
+			return GetAttributeValue<Guid?>("sdkmessageprocessingstepid");
 		}
 		set
 		{
 			OnPropertyChanging("SdkMessageProcessingStepId");
-			((Entity)this).SetAttributeValue("sdkmessageprocessingstepid", (object)value);
+			SetAttributeValue("sdkmessageprocessingstepid", (object)value);
 			if (value.HasValue)
 			{
-				((Entity)this).Id = value.Value;
+				Id = value.Value;
 			}
 			else
 			{
-				((Entity)this).Id = Guid.Empty;
+				Id = Guid.Empty;
 			}
 			OnPropertyChanged("SdkMessageProcessingStepId");
 		}
 	}
 
 	[AttributeLogicalName("sdkmessageprocessingstepidunique")]
-	public Guid? SdkMessageProcessingStepIdUnique => ((Entity)this).GetAttributeValue<Guid?>("sdkmessageprocessingstepidunique");
+	public Guid? SdkMessageProcessingStepIdUnique => GetAttributeValue<Guid?>("sdkmessageprocessingstepidunique");
 
 	[AttributeLogicalName("sdkmessageprocessingstepsecureconfigid")]
 	public EntityReference SdkMessageProcessingStepSecureConfigId
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("sdkmessageprocessingstepsecureconfigid");
+			return GetAttributeValue<EntityReference>("sdkmessageprocessingstepsecureconfigid");
 		}
 		set
 		{
 			OnPropertyChanging("SdkMessageProcessingStepSecureConfigId");
-			((Entity)this).SetAttributeValue("sdkmessageprocessingstepsecureconfigid", (object)value);
+			SetAttributeValue("sdkmessageprocessingstepsecureconfigid", (object)value);
 			OnPropertyChanged("SdkMessageProcessingStepSecureConfigId");
 		}
 	}
 
 	[AttributeLogicalName("solutionid")]
-	public Guid? SolutionId => ((Entity)this).GetAttributeValue<Guid?>("solutionid");
+	public Guid? SolutionId => GetAttributeValue<Guid?>("solutionid");
 
 	[AttributeLogicalName("stage")]
 	public OptionSetValue Stage
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("stage");
+			return GetAttributeValue<OptionSetValue>("stage");
 		}
 		set
 		{
 			OnPropertyChanging("Stage");
-			((Entity)this).SetAttributeValue("stage", (object)value);
+			SetAttributeValue("stage", (object)value);
 			OnPropertyChanged("Stage");
 		}
 	}
@@ -1269,7 +1269,7 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			OptionSetValue attributeValue = ((Entity)this).GetAttributeValue<OptionSetValue>("statecode");
+			OptionSetValue attributeValue = GetAttributeValue<OptionSetValue>("statecode");
 			if (attributeValue != null)
 			{
 				return (SdkMessageProcessingStepState)Enum.ToObject(typeof(SdkMessageProcessingStepState), attributeValue.Value);
@@ -1283,11 +1283,11 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 			OnPropertyChanging("StateCode");
 			if (!value.HasValue)
 			{
-				((Entity)this).SetAttributeValue("statecode", (object)null);
+				SetAttributeValue("statecode", (object)null);
 			}
 			else
 			{
-				((Entity)this).SetAttributeValue("statecode", (object)new OptionSetValue((int)value.Value));
+				SetAttributeValue("statecode", (object)new OptionSetValue((int)value.Value));
 			}
 			OnPropertyChanged("StateCode");
 		}
@@ -1298,12 +1298,12 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("statuscode");
+			return GetAttributeValue<OptionSetValue>("statuscode");
 		}
 		set
 		{
 			OnPropertyChanging("StatusCode");
-			((Entity)this).SetAttributeValue("statuscode", (object)value);
+			SetAttributeValue("statuscode", (object)value);
 			OnPropertyChanged("StatusCode");
 		}
 	}
@@ -1313,21 +1313,21 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("supporteddeployment");
+			return GetAttributeValue<OptionSetValue>("supporteddeployment");
 		}
 		set
 		{
 			OnPropertyChanging("SupportedDeployment");
-			((Entity)this).SetAttributeValue("supporteddeployment", (object)value);
+			SetAttributeValue("supporteddeployment", (object)value);
 			OnPropertyChanged("SupportedDeployment");
 		}
 	}
 
 	[AttributeLogicalName("supportingsolutionid")]
-	public Guid? SupportingSolutionId => ((Entity)this).GetAttributeValue<Guid?>("supportingsolutionid");
+	public Guid? SupportingSolutionId => GetAttributeValue<Guid?>("supportingsolutionid");
 
 	[AttributeLogicalName("versionnumber")]
-	public long? VersionNumber => ((Entity)this).GetAttributeValue<long?>("versionnumber");
+	public long? VersionNumber => GetAttributeValue<long?>("versionnumber");
 
 	[AttributeLogicalName("createdby")]
 	[RelationshipSchemaName("createdby_sdkmessageprocessingstep")]
@@ -1341,13 +1341,13 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "createdby_sdkmessageprocessingstep");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("createdby_sdkmessageprocessingstep", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("createdby_sdkmessageprocessingstep", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("createdby_sdkmessageprocessingstep", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("createdby_sdkmessageprocessingstep", (EntityRole?)null);
 			}
 		}
 	}
@@ -1364,19 +1364,19 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "impersonatinguserid_sdkmessageprocessingstep");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("impersonatinguserid_sdkmessageprocessingstep", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("impersonatinguserid_sdkmessageprocessingstep", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("impersonatinguserid_sdkmessageprocessingstep", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("impersonatinguserid_sdkmessageprocessingstep", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("impersonatinguserid_sdkmessageprocessingstep");
-			((Entity)this).SetRelatedEntity<SystemUser>("impersonatinguserid_sdkmessageprocessingstep", (EntityRole?)null, value);
+			SetRelatedEntity<SystemUser>("impersonatinguserid_sdkmessageprocessingstep", (EntityRole?)null, value);
 			OnPropertyChanged("impersonatinguserid_sdkmessageprocessingstep");
 		}
 	}
@@ -1393,13 +1393,13 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_sdkmessageprocessingstep_createdonbehalfby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_sdkmessageprocessingstep_createdonbehalfby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_sdkmessageprocessingstep_createdonbehalfby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_sdkmessageprocessingstep_createdonbehalfby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("lk_sdkmessageprocessingstep_createdonbehalfby", (EntityRole?)null);
 			}
 		}
 	}
@@ -1416,13 +1416,13 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_sdkmessageprocessingstep_modifiedonbehalfby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_sdkmessageprocessingstep_modifiedonbehalfby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_sdkmessageprocessingstep_modifiedonbehalfby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_sdkmessageprocessingstep_modifiedonbehalfby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("lk_sdkmessageprocessingstep_modifiedonbehalfby", (EntityRole?)null);
 			}
 		}
 	}
@@ -1439,13 +1439,13 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "modifiedby_sdkmessageprocessingstep");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("modifiedby_sdkmessageprocessingstep", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("modifiedby_sdkmessageprocessingstep", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("modifiedby_sdkmessageprocessingstep", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("modifiedby_sdkmessageprocessingstep", (EntityRole?)null);
 			}
 		}
 	}
@@ -1462,19 +1462,19 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "sdkmessagefilterid_sdkmessageprocessingstep");
 				}
-				SdkMessageFilter relatedEntity = ((Entity)this).GetRelatedEntity<SdkMessageFilter>("sdkmessagefilterid_sdkmessageprocessingstep", (EntityRole?)null);
+				SdkMessageFilter relatedEntity = GetRelatedEntity<SdkMessageFilter>("sdkmessagefilterid_sdkmessageprocessingstep", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SdkMessageFilter>("sdkmessagefilterid_sdkmessageprocessingstep", (EntityRole?)null);
+				return GetRelatedEntity<SdkMessageFilter>("sdkmessagefilterid_sdkmessageprocessingstep", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("sdkmessagefilterid_sdkmessageprocessingstep");
-			((Entity)this).SetRelatedEntity<SdkMessageFilter>("sdkmessagefilterid_sdkmessageprocessingstep", (EntityRole?)null, value);
+			SetRelatedEntity<SdkMessageFilter>("sdkmessagefilterid_sdkmessageprocessingstep", (EntityRole?)null, value);
 			OnPropertyChanged("sdkmessagefilterid_sdkmessageprocessingstep");
 		}
 	}
@@ -1491,19 +1491,19 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "sdkmessageid_sdkmessageprocessingstep");
 				}
-				SdkMessage relatedEntity = ((Entity)this).GetRelatedEntity<SdkMessage>("sdkmessageid_sdkmessageprocessingstep", (EntityRole?)null);
+				SdkMessage relatedEntity = GetRelatedEntity<SdkMessage>("sdkmessageid_sdkmessageprocessingstep", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SdkMessage>("sdkmessageid_sdkmessageprocessingstep", (EntityRole?)null);
+				return GetRelatedEntity<SdkMessage>("sdkmessageid_sdkmessageprocessingstep", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("sdkmessageid_sdkmessageprocessingstep");
-			((Entity)this).SetRelatedEntity<SdkMessage>("sdkmessageid_sdkmessageprocessingstep", (EntityRole?)null, value);
+			SetRelatedEntity<SdkMessage>("sdkmessageid_sdkmessageprocessingstep", (EntityRole?)null, value);
 			OnPropertyChanged("sdkmessageid_sdkmessageprocessingstep");
 		}
 	}
@@ -1535,7 +1535,7 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 
 	public SystemUser Load_impersonatinguserid_sdkmessageprocessingstep(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		Entity val = CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", ((Entity)this).LogicalName, "systemuserid", "impersonatinguserid", "sdkmessageprocessingstepid", "sdkmessageprocessingstepid", recordCountLimit, attributes).FirstOrDefault();
+		Entity val = CrmHelpers.LoadRelation((Entity)(object)this, service, "systemuser", LogicalName, "systemuserid", "impersonatinguserid", "sdkmessageprocessingstepid", "sdkmessageprocessingstepid", recordCountLimit, attributes).FirstOrDefault();
 		if (val != null)
 		{
 			return impersonatinguserid_sdkmessageprocessingstep = val.ToEntity<SystemUser>();
@@ -1545,7 +1545,7 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 
 	public SdkMessageFilter Load_sdkmessagefilterid_sdkmessageprocessingstep(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		Entity val = CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessagefilter", ((Entity)this).LogicalName, "sdkmessagefilterid", "sdkmessagefilterid", "sdkmessageprocessingstepid", "sdkmessageprocessingstepid", recordCountLimit, attributes).FirstOrDefault();
+		Entity val = CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessagefilter", LogicalName, "sdkmessagefilterid", "sdkmessagefilterid", "sdkmessageprocessingstepid", "sdkmessageprocessingstepid", recordCountLimit, attributes).FirstOrDefault();
 		if (val != null)
 		{
 			return sdkmessagefilterid_sdkmessageprocessingstep = val.ToEntity<SdkMessageFilter>();
@@ -1555,7 +1555,7 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 
 	public SdkMessage Load_sdkmessageid_sdkmessageprocessingstep(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		Entity val = CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessage", ((Entity)this).LogicalName, "sdkmessageid", "sdkmessageid", "sdkmessageprocessingstepid", "sdkmessageprocessingstepid", recordCountLimit, attributes).FirstOrDefault();
+		Entity val = CrmHelpers.LoadRelation((Entity)(object)this, service, "sdkmessage", LogicalName, "sdkmessageid", "sdkmessageid", "sdkmessageprocessingstepid", "sdkmessageprocessingstepid", recordCountLimit, attributes).FirstOrDefault();
 		if (val != null)
 		{
 			return sdkmessageid_sdkmessageprocessingstep = val.ToEntity<SdkMessage>();
@@ -1574,16 +1574,16 @@ public class SdkMessageProcessingStep : Entity, INotifyPropertyChanging, INotify
 			object value = propertyInfo.GetValue(anonymousType, null);
 			if (propertyInfo.PropertyType == typeof(Guid))
 			{
-				((Entity)this).Id = (Guid)value;
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)["sdkmessageprocessingstepid"] = ((Entity)this).Id;
+				Id = (Guid)value;
+				((DataCollection<string, object>)(object)Attributes)["sdkmessageprocessingstepid"] = Id;
 			}
 			else if (propertyInfo.Name == "FormattedValues")
 			{
-				((DataCollection<string, string>)(object)((Entity)this).FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
+				((DataCollection<string, string>)(object)FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
 			}
 			else
 			{
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)[propertyInfo.Name.ToLower()] = value;
+				((DataCollection<string, object>)(object)Attributes)[propertyInfo.Name.ToLower()] = value;
 			}
 		}
 	}

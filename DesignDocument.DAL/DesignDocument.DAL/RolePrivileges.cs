@@ -240,7 +240,7 @@ public class RolePrivileges : Entity, INotifyPropertyChanging, INotifyPropertyCh
 	{
 		get
 		{
-			return ((Entity)this).Id;
+			return Id;
 		}
 		set
 		{
@@ -249,69 +249,69 @@ public class RolePrivileges : Entity, INotifyPropertyChanging, INotifyPropertyCh
 	}
 
 	[AttributeLogicalName("componentstate")]
-	public OptionSetValue ComponentState => ((Entity)this).GetAttributeValue<OptionSetValue>("componentstate");
+	public OptionSetValue ComponentState => GetAttributeValue<OptionSetValue>("componentstate");
 
 	[AttributeLogicalName("ismanaged")]
-	public bool? IsManaged => ((Entity)this).GetAttributeValue<bool?>("ismanaged");
+	public bool? IsManaged => GetAttributeValue<bool?>("ismanaged");
 
 	[AttributeLogicalName("overwritetime")]
-	public DateTime? OverwriteTime => ((Entity)this).GetAttributeValue<DateTime?>("overwritetime");
+	public DateTime? OverwriteTime => GetAttributeValue<DateTime?>("overwritetime");
 
 	[AttributeLogicalName("privilegedepthmask")]
 	public int? PrivilegeDepthMask
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("privilegedepthmask");
+			return GetAttributeValue<int?>("privilegedepthmask");
 		}
 		set
 		{
 			OnPropertyChanging("PrivilegeDepthMask");
-			((Entity)this).SetAttributeValue("privilegedepthmask", (object)value);
+			SetAttributeValue("privilegedepthmask", (object)value);
 			OnPropertyChanged("PrivilegeDepthMask");
 		}
 	}
 
 	[AttributeLogicalName("privilegeid")]
-	public Guid? PrivilegeId => ((Entity)this).GetAttributeValue<Guid?>("privilegeid");
+	public Guid? PrivilegeId => GetAttributeValue<Guid?>("privilegeid");
 
 	[AttributeLogicalName("roleid")]
-	public Guid? RoleId => ((Entity)this).GetAttributeValue<Guid?>("roleid");
+	public Guid? RoleId => GetAttributeValue<Guid?>("roleid");
 
 	[AttributeLogicalName("roleprivilegeid")]
 	public Guid? RolePrivilegeId
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("roleprivilegeid");
+			return GetAttributeValue<Guid?>("roleprivilegeid");
 		}
 		set
 		{
 			OnPropertyChanging("RolePrivilegeId");
-			((Entity)this).SetAttributeValue("roleprivilegeid", (object)value);
+			SetAttributeValue("roleprivilegeid", (object)value);
 			if (value.HasValue)
 			{
-				((Entity)this).Id = value.Value;
+				Id = value.Value;
 			}
 			else
 			{
-				((Entity)this).Id = Guid.Empty;
+				Id = Guid.Empty;
 			}
 			OnPropertyChanged("RolePrivilegeId");
 		}
 	}
 
 	[AttributeLogicalName("roleprivilegeidunique")]
-	public Guid? RolePrivilegeIdUnique => ((Entity)this).GetAttributeValue<Guid?>("roleprivilegeidunique");
+	public Guid? RolePrivilegeIdUnique => GetAttributeValue<Guid?>("roleprivilegeidunique");
 
 	[AttributeLogicalName("solutionid")]
-	public Guid? SolutionId => ((Entity)this).GetAttributeValue<Guid?>("solutionid");
+	public Guid? SolutionId => GetAttributeValue<Guid?>("solutionid");
 
 	[AttributeLogicalName("supportingsolutionid")]
-	public Guid? SupportingSolutionId => ((Entity)this).GetAttributeValue<Guid?>("supportingsolutionid");
+	public Guid? SupportingSolutionId => GetAttributeValue<Guid?>("supportingsolutionid");
 
 	[AttributeLogicalName("versionnumber")]
-	public long? VersionNumber => ((Entity)this).GetAttributeValue<long?>("versionnumber");
+	public long? VersionNumber => GetAttributeValue<long?>("versionnumber");
 
 	[RelationshipSchemaName("roleprivileges_association")]
 	public IEnumerable<Privilege> roleprivileges_association
@@ -324,7 +324,7 @@ public class RolePrivileges : Entity, INotifyPropertyChanging, INotifyPropertyCh
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "roleprivileges_association");
 				}
-				IEnumerable<Privilege> relatedEntities = ((Entity)this).GetRelatedEntities<Privilege>("roleprivileges_association", (EntityRole?)null);
+				IEnumerable<Privilege> relatedEntities = GetRelatedEntities<Privilege>("roleprivileges_association", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(Privilege element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -333,13 +333,13 @@ public class RolePrivileges : Entity, INotifyPropertyChanging, INotifyPropertyCh
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Privilege>("roleprivileges_association", (EntityRole?)null);
+				return GetRelatedEntities<Privilege>("roleprivileges_association", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("roleprivileges_association");
-			((Entity)this).SetRelatedEntities<Privilege>("roleprivileges_association", (EntityRole?)null, value);
+			SetRelatedEntities<Privilege>("roleprivileges_association", (EntityRole?)null, value);
 			OnPropertyChanged("roleprivileges_association");
 		}
 	}
@@ -388,16 +388,16 @@ public class RolePrivileges : Entity, INotifyPropertyChanging, INotifyPropertyCh
 			object value = propertyInfo.GetValue(anonymousType, null);
 			if (propertyInfo.PropertyType == typeof(Guid))
 			{
-				((Entity)this).Id = (Guid)value;
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)["roleprivilegeid"] = ((Entity)this).Id;
+				Id = (Guid)value;
+				((DataCollection<string, object>)(object)Attributes)["roleprivilegeid"] = Id;
 			}
 			else if (propertyInfo.Name == "FormattedValues")
 			{
-				((DataCollection<string, string>)(object)((Entity)this).FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
+				((DataCollection<string, string>)(object)FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
 			}
 			else
 			{
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)[propertyInfo.Name.ToLower()] = value;
+				((DataCollection<string, object>)(object)Attributes)[propertyInfo.Name.ToLower()] = value;
 			}
 		}
 	}

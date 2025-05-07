@@ -336,7 +336,7 @@ public class Privilege : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).Id;
+			return Id;
 		}
 		set
 		{
@@ -349,12 +349,12 @@ public class Privilege : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("accessright");
+			return GetAttributeValue<int?>("accessright");
 		}
 		set
 		{
 			OnPropertyChanging("AccessRight");
-			((Entity)this).SetAttributeValue("accessright", (object)value);
+			SetAttributeValue("accessright", (object)value);
 			OnPropertyChanged("AccessRight");
 		}
 	}
@@ -364,12 +364,12 @@ public class Privilege : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("canbebasic");
+			return GetAttributeValue<bool?>("canbebasic");
 		}
 		set
 		{
 			OnPropertyChanging("CanBeBasic");
-			((Entity)this).SetAttributeValue("canbebasic", (object)value);
+			SetAttributeValue("canbebasic", (object)value);
 			OnPropertyChanged("CanBeBasic");
 		}
 	}
@@ -379,12 +379,12 @@ public class Privilege : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("canbedeep");
+			return GetAttributeValue<bool?>("canbedeep");
 		}
 		set
 		{
 			OnPropertyChanging("CanBeDeep");
-			((Entity)this).SetAttributeValue("canbedeep", (object)value);
+			SetAttributeValue("canbedeep", (object)value);
 			OnPropertyChanged("CanBeDeep");
 		}
 	}
@@ -394,12 +394,12 @@ public class Privilege : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("canbeentityreference");
+			return GetAttributeValue<bool?>("canbeentityreference");
 		}
 		set
 		{
 			OnPropertyChanging("CanBeEntityReference");
-			((Entity)this).SetAttributeValue("canbeentityreference", (object)value);
+			SetAttributeValue("canbeentityreference", (object)value);
 			OnPropertyChanged("CanBeEntityReference");
 		}
 	}
@@ -409,12 +409,12 @@ public class Privilege : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("canbeglobal");
+			return GetAttributeValue<bool?>("canbeglobal");
 		}
 		set
 		{
 			OnPropertyChanging("CanBeGlobal");
-			((Entity)this).SetAttributeValue("canbeglobal", (object)value);
+			SetAttributeValue("canbeglobal", (object)value);
 			OnPropertyChanged("CanBeGlobal");
 		}
 	}
@@ -424,12 +424,12 @@ public class Privilege : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("canbelocal");
+			return GetAttributeValue<bool?>("canbelocal");
 		}
 		set
 		{
 			OnPropertyChanging("CanBeLocal");
-			((Entity)this).SetAttributeValue("canbelocal", (object)value);
+			SetAttributeValue("canbelocal", (object)value);
 			OnPropertyChanged("CanBeLocal");
 		}
 	}
@@ -439,30 +439,30 @@ public class Privilege : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("canbeparententityreference");
+			return GetAttributeValue<bool?>("canbeparententityreference");
 		}
 		set
 		{
 			OnPropertyChanging("CanBeParentEntityReference");
-			((Entity)this).SetAttributeValue("canbeparententityreference", (object)value);
+			SetAttributeValue("canbeparententityreference", (object)value);
 			OnPropertyChanged("CanBeParentEntityReference");
 		}
 	}
 
 	[AttributeLogicalName("isdisabledwhenintegrated")]
-	public bool? IsDisabledWhenIntegrated => ((Entity)this).GetAttributeValue<bool?>("isdisabledwhenintegrated");
+	public bool? IsDisabledWhenIntegrated => GetAttributeValue<bool?>("isdisabledwhenintegrated");
 
 	[AttributeLogicalName("name")]
 	public string Name
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("name");
+			return GetAttributeValue<string>("name");
 		}
 		set
 		{
 			OnPropertyChanging("Name");
-			((Entity)this).SetAttributeValue("name", (object)value);
+			SetAttributeValue("name", (object)value);
 			OnPropertyChanged("Name");
 		}
 	}
@@ -472,26 +472,26 @@ public class Privilege : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("privilegeid");
+			return GetAttributeValue<Guid?>("privilegeid");
 		}
 		set
 		{
 			OnPropertyChanging("PrivilegeId");
-			((Entity)this).SetAttributeValue("privilegeid", (object)value);
+			SetAttributeValue("privilegeid", (object)value);
 			if (value.HasValue)
 			{
-				((Entity)this).Id = value.Value;
+				Id = value.Value;
 			}
 			else
 			{
-				((Entity)this).Id = Guid.Empty;
+				Id = Guid.Empty;
 			}
 			OnPropertyChanged("PrivilegeId");
 		}
 	}
 
 	[AttributeLogicalName("versionnumber")]
-	public long? VersionNumber => ((Entity)this).GetAttributeValue<long?>("versionnumber");
+	public long? VersionNumber => GetAttributeValue<long?>("versionnumber");
 
 	[RelationshipSchemaName("roleprivileges_association")]
 	public IEnumerable<Role> roleprivileges_association
@@ -504,7 +504,7 @@ public class Privilege : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "roleprivileges_association");
 				}
-				IEnumerable<Role> relatedEntities = ((Entity)this).GetRelatedEntities<Role>("roleprivileges_association", (EntityRole?)null);
+				IEnumerable<Role> relatedEntities = GetRelatedEntities<Role>("roleprivileges_association", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(Role element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -513,13 +513,13 @@ public class Privilege : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Role>("roleprivileges_association", (EntityRole?)null);
+				return GetRelatedEntities<Role>("roleprivileges_association", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("roleprivileges_association");
-			((Entity)this).SetRelatedEntities<Role>("roleprivileges_association", (EntityRole?)null, value);
+			SetRelatedEntities<Role>("roleprivileges_association", (EntityRole?)null, value);
 			OnPropertyChanged("roleprivileges_association");
 		}
 	}
@@ -568,16 +568,16 @@ public class Privilege : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 			object value = propertyInfo.GetValue(anonymousType, null);
 			if (propertyInfo.PropertyType == typeof(Guid))
 			{
-				((Entity)this).Id = (Guid)value;
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)["privilegeid"] = ((Entity)this).Id;
+				Id = (Guid)value;
+				((DataCollection<string, object>)(object)Attributes)["privilegeid"] = Id;
 			}
 			else if (propertyInfo.Name == "FormattedValues")
 			{
-				((DataCollection<string, string>)(object)((Entity)this).FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
+				((DataCollection<string, string>)(object)FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
 			}
 			else
 			{
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)[propertyInfo.Name.ToLower()] = value;
+				((DataCollection<string, object>)(object)Attributes)[propertyInfo.Name.ToLower()] = value;
 			}
 		}
 	}

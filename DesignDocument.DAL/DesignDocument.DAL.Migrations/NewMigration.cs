@@ -22,7 +22,7 @@ public sealed class NewMigration : DbMigration, IMigrationMetadata
 
 	public override void Up()
 	{
-		((DbMigration)this).CreateTable("dbo.EntitySelects", (ColumnBuilder c) => new
+		CreateTable("dbo.EntitySelects", (ColumnBuilder c) => new
 		{
 			Id = c.Guid((bool?)false, true, (Guid?)null, (string)null, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null),
 			DisplayName = c.String((bool?)null, (int?)null, (bool?)null, (bool?)null, (string)null, (string)null, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null),
@@ -35,7 +35,7 @@ public sealed class NewMigration : DbMigration, IMigrationMetadata
 			Generation_Id = c.Guid((bool?)null, false, (Guid?)null, (string)null, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null)
 		}, (object)null).PrimaryKey(t => (object)t.Id, (string)null, true, (object)null).ForeignKey("dbo.Generations", t => (object)t.Generation_Id, false, (string)null, (object)null)
 			.Index(t => (object)t.Generation_Id, (string)null, false, false, (object)null);
-		((DbMigration)this).CreateTable("dbo.Generations", (ColumnBuilder c) => new
+		CreateTable("dbo.Generations", (ColumnBuilder c) => new
 		{
 			Id = c.Guid((bool?)false, true, (Guid?)null, (string)null, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null),
 			IP = c.String((bool?)null, (int?)null, (bool?)null, (bool?)null, (string)null, (string)null, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null),
@@ -49,7 +49,7 @@ public sealed class NewMigration : DbMigration, IMigrationMetadata
 			.ForeignKey("dbo.Users", t => (object)t.User_Id, false, (string)null, (object)null)
 			.Index(t => (object)t.Organization_Id, (string)null, false, false, (object)null)
 			.Index(t => (object)t.User_Id, (string)null, false, false, (object)null);
-		((DbMigration)this).CreateTable("dbo.Organizations", (ColumnBuilder c) => new
+		CreateTable("dbo.Organizations", (ColumnBuilder c) => new
 		{
 			Id = c.Guid((bool?)false, true, (Guid?)null, (string)null, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null),
 			URL = c.String((bool?)null, (int?)null, (bool?)null, (bool?)null, (string)null, (string)null, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null),
@@ -58,7 +58,7 @@ public sealed class NewMigration : DbMigration, IMigrationMetadata
 			ModifiedOn = c.DateTime((bool?)false, (byte?)null, (DateTime?)null, (string)null, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null),
 			CreatedOn = c.DateTime((bool?)false, (byte?)null, (DateTime?)null, (string)null, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null)
 		}, (object)null).PrimaryKey(t => (object)t.Id, (string)null, true, (object)null);
-		((DbMigration)this).CreateTable("dbo.Users", (ColumnBuilder c) => new
+		CreateTable("dbo.Users", (ColumnBuilder c) => new
 		{
 			Id = c.Guid((bool?)false, true, (Guid?)null, (string)null, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null),
 			Password = c.String((bool?)null, (int?)null, (bool?)null, (bool?)null, (string)null, (string)null, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null),
@@ -75,17 +75,17 @@ public sealed class NewMigration : DbMigration, IMigrationMetadata
 
 	public override void Down()
 	{
-		((DbMigration)this).DropForeignKey("dbo.Generations", "User_Id", "dbo.Users", (object)null);
-		((DbMigration)this).DropForeignKey("dbo.Generations", "Organization_Id", "dbo.Organizations", (object)null);
-		((DbMigration)this).DropForeignKey("dbo.Users", "Organization_Id", "dbo.Organizations", (object)null);
-		((DbMigration)this).DropForeignKey("dbo.EntitySelects", "Generation_Id", "dbo.Generations", (object)null);
-		((DbMigration)this).DropIndex("dbo.Users", new string[1] { "Organization_Id" }, (object)null);
-		((DbMigration)this).DropIndex("dbo.Generations", new string[1] { "User_Id" }, (object)null);
-		((DbMigration)this).DropIndex("dbo.Generations", new string[1] { "Organization_Id" }, (object)null);
-		((DbMigration)this).DropIndex("dbo.EntitySelects", new string[1] { "Generation_Id" }, (object)null);
-		((DbMigration)this).DropTable("dbo.Users", (object)null);
-		((DbMigration)this).DropTable("dbo.Organizations", (object)null);
-		((DbMigration)this).DropTable("dbo.Generations", (object)null);
-		((DbMigration)this).DropTable("dbo.EntitySelects", (object)null);
+		DropForeignKey("dbo.Generations", "User_Id", "dbo.Users", (object)null);
+		DropForeignKey("dbo.Generations", "Organization_Id", "dbo.Organizations", (object)null);
+		DropForeignKey("dbo.Users", "Organization_Id", "dbo.Organizations", (object)null);
+		DropForeignKey("dbo.EntitySelects", "Generation_Id", "dbo.Generations", (object)null);
+		DropIndex("dbo.Users", new string[1] { "Organization_Id" }, (object)null);
+		DropIndex("dbo.Generations", new string[1] { "User_Id" }, (object)null);
+		DropIndex("dbo.Generations", new string[1] { "Organization_Id" }, (object)null);
+		DropIndex("dbo.EntitySelects", new string[1] { "Generation_Id" }, (object)null);
+		DropTable("dbo.Users", (object)null);
+		DropTable("dbo.Organizations", (object)null);
+		DropTable("dbo.Generations", (object)null);
+		DropTable("dbo.EntitySelects", (object)null);
 	}
 }
