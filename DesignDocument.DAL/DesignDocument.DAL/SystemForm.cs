@@ -713,7 +713,7 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).Id;
+			return Id;
 		}
 		set
 		{
@@ -726,12 +726,12 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("ancestorformid");
+			return GetAttributeValue<EntityReference>("ancestorformid");
 		}
 		set
 		{
 			OnPropertyChanging("AncestorFormId");
-			((Entity)this).SetAttributeValue("ancestorformid", (object)value);
+			SetAttributeValue("ancestorformid", (object)value);
 			OnPropertyChanged("AncestorFormId");
 		}
 	}
@@ -741,30 +741,30 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<BooleanManagedProperty>("canbedeleted");
+			return GetAttributeValue<BooleanManagedProperty>("canbedeleted");
 		}
 		set
 		{
 			OnPropertyChanging("CanBeDeleted");
-			((Entity)this).SetAttributeValue("canbedeleted", (object)value);
+			SetAttributeValue("canbedeleted", (object)value);
 			OnPropertyChanged("CanBeDeleted");
 		}
 	}
 
 	[AttributeLogicalName("componentstate")]
-	public OptionSetValue ComponentState => ((Entity)this).GetAttributeValue<OptionSetValue>("componentstate");
+	public OptionSetValue ComponentState => GetAttributeValue<OptionSetValue>("componentstate");
 
 	[AttributeLogicalName("description")]
 	public string Description
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("description");
+			return GetAttributeValue<string>("description");
 		}
 		set
 		{
 			OnPropertyChanging("Description");
-			((Entity)this).SetAttributeValue("description", (object)value);
+			SetAttributeValue("description", (object)value);
 			OnPropertyChanged("Description");
 		}
 	}
@@ -774,12 +774,12 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("formactivationstate");
+			return GetAttributeValue<OptionSetValue>("formactivationstate");
 		}
 		set
 		{
 			OnPropertyChanging("FormActivationState");
-			((Entity)this).SetAttributeValue("formactivationstate", (object)value);
+			SetAttributeValue("formactivationstate", (object)value);
 			OnPropertyChanged("FormActivationState");
 		}
 	}
@@ -789,38 +789,38 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("formid");
+			return GetAttributeValue<Guid?>("formid");
 		}
 		set
 		{
 			OnPropertyChanging("FormId");
-			((Entity)this).SetAttributeValue("formid", (object)value);
+			SetAttributeValue("formid", (object)value);
 			if (value.HasValue)
 			{
-				((Entity)this).Id = value.Value;
+				Id = value.Value;
 			}
 			else
 			{
-				((Entity)this).Id = Guid.Empty;
+				Id = Guid.Empty;
 			}
 			OnPropertyChanged("FormId");
 		}
 	}
 
 	[AttributeLogicalName("formidunique")]
-	public Guid? FormIdUnique => ((Entity)this).GetAttributeValue<Guid?>("formidunique");
+	public Guid? FormIdUnique => GetAttributeValue<Guid?>("formidunique");
 
 	[AttributeLogicalName("formpresentation")]
 	public OptionSetValue FormPresentation
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("formpresentation");
+			return GetAttributeValue<OptionSetValue>("formpresentation");
 		}
 		set
 		{
 			OnPropertyChanging("FormPresentation");
-			((Entity)this).SetAttributeValue("formpresentation", (object)value);
+			SetAttributeValue("formpresentation", (object)value);
 			OnPropertyChanged("FormPresentation");
 		}
 	}
@@ -830,30 +830,30 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("formxml");
+			return GetAttributeValue<string>("formxml");
 		}
 		set
 		{
 			OnPropertyChanging("FormXml");
-			((Entity)this).SetAttributeValue("formxml", (object)value);
+			SetAttributeValue("formxml", (object)value);
 			OnPropertyChanged("FormXml");
 		}
 	}
 
 	[AttributeLogicalName("formxmlmanaged")]
-	public string FormXmlManaged => ((Entity)this).GetAttributeValue<string>("formxmlmanaged");
+	public string FormXmlManaged => GetAttributeValue<string>("formxmlmanaged");
 
 	[AttributeLogicalName("introducedversion")]
 	public string IntroducedVersion
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("introducedversion");
+			return GetAttributeValue<string>("introducedversion");
 		}
 		set
 		{
 			OnPropertyChanging("IntroducedVersion");
-			((Entity)this).SetAttributeValue("introducedversion", (object)value);
+			SetAttributeValue("introducedversion", (object)value);
 			OnPropertyChanged("IntroducedVersion");
 		}
 	}
@@ -863,12 +863,12 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("isairmerged");
+			return GetAttributeValue<bool?>("isairmerged");
 		}
 		set
 		{
 			OnPropertyChanging("IsAIRMerged");
-			((Entity)this).SetAttributeValue("isairmerged", (object)value);
+			SetAttributeValue("isairmerged", (object)value);
 			OnPropertyChanged("IsAIRMerged");
 		}
 	}
@@ -878,12 +878,12 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<BooleanManagedProperty>("iscustomizable");
+			return GetAttributeValue<BooleanManagedProperty>("iscustomizable");
 		}
 		set
 		{
 			OnPropertyChanging("IsCustomizable");
-			((Entity)this).SetAttributeValue("iscustomizable", (object)value);
+			SetAttributeValue("iscustomizable", (object)value);
 			OnPropertyChanged("IsCustomizable");
 		}
 	}
@@ -893,12 +893,12 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("isdefault");
+			return GetAttributeValue<bool?>("isdefault");
 		}
 		set
 		{
 			OnPropertyChanging("IsDefault");
-			((Entity)this).SetAttributeValue("isdefault", (object)value);
+			SetAttributeValue("isdefault", (object)value);
 			OnPropertyChanged("IsDefault");
 		}
 	}
@@ -908,30 +908,30 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("isdesktopenabled");
+			return GetAttributeValue<bool?>("isdesktopenabled");
 		}
 		set
 		{
 			OnPropertyChanging("IsDesktopEnabled");
-			((Entity)this).SetAttributeValue("isdesktopenabled", (object)value);
+			SetAttributeValue("isdesktopenabled", (object)value);
 			OnPropertyChanged("IsDesktopEnabled");
 		}
 	}
 
 	[AttributeLogicalName("ismanaged")]
-	public bool? IsManaged => ((Entity)this).GetAttributeValue<bool?>("ismanaged");
+	public bool? IsManaged => GetAttributeValue<bool?>("ismanaged");
 
 	[AttributeLogicalName("istabletenabled")]
 	public bool? IsTabletEnabled
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("istabletenabled");
+			return GetAttributeValue<bool?>("istabletenabled");
 		}
 		set
 		{
 			OnPropertyChanging("IsTabletEnabled");
-			((Entity)this).SetAttributeValue("istabletenabled", (object)value);
+			SetAttributeValue("istabletenabled", (object)value);
 			OnPropertyChanged("IsTabletEnabled");
 		}
 	}
@@ -941,12 +941,12 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("name");
+			return GetAttributeValue<string>("name");
 		}
 		set
 		{
 			OnPropertyChanging("Name");
-			((Entity)this).SetAttributeValue("name", (object)value);
+			SetAttributeValue("name", (object)value);
 			OnPropertyChanged("Name");
 		}
 	}
@@ -956,42 +956,42 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("objecttypecode");
+			return GetAttributeValue<string>("objecttypecode");
 		}
 		set
 		{
 			OnPropertyChanging("ObjectTypeCode");
-			((Entity)this).SetAttributeValue("objecttypecode", (object)value);
+			SetAttributeValue("objecttypecode", (object)value);
 			OnPropertyChanged("ObjectTypeCode");
 		}
 	}
 
 	[AttributeLogicalName("organizationid")]
-	public EntityReference OrganizationId => ((Entity)this).GetAttributeValue<EntityReference>("organizationid");
+	public EntityReference OrganizationId => GetAttributeValue<EntityReference>("organizationid");
 
 	[AttributeLogicalName("overwritetime")]
-	public DateTime? OverwriteTime => ((Entity)this).GetAttributeValue<DateTime?>("overwritetime");
+	public DateTime? OverwriteTime => GetAttributeValue<DateTime?>("overwritetime");
 
 	[AttributeLogicalName("publishedon")]
-	public DateTime? PublishedOn => ((Entity)this).GetAttributeValue<DateTime?>("publishedon");
+	public DateTime? PublishedOn => GetAttributeValue<DateTime?>("publishedon");
 
 	[AttributeLogicalName("solutionid")]
-	public Guid? SolutionId => ((Entity)this).GetAttributeValue<Guid?>("solutionid");
+	public Guid? SolutionId => GetAttributeValue<Guid?>("solutionid");
 
 	[AttributeLogicalName("supportingsolutionid")]
-	public Guid? SupportingSolutionId => ((Entity)this).GetAttributeValue<Guid?>("supportingsolutionid");
+	public Guid? SupportingSolutionId => GetAttributeValue<Guid?>("supportingsolutionid");
 
 	[AttributeLogicalName("type")]
 	public OptionSetValue Type
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("type");
+			return GetAttributeValue<OptionSetValue>("type");
 		}
 		set
 		{
 			OnPropertyChanging("Type");
-			((Entity)this).SetAttributeValue("type", (object)value);
+			SetAttributeValue("type", (object)value);
 			OnPropertyChanged("Type");
 		}
 	}
@@ -1001,12 +1001,12 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("uniquename");
+			return GetAttributeValue<string>("uniquename");
 		}
 		set
 		{
 			OnPropertyChanging("UniqueName");
-			((Entity)this).SetAttributeValue("uniquename", (object)value);
+			SetAttributeValue("uniquename", (object)value);
 			OnPropertyChanged("UniqueName");
 		}
 	}
@@ -1016,20 +1016,20 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("version");
+			return GetAttributeValue<int?>("version");
 		}
 		set
 		{
 			OnPropertyChanging("Version");
-			((Entity)this).SetAttributeValue("version", (object)value);
+			SetAttributeValue("version", (object)value);
 			OnPropertyChanged("Version");
 		}
 	}
 
 	[AttributeLogicalName("versionnumber")]
-	public long? VersionNumber => ((Entity)this).GetAttributeValue<long?>("versionnumber");
+	public long? VersionNumber => GetAttributeValue<long?>("versionnumber");
 
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public IEnumerable<SystemForm> Referenced_form_ancestor_form
 	{
 		get
@@ -1040,7 +1040,7 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "form_ancestor_form");
 				}
-				IEnumerable<SystemForm> relatedEntities = ((Entity)this).GetRelatedEntities<SystemForm>("form_ancestor_form", (EntityRole?)(EntityRole)1);
+				IEnumerable<SystemForm> relatedEntities = GetRelatedEntities<SystemForm>("form_ancestor_form", (EntityRole?)(EntityRole)1);
 				relatedEntities.ToList().ForEach(delegate(SystemForm element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -1049,19 +1049,19 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<SystemForm>("form_ancestor_form", (EntityRole?)(EntityRole)1);
+				return GetRelatedEntities<SystemForm>("form_ancestor_form", (EntityRole?)(EntityRole)1);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("Referenced_form_ancestor_form");
-			((Entity)this).SetRelatedEntities<SystemForm>("form_ancestor_form", (EntityRole?)(EntityRole)1, value);
+			SetRelatedEntities<SystemForm>("form_ancestor_form", (EntityRole?)(EntityRole)1, value);
 			OnPropertyChanged("Referenced_form_ancestor_form");
 		}
 	}
 
 	[AttributeLogicalName("ancestorformid")]
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public SystemForm Referencing_form_ancestor_form
 	{
 		get
@@ -1072,19 +1072,19 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "form_ancestor_form");
 				}
-				SystemForm relatedEntity = ((Entity)this).GetRelatedEntity<SystemForm>("form_ancestor_form", (EntityRole?)(EntityRole)0);
+				SystemForm relatedEntity = GetRelatedEntity<SystemForm>("form_ancestor_form", (EntityRole?)(EntityRole)0);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemForm>("form_ancestor_form", (EntityRole?)(EntityRole)0);
+				return GetRelatedEntity<SystemForm>("form_ancestor_form", (EntityRole?)(EntityRole)0);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("Referencing_form_ancestor_form");
-			((Entity)this).SetRelatedEntity<SystemForm>("form_ancestor_form", (EntityRole?)(EntityRole)0, value);
+			SetRelatedEntity<SystemForm>("form_ancestor_form", (EntityRole?)(EntityRole)0, value);
 			OnPropertyChanged("Referencing_form_ancestor_form");
 		}
 	}
@@ -1116,7 +1116,7 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public List<SystemForm> Load_Referenced_form_ancestor_form(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<SystemForm> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "systemform", ((Entity)this).LogicalName, "ancestorformid", "formid", "formid", "formid", recordCountLimit, attributes)
+		IEnumerable<SystemForm> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "systemform", LogicalName, "ancestorformid", "formid", "formid", "formid", recordCountLimit, attributes)
 			select entity.ToEntity<SystemForm>();
 		Referenced_form_ancestor_form = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -1124,7 +1124,7 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 
 	public SystemForm Load_Referencing_form_ancestor_form(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		Entity val = CrmHelpers.LoadRelation((Entity)(object)this, service, "systemform", ((Entity)this).LogicalName, "formid", "ancestorformid", "formid", "formid", recordCountLimit, attributes).FirstOrDefault();
+		Entity val = CrmHelpers.LoadRelation((Entity)(object)this, service, "systemform", LogicalName, "formid", "ancestorformid", "formid", "formid", recordCountLimit, attributes).FirstOrDefault();
 		if (val != null)
 		{
 			return Referencing_form_ancestor_form = val.ToEntity<SystemForm>();
@@ -1143,16 +1143,16 @@ public class SystemForm : Entity, INotifyPropertyChanging, INotifyPropertyChange
 			object value = propertyInfo.GetValue(anonymousType, null);
 			if (propertyInfo.PropertyType == typeof(Guid))
 			{
-				((Entity)this).Id = (Guid)value;
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)["formid"] = ((Entity)this).Id;
+				Id = (Guid)value;
+				((DataCollection<string, object>)(object)Attributes)["formid"] = Id;
 			}
 			else if (propertyInfo.Name == "FormattedValues")
 			{
-				((DataCollection<string, string>)(object)((Entity)this).FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
+				((DataCollection<string, string>)(object)FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
 			}
 			else
 			{
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)[propertyInfo.Name.ToLower()] = value;
+				((DataCollection<string, object>)(object)Attributes)[propertyInfo.Name.ToLower()] = value;
 			}
 		}
 	}

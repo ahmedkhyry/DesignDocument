@@ -528,7 +528,7 @@ public class PluginAssembly : Entity, INotifyPropertyChanging, INotifyPropertyCh
 	{
 		get
 		{
-			return ((Entity)this).Id;
+			return Id;
 		}
 		set
 		{
@@ -537,61 +537,61 @@ public class PluginAssembly : Entity, INotifyPropertyChanging, INotifyPropertyCh
 	}
 
 	[AttributeLogicalName("componentstate")]
-	public OptionSetValue ComponentState => ((Entity)this).GetAttributeValue<OptionSetValue>("componentstate");
+	public OptionSetValue ComponentState => GetAttributeValue<OptionSetValue>("componentstate");
 
 	[AttributeLogicalName("content")]
 	public string Content
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("content");
+			return GetAttributeValue<string>("content");
 		}
 		set
 		{
 			OnPropertyChanging("Content");
-			((Entity)this).SetAttributeValue("content", (object)value);
+			SetAttributeValue("content", (object)value);
 			OnPropertyChanged("Content");
 		}
 	}
 
 	[AttributeLogicalName("createdby")]
-	public EntityReference CreatedBy => ((Entity)this).GetAttributeValue<EntityReference>("createdby");
+	public EntityReference CreatedBy => GetAttributeValue<EntityReference>("createdby");
 
 	[AttributeLogicalName("createdon")]
-	public DateTime? CreatedOn => ((Entity)this).GetAttributeValue<DateTime?>("createdon");
+	public DateTime? CreatedOn => GetAttributeValue<DateTime?>("createdon");
 
 	[AttributeLogicalName("createdonbehalfby")]
-	public EntityReference CreatedOnBehalfBy => ((Entity)this).GetAttributeValue<EntityReference>("createdonbehalfby");
+	public EntityReference CreatedOnBehalfBy => GetAttributeValue<EntityReference>("createdonbehalfby");
 
 	[AttributeLogicalName("culture")]
 	public string Culture
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("culture");
+			return GetAttributeValue<string>("culture");
 		}
 		set
 		{
 			OnPropertyChanging("Culture");
-			((Entity)this).SetAttributeValue("culture", (object)value);
+			SetAttributeValue("culture", (object)value);
 			OnPropertyChanged("Culture");
 		}
 	}
 
 	[AttributeLogicalName("customizationlevel")]
-	public int? CustomizationLevel => ((Entity)this).GetAttributeValue<int?>("customizationlevel");
+	public int? CustomizationLevel => GetAttributeValue<int?>("customizationlevel");
 
 	[AttributeLogicalName("description")]
 	public string Description
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("description");
+			return GetAttributeValue<string>("description");
 		}
 		set
 		{
 			OnPropertyChanging("Description");
-			((Entity)this).SetAttributeValue("description", (object)value);
+			SetAttributeValue("description", (object)value);
 			OnPropertyChanged("Description");
 		}
 	}
@@ -601,12 +601,12 @@ public class PluginAssembly : Entity, INotifyPropertyChanging, INotifyPropertyCh
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("introducedversion");
+			return GetAttributeValue<string>("introducedversion");
 		}
 		set
 		{
 			OnPropertyChanging("IntroducedVersion");
-			((Entity)this).SetAttributeValue("introducedversion", (object)value);
+			SetAttributeValue("introducedversion", (object)value);
 			OnPropertyChanged("IntroducedVersion");
 		}
 	}
@@ -616,81 +616,81 @@ public class PluginAssembly : Entity, INotifyPropertyChanging, INotifyPropertyCh
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<BooleanManagedProperty>("ishidden");
+			return GetAttributeValue<BooleanManagedProperty>("ishidden");
 		}
 		set
 		{
 			OnPropertyChanging("IsHidden");
-			((Entity)this).SetAttributeValue("ishidden", (object)value);
+			SetAttributeValue("ishidden", (object)value);
 			OnPropertyChanged("IsHidden");
 		}
 	}
 
 	[AttributeLogicalName("ismanaged")]
-	public bool? IsManaged => ((Entity)this).GetAttributeValue<bool?>("ismanaged");
+	public bool? IsManaged => GetAttributeValue<bool?>("ismanaged");
 
 	[AttributeLogicalName("isolationmode")]
 	public OptionSetValue IsolationMode
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("isolationmode");
+			return GetAttributeValue<OptionSetValue>("isolationmode");
 		}
 		set
 		{
 			OnPropertyChanging("IsolationMode");
-			((Entity)this).SetAttributeValue("isolationmode", (object)value);
+			SetAttributeValue("isolationmode", (object)value);
 			OnPropertyChanged("IsolationMode");
 		}
 	}
 
 	[AttributeLogicalName("major")]
-	public int? Major => ((Entity)this).GetAttributeValue<int?>("major");
+	public int? Major => GetAttributeValue<int?>("major");
 
 	[AttributeLogicalName("minor")]
-	public int? Minor => ((Entity)this).GetAttributeValue<int?>("minor");
+	public int? Minor => GetAttributeValue<int?>("minor");
 
 	[AttributeLogicalName("modifiedby")]
-	public EntityReference ModifiedBy => ((Entity)this).GetAttributeValue<EntityReference>("modifiedby");
+	public EntityReference ModifiedBy => GetAttributeValue<EntityReference>("modifiedby");
 
 	[AttributeLogicalName("modifiedon")]
-	public DateTime? ModifiedOn => ((Entity)this).GetAttributeValue<DateTime?>("modifiedon");
+	public DateTime? ModifiedOn => GetAttributeValue<DateTime?>("modifiedon");
 
 	[AttributeLogicalName("modifiedonbehalfby")]
-	public EntityReference ModifiedOnBehalfBy => ((Entity)this).GetAttributeValue<EntityReference>("modifiedonbehalfby");
+	public EntityReference ModifiedOnBehalfBy => GetAttributeValue<EntityReference>("modifiedonbehalfby");
 
 	[AttributeLogicalName("name")]
 	public string Name
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("name");
+			return GetAttributeValue<string>("name");
 		}
 		set
 		{
 			OnPropertyChanging("Name");
-			((Entity)this).SetAttributeValue("name", (object)value);
+			SetAttributeValue("name", (object)value);
 			OnPropertyChanged("Name");
 		}
 	}
 
 	[AttributeLogicalName("organizationid")]
-	public EntityReference OrganizationId => ((Entity)this).GetAttributeValue<EntityReference>("organizationid");
+	public EntityReference OrganizationId => GetAttributeValue<EntityReference>("organizationid");
 
 	[AttributeLogicalName("overwritetime")]
-	public DateTime? OverwriteTime => ((Entity)this).GetAttributeValue<DateTime?>("overwritetime");
+	public DateTime? OverwriteTime => GetAttributeValue<DateTime?>("overwritetime");
 
 	[AttributeLogicalName("path")]
 	public string Path
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("path");
+			return GetAttributeValue<string>("path");
 		}
 		set
 		{
 			OnPropertyChanging("Path");
-			((Entity)this).SetAttributeValue("path", (object)value);
+			SetAttributeValue("path", (object)value);
 			OnPropertyChanged("Path");
 		}
 	}
@@ -700,56 +700,56 @@ public class PluginAssembly : Entity, INotifyPropertyChanging, INotifyPropertyCh
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("pluginassemblyid");
+			return GetAttributeValue<Guid?>("pluginassemblyid");
 		}
 		set
 		{
 			OnPropertyChanging("PluginAssemblyId");
-			((Entity)this).SetAttributeValue("pluginassemblyid", (object)value);
+			SetAttributeValue("pluginassemblyid", (object)value);
 			if (value.HasValue)
 			{
-				((Entity)this).Id = value.Value;
+				Id = value.Value;
 			}
 			else
 			{
-				((Entity)this).Id = Guid.Empty;
+				Id = Guid.Empty;
 			}
 			OnPropertyChanged("PluginAssemblyId");
 		}
 	}
 
 	[AttributeLogicalName("pluginassemblyidunique")]
-	public Guid? PluginAssemblyIdUnique => ((Entity)this).GetAttributeValue<Guid?>("pluginassemblyidunique");
+	public Guid? PluginAssemblyIdUnique => GetAttributeValue<Guid?>("pluginassemblyidunique");
 
 	[AttributeLogicalName("publickeytoken")]
 	public string PublicKeyToken
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("publickeytoken");
+			return GetAttributeValue<string>("publickeytoken");
 		}
 		set
 		{
 			OnPropertyChanging("PublicKeyToken");
-			((Entity)this).SetAttributeValue("publickeytoken", (object)value);
+			SetAttributeValue("publickeytoken", (object)value);
 			OnPropertyChanged("PublicKeyToken");
 		}
 	}
 
 	[AttributeLogicalName("solutionid")]
-	public Guid? SolutionId => ((Entity)this).GetAttributeValue<Guid?>("solutionid");
+	public Guid? SolutionId => GetAttributeValue<Guid?>("solutionid");
 
 	[AttributeLogicalName("sourcehash")]
 	public string SourceHash
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("sourcehash");
+			return GetAttributeValue<string>("sourcehash");
 		}
 		set
 		{
 			OnPropertyChanging("SourceHash");
-			((Entity)this).SetAttributeValue("sourcehash", (object)value);
+			SetAttributeValue("sourcehash", (object)value);
 			OnPropertyChanged("SourceHash");
 		}
 	}
@@ -759,36 +759,36 @@ public class PluginAssembly : Entity, INotifyPropertyChanging, INotifyPropertyCh
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("sourcetype");
+			return GetAttributeValue<OptionSetValue>("sourcetype");
 		}
 		set
 		{
 			OnPropertyChanging("SourceType");
-			((Entity)this).SetAttributeValue("sourcetype", (object)value);
+			SetAttributeValue("sourcetype", (object)value);
 			OnPropertyChanged("SourceType");
 		}
 	}
 
 	[AttributeLogicalName("supportingsolutionid")]
-	public Guid? SupportingSolutionId => ((Entity)this).GetAttributeValue<Guid?>("supportingsolutionid");
+	public Guid? SupportingSolutionId => GetAttributeValue<Guid?>("supportingsolutionid");
 
 	[AttributeLogicalName("version")]
 	public string Version
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("version");
+			return GetAttributeValue<string>("version");
 		}
 		set
 		{
 			OnPropertyChanging("Version");
-			((Entity)this).SetAttributeValue("version", (object)value);
+			SetAttributeValue("version", (object)value);
 			OnPropertyChanged("Version");
 		}
 	}
 
 	[AttributeLogicalName("versionnumber")]
-	public long? VersionNumber => ((Entity)this).GetAttributeValue<long?>("versionnumber");
+	public long? VersionNumber => GetAttributeValue<long?>("versionnumber");
 
 	[AttributeLogicalName("createdby")]
 	[RelationshipSchemaName("createdby_pluginassembly")]
@@ -802,13 +802,13 @@ public class PluginAssembly : Entity, INotifyPropertyChanging, INotifyPropertyCh
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "createdby_pluginassembly");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("createdby_pluginassembly", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("createdby_pluginassembly", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("createdby_pluginassembly", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("createdby_pluginassembly", (EntityRole?)null);
 			}
 		}
 	}
@@ -825,13 +825,13 @@ public class PluginAssembly : Entity, INotifyPropertyChanging, INotifyPropertyCh
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_pluginassembly_createdonbehalfby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_pluginassembly_createdonbehalfby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_pluginassembly_createdonbehalfby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_pluginassembly_createdonbehalfby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("lk_pluginassembly_createdonbehalfby", (EntityRole?)null);
 			}
 		}
 	}
@@ -848,13 +848,13 @@ public class PluginAssembly : Entity, INotifyPropertyChanging, INotifyPropertyCh
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_pluginassembly_modifiedonbehalfby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("lk_pluginassembly_modifiedonbehalfby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("lk_pluginassembly_modifiedonbehalfby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("lk_pluginassembly_modifiedonbehalfby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("lk_pluginassembly_modifiedonbehalfby", (EntityRole?)null);
 			}
 		}
 	}
@@ -871,13 +871,13 @@ public class PluginAssembly : Entity, INotifyPropertyChanging, INotifyPropertyCh
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "modifiedby_pluginassembly");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("modifiedby_pluginassembly", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("modifiedby_pluginassembly", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("modifiedby_pluginassembly", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("modifiedby_pluginassembly", (EntityRole?)null);
 			}
 		}
 	}
@@ -918,16 +918,16 @@ public class PluginAssembly : Entity, INotifyPropertyChanging, INotifyPropertyCh
 			object value = propertyInfo.GetValue(anonymousType, null);
 			if (propertyInfo.PropertyType == typeof(Guid))
 			{
-				((Entity)this).Id = (Guid)value;
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)["pluginassemblyid"] = ((Entity)this).Id;
+				Id = (Guid)value;
+				((DataCollection<string, object>)(object)Attributes)["pluginassemblyid"] = Id;
 			}
 			else if (propertyInfo.Name == "FormattedValues")
 			{
-				((DataCollection<string, string>)(object)((Entity)this).FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
+				((DataCollection<string, string>)(object)FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
 			}
 			else
 			{
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)[propertyInfo.Name.ToLower()] = value;
+				((DataCollection<string, object>)(object)Attributes)[propertyInfo.Name.ToLower()] = value;
 			}
 		}
 	}

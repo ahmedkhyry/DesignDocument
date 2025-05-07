@@ -12,7 +12,10 @@
   <PropertyGroup>
     <RootNamespace />
   </PropertyGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.1.3" />
+    <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies" Version="8.2.0" />
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Xrm.Sdk" />
     <Reference Include="System.Core" />

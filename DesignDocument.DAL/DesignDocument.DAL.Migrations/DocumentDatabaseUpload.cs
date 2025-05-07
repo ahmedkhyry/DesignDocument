@@ -23,11 +23,11 @@ public sealed class DocumentDatabaseUpload : DbMigration, IMigrationMetadata
 
 	public override void Up()
 	{
-		((DbMigration)this).AddColumn("dbo.Generations", "Document", (Func<ColumnBuilder, ColumnModel>)((ColumnBuilder c) => c.Binary((bool?)null, (int?)null, (bool?)null, (byte[])null, (string)null, false, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null)), (object)null);
+		AddColumn("dbo.Generations", "Document", (Func<ColumnBuilder, ColumnModel>)((ColumnBuilder c) => c.Binary((bool?)null, (int?)null, (bool?)null, (byte[])null, (string)null, false, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null)), (object)null);
 	}
 
 	public override void Down()
 	{
-		((DbMigration)this).DropColumn("dbo.Generations", "Document", (object)null);
+		DropColumn("dbo.Generations", "Document", (object)null);
 	}
 }

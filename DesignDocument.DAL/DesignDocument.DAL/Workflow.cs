@@ -1455,7 +1455,7 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).Id;
+			return Id;
 		}
 		set
 		{
@@ -1464,19 +1464,19 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	}
 
 	[AttributeLogicalName("activeworkflowid")]
-	public EntityReference ActiveWorkflowId => ((Entity)this).GetAttributeValue<EntityReference>("activeworkflowid");
+	public EntityReference ActiveWorkflowId => GetAttributeValue<EntityReference>("activeworkflowid");
 
 	[AttributeLogicalName("asyncautodelete")]
 	public bool? AsyncAutoDelete
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("asyncautodelete");
+			return GetAttributeValue<bool?>("asyncautodelete");
 		}
 		set
 		{
 			OnPropertyChanging("AsyncAutoDelete");
-			((Entity)this).SetAttributeValue("asyncautodelete", (object)value);
+			SetAttributeValue("asyncautodelete", (object)value);
 			OnPropertyChanged("AsyncAutoDelete");
 		}
 	}
@@ -1486,12 +1486,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("businessprocesstype");
+			return GetAttributeValue<OptionSetValue>("businessprocesstype");
 		}
 		set
 		{
 			OnPropertyChanging("BusinessProcessType");
-			((Entity)this).SetAttributeValue("businessprocesstype", (object)value);
+			SetAttributeValue("businessprocesstype", (object)value);
 			OnPropertyChanged("BusinessProcessType");
 		}
 	}
@@ -1501,42 +1501,42 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("category");
+			return GetAttributeValue<OptionSetValue>("category");
 		}
 		set
 		{
 			OnPropertyChanging("Category");
-			((Entity)this).SetAttributeValue("category", (object)value);
+			SetAttributeValue("category", (object)value);
 			OnPropertyChanged("Category");
 		}
 	}
 
 	[AttributeLogicalName("clientdata")]
-	public string ClientData => ((Entity)this).GetAttributeValue<string>("clientdata");
+	public string ClientData => GetAttributeValue<string>("clientdata");
 
 	[AttributeLogicalName("componentstate")]
-	public OptionSetValue ComponentState => ((Entity)this).GetAttributeValue<OptionSetValue>("componentstate");
+	public OptionSetValue ComponentState => GetAttributeValue<OptionSetValue>("componentstate");
 
 	[AttributeLogicalName("createdby")]
-	public EntityReference CreatedBy => ((Entity)this).GetAttributeValue<EntityReference>("createdby");
+	public EntityReference CreatedBy => GetAttributeValue<EntityReference>("createdby");
 
 	[AttributeLogicalName("createdon")]
-	public DateTime? CreatedOn => ((Entity)this).GetAttributeValue<DateTime?>("createdon");
+	public DateTime? CreatedOn => GetAttributeValue<DateTime?>("createdon");
 
 	[AttributeLogicalName("createdonbehalfby")]
-	public EntityReference CreatedOnBehalfBy => ((Entity)this).GetAttributeValue<EntityReference>("createdonbehalfby");
+	public EntityReference CreatedOnBehalfBy => GetAttributeValue<EntityReference>("createdonbehalfby");
 
 	[AttributeLogicalName("createstage")]
 	public OptionSetValue CreateStage
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("createstage");
+			return GetAttributeValue<OptionSetValue>("createstage");
 		}
 		set
 		{
 			OnPropertyChanging("CreateStage");
-			((Entity)this).SetAttributeValue("createstage", (object)value);
+			SetAttributeValue("createstage", (object)value);
 			OnPropertyChanged("CreateStage");
 		}
 	}
@@ -1546,12 +1546,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("deletestage");
+			return GetAttributeValue<OptionSetValue>("deletestage");
 		}
 		set
 		{
 			OnPropertyChanging("DeleteStage");
-			((Entity)this).SetAttributeValue("deletestage", (object)value);
+			SetAttributeValue("deletestage", (object)value);
 			OnPropertyChanged("DeleteStage");
 		}
 	}
@@ -1561,12 +1561,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("description");
+			return GetAttributeValue<string>("description");
 		}
 		set
 		{
 			OnPropertyChanging("Description");
-			((Entity)this).SetAttributeValue("description", (object)value);
+			SetAttributeValue("description", (object)value);
 			OnPropertyChanged("Description");
 		}
 	}
@@ -1576,36 +1576,36 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<byte[]>("entityimage");
+			return GetAttributeValue<byte[]>("entityimage");
 		}
 		set
 		{
 			OnPropertyChanging("EntityImage");
-			((Entity)this).SetAttributeValue("entityimage", (object)value);
+			SetAttributeValue("entityimage", (object)value);
 			OnPropertyChanged("EntityImage");
 		}
 	}
 
 	[AttributeLogicalName("entityimage_timestamp")]
-	public long? EntityImage_Timestamp => ((Entity)this).GetAttributeValue<long?>("entityimage_timestamp");
+	public long? EntityImage_Timestamp => GetAttributeValue<long?>("entityimage_timestamp");
 
 	[AttributeLogicalName("entityimage_url")]
-	public string EntityImage_URL => ((Entity)this).GetAttributeValue<string>("entityimage_url");
+	public string EntityImage_URL => GetAttributeValue<string>("entityimage_url");
 
 	[AttributeLogicalName("entityimageid")]
-	public Guid? EntityImageId => ((Entity)this).GetAttributeValue<Guid?>("entityimageid");
+	public Guid? EntityImageId => GetAttributeValue<Guid?>("entityimageid");
 
 	[AttributeLogicalName("formid")]
 	public Guid? FormId
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("formid");
+			return GetAttributeValue<Guid?>("formid");
 		}
 		set
 		{
 			OnPropertyChanging("FormId");
-			((Entity)this).SetAttributeValue("formid", (object)value);
+			SetAttributeValue("formid", (object)value);
 			OnPropertyChanged("FormId");
 		}
 	}
@@ -1615,12 +1615,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("inputparameters");
+			return GetAttributeValue<string>("inputparameters");
 		}
 		set
 		{
 			OnPropertyChanging("InputParameters");
-			((Entity)this).SetAttributeValue("inputparameters", (object)value);
+			SetAttributeValue("inputparameters", (object)value);
 			OnPropertyChanged("InputParameters");
 		}
 	}
@@ -1630,48 +1630,48 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("introducedversion");
+			return GetAttributeValue<string>("introducedversion");
 		}
 		set
 		{
 			OnPropertyChanging("IntroducedVersion");
-			((Entity)this).SetAttributeValue("introducedversion", (object)value);
+			SetAttributeValue("introducedversion", (object)value);
 			OnPropertyChanged("IntroducedVersion");
 		}
 	}
 
 	[AttributeLogicalName("iscrmuiworkflow")]
-	public bool? IsCrmUIWorkflow => ((Entity)this).GetAttributeValue<bool?>("iscrmuiworkflow");
+	public bool? IsCrmUIWorkflow => GetAttributeValue<bool?>("iscrmuiworkflow");
 
 	[AttributeLogicalName("iscustomizable")]
 	public BooleanManagedProperty IsCustomizable
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<BooleanManagedProperty>("iscustomizable");
+			return GetAttributeValue<BooleanManagedProperty>("iscustomizable");
 		}
 		set
 		{
 			OnPropertyChanging("IsCustomizable");
-			((Entity)this).SetAttributeValue("iscustomizable", (object)value);
+			SetAttributeValue("iscustomizable", (object)value);
 			OnPropertyChanged("IsCustomizable");
 		}
 	}
 
 	[AttributeLogicalName("ismanaged")]
-	public bool? IsManaged => ((Entity)this).GetAttributeValue<bool?>("ismanaged");
+	public bool? IsManaged => GetAttributeValue<bool?>("ismanaged");
 
 	[AttributeLogicalName("istransacted")]
 	public bool? IsTransacted
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("istransacted");
+			return GetAttributeValue<bool?>("istransacted");
 		}
 		set
 		{
 			OnPropertyChanging("IsTransacted");
-			((Entity)this).SetAttributeValue("istransacted", (object)value);
+			SetAttributeValue("istransacted", (object)value);
 			OnPropertyChanged("IsTransacted");
 		}
 	}
@@ -1681,12 +1681,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("languagecode");
+			return GetAttributeValue<int?>("languagecode");
 		}
 		set
 		{
 			OnPropertyChanging("LanguageCode");
-			((Entity)this).SetAttributeValue("languagecode", (object)value);
+			SetAttributeValue("languagecode", (object)value);
 			OnPropertyChanged("LanguageCode");
 		}
 	}
@@ -1696,36 +1696,36 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("mode");
+			return GetAttributeValue<OptionSetValue>("mode");
 		}
 		set
 		{
 			OnPropertyChanging("Mode");
-			((Entity)this).SetAttributeValue("mode", (object)value);
+			SetAttributeValue("mode", (object)value);
 			OnPropertyChanged("Mode");
 		}
 	}
 
 	[AttributeLogicalName("modifiedby")]
-	public EntityReference ModifiedBy => ((Entity)this).GetAttributeValue<EntityReference>("modifiedby");
+	public EntityReference ModifiedBy => GetAttributeValue<EntityReference>("modifiedby");
 
 	[AttributeLogicalName("modifiedon")]
-	public DateTime? ModifiedOn => ((Entity)this).GetAttributeValue<DateTime?>("modifiedon");
+	public DateTime? ModifiedOn => GetAttributeValue<DateTime?>("modifiedon");
 
 	[AttributeLogicalName("modifiedonbehalfby")]
-	public EntityReference ModifiedOnBehalfBy => ((Entity)this).GetAttributeValue<EntityReference>("modifiedonbehalfby");
+	public EntityReference ModifiedOnBehalfBy => GetAttributeValue<EntityReference>("modifiedonbehalfby");
 
 	[AttributeLogicalName("name")]
 	public string Name
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("name");
+			return GetAttributeValue<string>("name");
 		}
 		set
 		{
 			OnPropertyChanging("Name");
-			((Entity)this).SetAttributeValue("name", (object)value);
+			SetAttributeValue("name", (object)value);
 			OnPropertyChanged("Name");
 		}
 	}
@@ -1735,60 +1735,60 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("ondemand");
+			return GetAttributeValue<bool?>("ondemand");
 		}
 		set
 		{
 			OnPropertyChanging("OnDemand");
-			((Entity)this).SetAttributeValue("ondemand", (object)value);
+			SetAttributeValue("ondemand", (object)value);
 			OnPropertyChanged("OnDemand");
 		}
 	}
 
 	[AttributeLogicalName("overwritetime")]
-	public DateTime? OverwriteTime => ((Entity)this).GetAttributeValue<DateTime?>("overwritetime");
+	public DateTime? OverwriteTime => GetAttributeValue<DateTime?>("overwritetime");
 
 	[AttributeLogicalName("ownerid")]
 	public EntityReference OwnerId
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("ownerid");
+			return GetAttributeValue<EntityReference>("ownerid");
 		}
 		set
 		{
 			OnPropertyChanging("OwnerId");
-			((Entity)this).SetAttributeValue("ownerid", (object)value);
+			SetAttributeValue("ownerid", (object)value);
 			OnPropertyChanged("OwnerId");
 		}
 	}
 
 	[AttributeLogicalName("owningbusinessunit")]
-	public EntityReference OwningBusinessUnit => ((Entity)this).GetAttributeValue<EntityReference>("owningbusinessunit");
+	public EntityReference OwningBusinessUnit => GetAttributeValue<EntityReference>("owningbusinessunit");
 
 	[AttributeLogicalName("owningteam")]
-	public EntityReference OwningTeam => ((Entity)this).GetAttributeValue<EntityReference>("owningteam");
+	public EntityReference OwningTeam => GetAttributeValue<EntityReference>("owningteam");
 
 	[AttributeLogicalName("owninguser")]
-	public EntityReference OwningUser => ((Entity)this).GetAttributeValue<EntityReference>("owninguser");
+	public EntityReference OwningUser => GetAttributeValue<EntityReference>("owninguser");
 
 	[AttributeLogicalName("parentworkflowid")]
-	public EntityReference ParentWorkflowId => ((Entity)this).GetAttributeValue<EntityReference>("parentworkflowid");
+	public EntityReference ParentWorkflowId => GetAttributeValue<EntityReference>("parentworkflowid");
 
 	[AttributeLogicalName("plugintypeid")]
-	public EntityReference PluginTypeId => ((Entity)this).GetAttributeValue<EntityReference>("plugintypeid");
+	public EntityReference PluginTypeId => GetAttributeValue<EntityReference>("plugintypeid");
 
 	[AttributeLogicalName("primaryentity")]
 	public string PrimaryEntity
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("primaryentity");
+			return GetAttributeValue<string>("primaryentity");
 		}
 		set
 		{
 			OnPropertyChanging("PrimaryEntity");
-			((Entity)this).SetAttributeValue("primaryentity", (object)value);
+			SetAttributeValue("primaryentity", (object)value);
 			OnPropertyChanged("PrimaryEntity");
 		}
 	}
@@ -1798,12 +1798,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("processorder");
+			return GetAttributeValue<int?>("processorder");
 		}
 		set
 		{
 			OnPropertyChanging("ProcessOrder");
-			((Entity)this).SetAttributeValue("processorder", (object)value);
+			SetAttributeValue("processorder", (object)value);
 			OnPropertyChanged("ProcessOrder");
 		}
 	}
@@ -1813,12 +1813,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("processroleassignment");
+			return GetAttributeValue<string>("processroleassignment");
 		}
 		set
 		{
 			OnPropertyChanging("ProcessRoleAssignment");
-			((Entity)this).SetAttributeValue("processroleassignment", (object)value);
+			SetAttributeValue("processroleassignment", (object)value);
 			OnPropertyChanged("ProcessRoleAssignment");
 		}
 	}
@@ -1828,12 +1828,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<int?>("rank");
+			return GetAttributeValue<int?>("rank");
 		}
 		set
 		{
 			OnPropertyChanging("Rank");
-			((Entity)this).SetAttributeValue("rank", (object)value);
+			SetAttributeValue("rank", (object)value);
 			OnPropertyChanged("Rank");
 		}
 	}
@@ -1843,12 +1843,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("rendererobjecttypecode");
+			return GetAttributeValue<string>("rendererobjecttypecode");
 		}
 		set
 		{
 			OnPropertyChanging("RendererObjectTypeCode");
-			((Entity)this).SetAttributeValue("rendererobjecttypecode", (object)value);
+			SetAttributeValue("rendererobjecttypecode", (object)value);
 			OnPropertyChanged("RendererObjectTypeCode");
 		}
 	}
@@ -1858,12 +1858,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("runas");
+			return GetAttributeValue<OptionSetValue>("runas");
 		}
 		set
 		{
 			OnPropertyChanging("RunAs");
-			((Entity)this).SetAttributeValue("runas", (object)value);
+			SetAttributeValue("runas", (object)value);
 			OnPropertyChanged("RunAs");
 		}
 	}
@@ -1873,28 +1873,28 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("scope");
+			return GetAttributeValue<OptionSetValue>("scope");
 		}
 		set
 		{
 			OnPropertyChanging("Scope");
-			((Entity)this).SetAttributeValue("scope", (object)value);
+			SetAttributeValue("scope", (object)value);
 			OnPropertyChanged("Scope");
 		}
 	}
 
 	[AttributeLogicalName("sdkmessageid")]
-	public EntityReference SdkMessageId => ((Entity)this).GetAttributeValue<EntityReference>("sdkmessageid");
+	public EntityReference SdkMessageId => GetAttributeValue<EntityReference>("sdkmessageid");
 
 	[AttributeLogicalName("solutionid")]
-	public Guid? SolutionId => ((Entity)this).GetAttributeValue<Guid?>("solutionid");
+	public Guid? SolutionId => GetAttributeValue<Guid?>("solutionid");
 
 	[AttributeLogicalName("statecode")]
 	public WorkflowState? StateCode
 	{
 		get
 		{
-			OptionSetValue attributeValue = ((Entity)this).GetAttributeValue<OptionSetValue>("statecode");
+			OptionSetValue attributeValue = GetAttributeValue<OptionSetValue>("statecode");
 			if (attributeValue != null)
 			{
 				return (WorkflowState)Enum.ToObject(typeof(WorkflowState), attributeValue.Value);
@@ -1908,11 +1908,11 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 			OnPropertyChanging("StateCode");
 			if (!value.HasValue)
 			{
-				((Entity)this).SetAttributeValue("statecode", (object)null);
+				SetAttributeValue("statecode", (object)null);
 			}
 			else
 			{
-				((Entity)this).SetAttributeValue("statecode", (object)new OptionSetValue((int)value.Value));
+				SetAttributeValue("statecode", (object)new OptionSetValue((int)value.Value));
 			}
 			OnPropertyChanged("StateCode");
 		}
@@ -1923,12 +1923,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("statuscode");
+			return GetAttributeValue<OptionSetValue>("statuscode");
 		}
 		set
 		{
 			OnPropertyChanging("StatusCode");
-			((Entity)this).SetAttributeValue("statuscode", (object)value);
+			SetAttributeValue("statuscode", (object)value);
 			OnPropertyChanged("StatusCode");
 		}
 	}
@@ -1938,30 +1938,30 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("subprocess");
+			return GetAttributeValue<bool?>("subprocess");
 		}
 		set
 		{
 			OnPropertyChanging("Subprocess");
-			((Entity)this).SetAttributeValue("subprocess", (object)value);
+			SetAttributeValue("subprocess", (object)value);
 			OnPropertyChanged("Subprocess");
 		}
 	}
 
 	[AttributeLogicalName("supportingsolutionid")]
-	public Guid? SupportingSolutionId => ((Entity)this).GetAttributeValue<Guid?>("supportingsolutionid");
+	public Guid? SupportingSolutionId => GetAttributeValue<Guid?>("supportingsolutionid");
 
 	[AttributeLogicalName("syncworkflowlogonfailure")]
 	public bool? SyncWorkflowLogOnFailure
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("syncworkflowlogonfailure");
+			return GetAttributeValue<bool?>("syncworkflowlogonfailure");
 		}
 		set
 		{
 			OnPropertyChanging("SyncWorkflowLogOnFailure");
-			((Entity)this).SetAttributeValue("syncworkflowlogonfailure", (object)value);
+			SetAttributeValue("syncworkflowlogonfailure", (object)value);
 			OnPropertyChanged("SyncWorkflowLogOnFailure");
 		}
 	}
@@ -1971,12 +1971,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("triggeroncreate");
+			return GetAttributeValue<bool?>("triggeroncreate");
 		}
 		set
 		{
 			OnPropertyChanging("TriggerOnCreate");
-			((Entity)this).SetAttributeValue("triggeroncreate", (object)value);
+			SetAttributeValue("triggeroncreate", (object)value);
 			OnPropertyChanged("TriggerOnCreate");
 		}
 	}
@@ -1986,12 +1986,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<bool?>("triggerondelete");
+			return GetAttributeValue<bool?>("triggerondelete");
 		}
 		set
 		{
 			OnPropertyChanging("TriggerOnDelete");
-			((Entity)this).SetAttributeValue("triggerondelete", (object)value);
+			SetAttributeValue("triggerondelete", (object)value);
 			OnPropertyChanged("TriggerOnDelete");
 		}
 	}
@@ -2001,12 +2001,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("triggeronupdateattributelist");
+			return GetAttributeValue<string>("triggeronupdateattributelist");
 		}
 		set
 		{
 			OnPropertyChanging("TriggerOnUpdateAttributeList");
-			((Entity)this).SetAttributeValue("triggeronupdateattributelist", (object)value);
+			SetAttributeValue("triggeronupdateattributelist", (object)value);
 			OnPropertyChanged("TriggerOnUpdateAttributeList");
 		}
 	}
@@ -2016,12 +2016,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("type");
+			return GetAttributeValue<OptionSetValue>("type");
 		}
 		set
 		{
 			OnPropertyChanging("Type");
-			((Entity)this).SetAttributeValue("type", (object)value);
+			SetAttributeValue("type", (object)value);
 			OnPropertyChanged("Type");
 		}
 	}
@@ -2031,12 +2031,12 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("uniquename");
+			return GetAttributeValue<string>("uniquename");
 		}
 		set
 		{
 			OnPropertyChanging("UniqueName");
-			((Entity)this).SetAttributeValue("uniquename", (object)value);
+			SetAttributeValue("uniquename", (object)value);
 			OnPropertyChanged("UniqueName");
 		}
 	}
@@ -2046,61 +2046,61 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("updatestage");
+			return GetAttributeValue<OptionSetValue>("updatestage");
 		}
 		set
 		{
 			OnPropertyChanging("UpdateStage");
-			((Entity)this).SetAttributeValue("updatestage", (object)value);
+			SetAttributeValue("updatestage", (object)value);
 			OnPropertyChanged("UpdateStage");
 		}
 	}
 
 	[AttributeLogicalName("versionnumber")]
-	public long? VersionNumber => ((Entity)this).GetAttributeValue<long?>("versionnumber");
+	public long? VersionNumber => GetAttributeValue<long?>("versionnumber");
 
 	[AttributeLogicalName("workflowid")]
 	public Guid? WorkflowId
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("workflowid");
+			return GetAttributeValue<Guid?>("workflowid");
 		}
 		set
 		{
 			OnPropertyChanging("WorkflowId");
-			((Entity)this).SetAttributeValue("workflowid", (object)value);
+			SetAttributeValue("workflowid", (object)value);
 			if (value.HasValue)
 			{
-				((Entity)this).Id = value.Value;
+				Id = value.Value;
 			}
 			else
 			{
-				((Entity)this).Id = Guid.Empty;
+				Id = Guid.Empty;
 			}
 			OnPropertyChanged("WorkflowId");
 		}
 	}
 
 	[AttributeLogicalName("workflowidunique")]
-	public Guid? WorkflowIdUnique => ((Entity)this).GetAttributeValue<Guid?>("workflowidunique");
+	public Guid? WorkflowIdUnique => GetAttributeValue<Guid?>("workflowidunique");
 
 	[AttributeLogicalName("xaml")]
 	public string Xaml
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("xaml");
+			return GetAttributeValue<string>("xaml");
 		}
 		set
 		{
 			OnPropertyChanging("Xaml");
-			((Entity)this).SetAttributeValue("xaml", (object)value);
+			SetAttributeValue("xaml", (object)value);
 			OnPropertyChanged("Xaml");
 		}
 	}
 
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public IEnumerable<Workflow> Referenced_workflow_active_workflow
 	{
 		get
@@ -2111,7 +2111,7 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_active_workflow");
 				}
-				IEnumerable<Workflow> relatedEntities = ((Entity)this).GetRelatedEntities<Workflow>("workflow_active_workflow", (EntityRole?)(EntityRole)1);
+				IEnumerable<Workflow> relatedEntities = GetRelatedEntities<Workflow>("workflow_active_workflow", (EntityRole?)(EntityRole)1);
 				relatedEntities.ToList().ForEach(delegate(Workflow element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -2120,13 +2120,13 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Workflow>("workflow_active_workflow", (EntityRole?)(EntityRole)1);
+				return GetRelatedEntities<Workflow>("workflow_active_workflow", (EntityRole?)(EntityRole)1);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("Referenced_workflow_active_workflow");
-			((Entity)this).SetRelatedEntities<Workflow>("workflow_active_workflow", (EntityRole?)(EntityRole)1, value);
+			SetRelatedEntities<Workflow>("workflow_active_workflow", (EntityRole?)(EntityRole)1, value);
 			OnPropertyChanged("Referenced_workflow_active_workflow");
 		}
 	}
@@ -2142,7 +2142,7 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_dependencies");
 				}
-				IEnumerable<WorkflowDependency> relatedEntities = ((Entity)this).GetRelatedEntities<WorkflowDependency>("workflow_dependencies", (EntityRole?)null);
+				IEnumerable<WorkflowDependency> relatedEntities = GetRelatedEntities<WorkflowDependency>("workflow_dependencies", (EntityRole?)null);
 				relatedEntities.ToList().ForEach(delegate(WorkflowDependency element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -2151,18 +2151,18 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<WorkflowDependency>("workflow_dependencies", (EntityRole?)null);
+				return GetRelatedEntities<WorkflowDependency>("workflow_dependencies", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("workflow_dependencies");
-			((Entity)this).SetRelatedEntities<WorkflowDependency>("workflow_dependencies", (EntityRole?)null, value);
+			SetRelatedEntities<WorkflowDependency>("workflow_dependencies", (EntityRole?)null, value);
 			OnPropertyChanged("workflow_dependencies");
 		}
 	}
 
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public IEnumerable<Workflow> Referenced_workflow_parent_workflow
 	{
 		get
@@ -2173,7 +2173,7 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_parent_workflow");
 				}
-				IEnumerable<Workflow> relatedEntities = ((Entity)this).GetRelatedEntities<Workflow>("workflow_parent_workflow", (EntityRole?)(EntityRole)1);
+				IEnumerable<Workflow> relatedEntities = GetRelatedEntities<Workflow>("workflow_parent_workflow", (EntityRole?)(EntityRole)1);
 				relatedEntities.ToList().ForEach(delegate(Workflow element)
 				{
 					element.ServiceContext = ServiceContext;
@@ -2182,13 +2182,13 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntities<Workflow>("workflow_parent_workflow", (EntityRole?)(EntityRole)1);
+				return GetRelatedEntities<Workflow>("workflow_parent_workflow", (EntityRole?)(EntityRole)1);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("Referenced_workflow_parent_workflow");
-			((Entity)this).SetRelatedEntities<Workflow>("workflow_parent_workflow", (EntityRole?)(EntityRole)1, value);
+			SetRelatedEntities<Workflow>("workflow_parent_workflow", (EntityRole?)(EntityRole)1, value);
 			OnPropertyChanged("Referenced_workflow_parent_workflow");
 		}
 	}
@@ -2205,19 +2205,19 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "system_user_workflow");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("system_user_workflow", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("system_user_workflow", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("system_user_workflow", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("system_user_workflow", (EntityRole?)null);
 			}
 		}
 	}
 
 	[AttributeLogicalName("activeworkflowid")]
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public Workflow Referencing_workflow_active_workflow
 	{
 		get
@@ -2228,13 +2228,13 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_active_workflow");
 				}
-				Workflow relatedEntity = ((Entity)this).GetRelatedEntity<Workflow>("workflow_active_workflow", (EntityRole?)(EntityRole)0);
+				Workflow relatedEntity = GetRelatedEntity<Workflow>("workflow_active_workflow", (EntityRole?)(EntityRole)0);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<Workflow>("workflow_active_workflow", (EntityRole?)(EntityRole)0);
+				return GetRelatedEntity<Workflow>("workflow_active_workflow", (EntityRole?)(EntityRole)0);
 			}
 		}
 	}
@@ -2251,13 +2251,13 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_createdby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("workflow_createdby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("workflow_createdby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("workflow_createdby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("workflow_createdby", (EntityRole?)null);
 			}
 		}
 	}
@@ -2274,13 +2274,13 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_createdonbehalfby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("workflow_createdonbehalfby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("workflow_createdonbehalfby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("workflow_createdonbehalfby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("workflow_createdonbehalfby", (EntityRole?)null);
 			}
 		}
 	}
@@ -2297,13 +2297,13 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_modifiedby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("workflow_modifiedby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("workflow_modifiedby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("workflow_modifiedby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("workflow_modifiedby", (EntityRole?)null);
 			}
 		}
 	}
@@ -2320,19 +2320,19 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_modifiedonbehalfby");
 				}
-				SystemUser relatedEntity = ((Entity)this).GetRelatedEntity<SystemUser>("workflow_modifiedonbehalfby", (EntityRole?)null);
+				SystemUser relatedEntity = GetRelatedEntity<SystemUser>("workflow_modifiedonbehalfby", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<SystemUser>("workflow_modifiedonbehalfby", (EntityRole?)null);
+				return GetRelatedEntity<SystemUser>("workflow_modifiedonbehalfby", (EntityRole?)null);
 			}
 		}
 	}
 
 	[AttributeLogicalName("parentworkflowid")]
-	[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
+	//[RelationshipSchemaName(/*Could not decode attribute arguments.*/)]
 	public Workflow Referencing_workflow_parent_workflow
 	{
 		get
@@ -2343,13 +2343,13 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "workflow_parent_workflow");
 				}
-				Workflow relatedEntity = ((Entity)this).GetRelatedEntity<Workflow>("workflow_parent_workflow", (EntityRole?)(EntityRole)0);
+				Workflow relatedEntity = GetRelatedEntity<Workflow>("workflow_parent_workflow", (EntityRole?)(EntityRole)0);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<Workflow>("workflow_parent_workflow", (EntityRole?)(EntityRole)0);
+				return GetRelatedEntity<Workflow>("workflow_parent_workflow", (EntityRole?)(EntityRole)0);
 			}
 		}
 	}
@@ -2383,7 +2383,7 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 
 	public List<Workflow> Load_Referenced_workflow_active_workflow(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<Workflow> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflow", ((Entity)this).LogicalName, "activeworkflowid", "workflowid", "workflowid", "workflowid", recordCountLimit, attributes)
+		IEnumerable<Workflow> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflow", LogicalName, "activeworkflowid", "workflowid", "workflowid", "workflowid", recordCountLimit, attributes)
 			select entity.ToEntity<Workflow>();
 		Referenced_workflow_active_workflow = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -2391,7 +2391,7 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 
 	public List<WorkflowDependency> Load_workflow_dependencies(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<WorkflowDependency> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflowdependency", ((Entity)this).LogicalName, "workflowid", "workflowid", "workflowid", "workflowid", recordCountLimit, attributes)
+		IEnumerable<WorkflowDependency> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflowdependency", LogicalName, "workflowid", "workflowid", "workflowid", "workflowid", recordCountLimit, attributes)
 			select entity.ToEntity<WorkflowDependency>();
 		workflow_dependencies = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -2399,7 +2399,7 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 
 	public List<Workflow> Load_Referenced_workflow_parent_workflow(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		IEnumerable<Workflow> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflow", ((Entity)this).LogicalName, "parentworkflowid", "workflowid", "workflowid", "workflowid", recordCountLimit, attributes)
+		IEnumerable<Workflow> source = from entity in CrmHelpers.LoadRelation((Entity)(object)this, service, "workflow", LogicalName, "parentworkflowid", "workflowid", "workflowid", "workflowid", recordCountLimit, attributes)
 			select entity.ToEntity<Workflow>();
 		Referenced_workflow_parent_workflow = ((source.Count() > 0) ? source.ToArray() : null);
 		return source.ToList();
@@ -2416,16 +2416,16 @@ public class Workflow : Entity, INotifyPropertyChanging, INotifyPropertyChanged
 			object value = propertyInfo.GetValue(anonymousType, null);
 			if (propertyInfo.PropertyType == typeof(Guid))
 			{
-				((Entity)this).Id = (Guid)value;
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)["workflowid"] = ((Entity)this).Id;
+				Id = (Guid)value;
+				((DataCollection<string, object>)(object)Attributes)["workflowid"] = Id;
 			}
 			else if (propertyInfo.Name == "FormattedValues")
 			{
-				((DataCollection<string, string>)(object)((Entity)this).FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
+				((DataCollection<string, string>)(object)FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
 			}
 			else
 			{
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)[propertyInfo.Name.ToLower()] = value;
+				((DataCollection<string, object>)(object)Attributes)[propertyInfo.Name.ToLower()] = value;
 			}
 		}
 	}

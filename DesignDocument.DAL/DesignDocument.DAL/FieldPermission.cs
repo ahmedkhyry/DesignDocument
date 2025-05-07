@@ -437,7 +437,7 @@ public class FieldPermission : Entity, INotifyPropertyChanging, INotifyPropertyC
 	{
 		get
 		{
-			return ((Entity)this).Id;
+			return Id;
 		}
 		set
 		{
@@ -450,12 +450,12 @@ public class FieldPermission : Entity, INotifyPropertyChanging, INotifyPropertyC
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("attributelogicalname");
+			return GetAttributeValue<string>("attributelogicalname");
 		}
 		set
 		{
 			OnPropertyChanging("AttributeLogicalName");
-			((Entity)this).SetAttributeValue("attributelogicalname", (object)value);
+			SetAttributeValue("attributelogicalname", (object)value);
 			OnPropertyChanged("AttributeLogicalName");
 		}
 	}
@@ -465,12 +465,12 @@ public class FieldPermission : Entity, INotifyPropertyChanging, INotifyPropertyC
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("cancreate");
+			return GetAttributeValue<OptionSetValue>("cancreate");
 		}
 		set
 		{
 			OnPropertyChanging("CanCreate");
-			((Entity)this).SetAttributeValue("cancreate", (object)value);
+			SetAttributeValue("cancreate", (object)value);
 			OnPropertyChanged("CanCreate");
 		}
 	}
@@ -480,12 +480,12 @@ public class FieldPermission : Entity, INotifyPropertyChanging, INotifyPropertyC
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("canread");
+			return GetAttributeValue<OptionSetValue>("canread");
 		}
 		set
 		{
 			OnPropertyChanging("CanRead");
-			((Entity)this).SetAttributeValue("canread", (object)value);
+			SetAttributeValue("canread", (object)value);
 			OnPropertyChanged("CanRead");
 		}
 	}
@@ -495,30 +495,30 @@ public class FieldPermission : Entity, INotifyPropertyChanging, INotifyPropertyC
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<OptionSetValue>("canupdate");
+			return GetAttributeValue<OptionSetValue>("canupdate");
 		}
 		set
 		{
 			OnPropertyChanging("CanUpdate");
-			((Entity)this).SetAttributeValue("canupdate", (object)value);
+			SetAttributeValue("canupdate", (object)value);
 			OnPropertyChanged("CanUpdate");
 		}
 	}
 
 	[AttributeLogicalName("componentstate")]
-	public OptionSetValue ComponentState => ((Entity)this).GetAttributeValue<OptionSetValue>("componentstate");
+	public OptionSetValue ComponentState => GetAttributeValue<OptionSetValue>("componentstate");
 
 	[AttributeLogicalName("entityname")]
 	public string EntityName
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<string>("entityname");
+			return GetAttributeValue<string>("entityname");
 		}
 		set
 		{
 			OnPropertyChanging("EntityName");
-			((Entity)this).SetAttributeValue("entityname", (object)value);
+			SetAttributeValue("entityname", (object)value);
 			OnPropertyChanged("EntityName");
 		}
 	}
@@ -528,59 +528,59 @@ public class FieldPermission : Entity, INotifyPropertyChanging, INotifyPropertyC
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<Guid?>("fieldpermissionid");
+			return GetAttributeValue<Guid?>("fieldpermissionid");
 		}
 		set
 		{
 			OnPropertyChanging("FieldPermissionId");
-			((Entity)this).SetAttributeValue("fieldpermissionid", (object)value);
+			SetAttributeValue("fieldpermissionid", (object)value);
 			if (value.HasValue)
 			{
-				((Entity)this).Id = value.Value;
+				Id = value.Value;
 			}
 			else
 			{
-				((Entity)this).Id = Guid.Empty;
+				Id = Guid.Empty;
 			}
 			OnPropertyChanged("FieldPermissionId");
 		}
 	}
 
 	[AttributeLogicalName("fieldpermissionidunique")]
-	public Guid? FieldPermissionIdUnique => ((Entity)this).GetAttributeValue<Guid?>("fieldpermissionidunique");
+	public Guid? FieldPermissionIdUnique => GetAttributeValue<Guid?>("fieldpermissionidunique");
 
 	[AttributeLogicalName("fieldsecurityprofileid")]
 	public EntityReference FieldSecurityProfileId
 	{
 		get
 		{
-			return ((Entity)this).GetAttributeValue<EntityReference>("fieldsecurityprofileid");
+			return GetAttributeValue<EntityReference>("fieldsecurityprofileid");
 		}
 		set
 		{
 			OnPropertyChanging("FieldSecurityProfileId");
-			((Entity)this).SetAttributeValue("fieldsecurityprofileid", (object)value);
+			SetAttributeValue("fieldsecurityprofileid", (object)value);
 			OnPropertyChanged("FieldSecurityProfileId");
 		}
 	}
 
 	[AttributeLogicalName("ismanaged")]
-	public bool? IsManaged => ((Entity)this).GetAttributeValue<bool?>("ismanaged");
+	public bool? IsManaged => GetAttributeValue<bool?>("ismanaged");
 
 	[AttributeLogicalName("organizationid")]
-	public EntityReference OrganizationId => ((Entity)this).GetAttributeValue<EntityReference>("organizationid");
+	public EntityReference OrganizationId => GetAttributeValue<EntityReference>("organizationid");
 
 	[AttributeLogicalName("overwritetime")]
-	public DateTime? OverwriteTime => ((Entity)this).GetAttributeValue<DateTime?>("overwritetime");
+	public DateTime? OverwriteTime => GetAttributeValue<DateTime?>("overwritetime");
 
 	[AttributeLogicalName("solutionid")]
-	public Guid? SolutionId => ((Entity)this).GetAttributeValue<Guid?>("solutionid");
+	public Guid? SolutionId => GetAttributeValue<Guid?>("solutionid");
 
 	[AttributeLogicalName("supportingsolutionid")]
-	public Guid? SupportingSolutionId => ((Entity)this).GetAttributeValue<Guid?>("supportingsolutionid");
+	public Guid? SupportingSolutionId => GetAttributeValue<Guid?>("supportingsolutionid");
 
 	[AttributeLogicalName("versionnumber")]
-	public long? VersionNumber => ((Entity)this).GetAttributeValue<long?>("versionnumber");
+	public long? VersionNumber => GetAttributeValue<long?>("versionnumber");
 
 	[AttributeLogicalName("fieldsecurityprofileid")]
 	[RelationshipSchemaName("lk_fieldpermission_fieldsecurityprofileid")]
@@ -594,19 +594,19 @@ public class FieldPermission : Entity, INotifyPropertyChanging, INotifyPropertyC
 				{
 					((OrganizationServiceContext)serviceContext).LoadProperty((Entity)(object)this, "lk_fieldpermission_fieldsecurityprofileid");
 				}
-				FieldSecurityProfile relatedEntity = ((Entity)this).GetRelatedEntity<FieldSecurityProfile>("lk_fieldpermission_fieldsecurityprofileid", (EntityRole?)null);
+				FieldSecurityProfile relatedEntity = GetRelatedEntity<FieldSecurityProfile>("lk_fieldpermission_fieldsecurityprofileid", (EntityRole?)null);
 				relatedEntity.ServiceContext = ServiceContext;
 				return relatedEntity;
 			}
 			catch
 			{
-				return ((Entity)this).GetRelatedEntity<FieldSecurityProfile>("lk_fieldpermission_fieldsecurityprofileid", (EntityRole?)null);
+				return GetRelatedEntity<FieldSecurityProfile>("lk_fieldpermission_fieldsecurityprofileid", (EntityRole?)null);
 			}
 		}
 		set
 		{
 			OnPropertyChanging("lk_fieldpermission_fieldsecurityprofileid");
-			((Entity)this).SetRelatedEntity<FieldSecurityProfile>("lk_fieldpermission_fieldsecurityprofileid", (EntityRole?)null, value);
+			SetRelatedEntity<FieldSecurityProfile>("lk_fieldpermission_fieldsecurityprofileid", (EntityRole?)null, value);
 			OnPropertyChanged("lk_fieldpermission_fieldsecurityprofileid");
 		}
 	}
@@ -638,7 +638,7 @@ public class FieldPermission : Entity, INotifyPropertyChanging, INotifyPropertyC
 
 	public FieldSecurityProfile Load_lk_fieldpermission_fieldsecurityprofileid(IOrganizationService service, int recordCountLimit = -1, params string[] attributes)
 	{
-		Entity val = CrmHelpers.LoadRelation((Entity)(object)this, service, "fieldsecurityprofile", ((Entity)this).LogicalName, "fieldsecurityprofileid", "fieldsecurityprofileid", "fieldpermissionid", "fieldpermissionid", recordCountLimit, attributes).FirstOrDefault();
+		Entity val = CrmHelpers.LoadRelation((Entity)(object)this, service, "fieldsecurityprofile", LogicalName, "fieldsecurityprofileid", "fieldsecurityprofileid", "fieldpermissionid", "fieldpermissionid", recordCountLimit, attributes).FirstOrDefault();
 		if (val != null)
 		{
 			return lk_fieldpermission_fieldsecurityprofileid = val.ToEntity<FieldSecurityProfile>();
@@ -657,16 +657,16 @@ public class FieldPermission : Entity, INotifyPropertyChanging, INotifyPropertyC
 			object value = propertyInfo.GetValue(anonymousType, null);
 			if (propertyInfo.PropertyType == typeof(Guid))
 			{
-				((Entity)this).Id = (Guid)value;
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)["fieldpermissionid"] = ((Entity)this).Id;
+				Id = (Guid)value;
+				((DataCollection<string, object>)(object)Attributes)["fieldpermissionid"] = Id;
 			}
 			else if (propertyInfo.Name == "FormattedValues")
 			{
-				((DataCollection<string, string>)(object)((Entity)this).FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
+				((DataCollection<string, string>)(object)FormattedValues).AddRange((IEnumerable<KeyValuePair<string, string>>)(FormattedValueCollection)value);
 			}
 			else
 			{
-				((DataCollection<string, object>)(object)((Entity)this).Attributes)[propertyInfo.Name.ToLower()] = value;
+				((DataCollection<string, object>)(object)Attributes)[propertyInfo.Name.ToLower()] = value;
 			}
 		}
 	}

@@ -23,11 +23,11 @@ public sealed class AddingVisioCheck : DbMigration, IMigrationMetadata
 
 	public override void Up()
 	{
-		((DbMigration)this).AddColumn("dbo.Generations", "IsVisio", (Func<ColumnBuilder, ColumnModel>)((ColumnBuilder c) => c.Boolean((bool?)false, (bool?)null, (string)null, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null)), (object)null);
+		AddColumn("dbo.Generations", "IsVisio", (Func<ColumnBuilder, ColumnModel>)((ColumnBuilder c) => c.Boolean((bool?)false, (bool?)null, (string)null, (string)null, (string)null, (IDictionary<string, AnnotationValues>)null)), (object)null);
 	}
 
 	public override void Down()
 	{
-		((DbMigration)this).DropColumn("dbo.Generations", "IsVisio", (object)null);
+		DropColumn("dbo.Generations", "IsVisio", (object)null);
 	}
 }
